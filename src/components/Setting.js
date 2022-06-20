@@ -170,7 +170,7 @@ export const Setting = ({
           m={0}
           p="1"
           mb={-14}
-          borderRadius="sm"
+          borderRadius="lg"
         />
         <Flex ml={4} mr="4">
           {checkMsg === '条件を満たした質問が存在しません' ? (
