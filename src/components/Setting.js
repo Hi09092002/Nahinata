@@ -168,7 +168,7 @@ export const Setting = ({
           src={titleImg}
           alt="TitleImage"
           m={0}
-          p="0"
+          p="1"
           mb={-14}
           borderRadius="sm"
         />
