@@ -36,7 +36,7 @@ import '../App.css'
 import { SearchWord } from './SearchWord'
 import { useState } from 'react'
 import jsCookie from 'js-cookie'
-import titleImg from '../img/titleImg.png'
+import titleImg from '../img/titleImg.JPG'
 export const Setting = ({
   questionList,
   showSettingDetail,
@@ -164,7 +164,14 @@ export const Setting = ({
           </Button>
         </Flex>
 
-        <Image src={titleImg} alt="TitleImage" m={0} p="0" mb={-14} />
+        <Image
+          src={titleImg}
+          alt="TitleImage"
+          m={0}
+          p="0"
+          mb={-14}
+          borderRadius="sm"
+        />
         <Flex ml={4} mr="4">
           {checkMsg === '条件を満たした質問が存在しません' ? (
             <Button

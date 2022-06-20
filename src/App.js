@@ -64,7 +64,7 @@ function App() {
           Ver.0.8
         </Badge>
         <Badge m={1} mt="0" borderRadius="full" px="2" colorScheme="teal">
-          発生・遺伝学
+          生化学
         </Badge>
       </Flex>
 
