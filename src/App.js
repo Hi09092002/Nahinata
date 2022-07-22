@@ -7,11 +7,14 @@ import { useQuestionList } from './useQuestionList'
 import { useSetting } from './hooks/useSetting'
 import { useHistory } from './hooks/useHistory'
 import { ChoicePanel } from './components/ChoicePanel'
+import { useTechnicalTerm } from './useTechnicalTerm'
 import jsCookie from 'js-cookie'
 
 function App() {
   const { showQuestionList } = useQuestionList()
   const questionList = showQuestionList()
+  const { showTechnicalTerm } = useTechnicalTerm()
+  const technicalTerm = showTechnicalTerm()
   const {
     showSettingDetail,
     updateQuestionOrder,
@@ -61,7 +64,7 @@ function App() {
           colorScheme="teal"
           variant={'outline'}
         >
-          Ver.0.8
+          Ver.0.9
         </Badge>
         <Badge m={1} mt="0" borderRadius="full" px="2" colorScheme="teal">
           生化学
@@ -102,6 +105,7 @@ function App() {
             reviewQuestion={reviewQuestion}
             reviewAskingQuestion={reviewAskingQuestion}
             saveHistory={saveHistory}
+            technicalTerm={technicalTerm}
           />
           {settingDetail.mode === 'practice' &&
           history[history.length - 1].askingQuestion.choices.length > 1 ? (

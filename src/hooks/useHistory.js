@@ -242,6 +242,7 @@ export const useHistory = () => {
         console.log(history)
       }
     }
+    // 追記：
   }
   const checkAnswer = () => {
     let newHistory = history[history.length - 1]

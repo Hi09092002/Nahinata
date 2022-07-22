@@ -83,10 +83,13 @@ export const ControlPanel = ({ showSettingDetail, showHistory }) => {
           </ModalBody>
 
           <ModalFooter>
-            <Button variant="ghost" onClick={() => window.location.reload()}>
-              タイトルへ戻る
+            <Button
+              variant="ghost"
+              onClick={() => document.location.reload(true)}
+            >
+              タイトルに戻る
             </Button>
-            <Button colorScheme="blue" mr={3} onClick={onClose}>
+            <Button colorScheme="blue" mr={3} ml="1" onClick={onClose}>
               Close
             </Button>
           </ModalFooter>
