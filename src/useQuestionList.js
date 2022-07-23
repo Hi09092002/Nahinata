@@ -3,6 +3,10 @@ import { useState } from 'react'
 import corePromoter from './img/answer/corePromoter.png'
 import promoter from './img/answer/promotor.png'
 import synthesizeCatecholamine from './img/answer/synthesizeCatecholamine.png'
+import donorAcceptorSite from './img/answer/donorAcceptorSite.png'
+import flankingRegion from './img/answer/flankingRegion.png'
+import splicing from './img/answer/splicing.png'
+import removeIntron from './img/answer/removeIntron.png'
 
 export const useQuestionList = () => {
   const [questionList, setQuestionList] = useState([
@@ -16,18 +20,31 @@ export const useQuestionList = () => {
           questionSentence:
             'Exon とは？Intron とは？どんな構造上の特徴があるのか？',
           choices: [],
-          answerImg: [],
-          answer: '準備中',
+          answerImg: [flankingRegion],
+          answer:
+            'intronはsplicingによって除去されるDNAやRNAの領域。Exonはsplicingにより結合されてmRNAとして核膜外に運ばれるDNAやRNAの領域',
+          commentary:
+            'さらにExonにはタンパク質に翻訳されるコーディング領域CDSと翻訳されない非翻訳領域UTRで構成されている。UTRはCDSを挟んで存在する',
+        },
+        {
+          detailInfo: '',
+          questionImg: [],
+          questionSentence: '5’-flanking region とは？',
+          choices: [],
+          answerImg: [flankingRegion],
+          answer:
+            'DNAの5’末端に隣接する領域で、プロモーターやエンハンサー、サイレンサーなども含む。RNAには転写されない',
           commentary: '',
         },
         {
           detailInfo: '',
           questionImg: [],
-          questionSentence: '5’-flanking region, 3’-flanking region とは？',
+          questionSentence: '3’-flanking region とは？',
           choices: [],
-          answerImg: [],
-          answer: '準備中',
-          commentary: '',
+          answerImg: [flankingRegion],
+          answer:
+            'DNAの3’末端に隣接する領域で、RNAには転写されるが、成熟mRNAを形成する過程で取り除かれる',
+          commentary: 'エンハンサーやサイレンサーも含まれる',
         },
         {
           detailInfo: '',
@@ -59,7 +76,7 @@ export const useQuestionList = () => {
           answer:
             'GC boxはgggcggの配列で、RNAポリメラーゼⅡにかかわるプロモーターのひとつであるが、TATA box（正しい位置からの適切な転写開始に必要なコアプロモーター）とは違いこれらコアモーターの活性を高める領域に分類される。',
           commentary:
-            'コアモーターの活性を高める領域はほかにもCAAT boxなどが存在するが、その中でも常に（恒常的に）発現しているような遺伝子にGC boxは存在している。',
+            'コアモーターの活性を高める領域はほかにもCAAT boxなどが存在するが、その中でも常に（恒常的に）発現しているようなハウスキーピング遺伝子にGC boxは存在している。',
         },
         {
           detailInfo: '',
@@ -67,7 +84,8 @@ export const useQuestionList = () => {
           questionSentence: 'Polyadenylation signal とは？',
           choices: [],
           answerImg: [],
-          answer: '準備中',
+          answer:
+            'polyA部位（ポリアデニル化部分）の10~30塩基上流に存在するDNA領域。ヒトの場合はほぼAAUAAA配列を含む。',
           commentary: '',
         },
         {
@@ -75,17 +93,21 @@ export const useQuestionList = () => {
           questionImg: [],
           questionSentence: 'splicing の donor・acceptor とは？例外は？',
           choices: [],
-          answerImg: [],
-          answer: '準備中',
-          commentary: '',
+          answerImg: [donorAcceptorSite, removeIntron],
+          answer:
+            'イントロンの5’末端をdonor、3’末端をacceptorと呼び、99%以上のイントロンの5’末端がGUで3’末端がAG（GU-AG則）。RNAスプライシングの過程でこれらの部位は投げ縄構造を取ってエキソンの適切な連結を助ける',
+          commentary:
+            '5’-スプライス部位と3’スプライス部位はそれぞれ供与部位donor site、受容部位acceptor siteという別名がある。例外はがん細胞？',
         },
         {
           detailInfo: '',
           questionImg: [],
-          questionSentence: 'その他 splicing に関する塩基配列状の特徴は？',
+          questionSentence:
+            'donor,acceptorの他に splicing に関する塩基配列状の特徴は？',
           choices: [],
-          answerImg: [],
-          answer: '準備中',
+          answerImg: [donorAcceptorSite, removeIntron],
+          answer:
+            'イントロンの3’スプライス部位の18~40塩基上流にある分枝部位は動物ではYNYYRAYとなっており、RNAスプライシングでイントロンの投げ縄構造を形成するのに重要な役割を担う。',
           commentary: '',
         },
         {
@@ -94,8 +116,10 @@ export const useQuestionList = () => {
           questionSentence: 'PNMT 遺伝子のコードするタンパク質の働きは？',
           choices: [],
           answerImg: [],
-          answer: '準備中',
-          commentary: '',
+          answer:
+            'Phenylethanolamine N-methyltransferase。stress responseで中心的な役割を果たし、心拍数や血圧を上昇させ、瞳孔を開き、血糖値の上昇をもたらすadrenalineの生合成に関与する。',
+          commentary:
+            'adrenalineは高峰譲吉らにより発見され、現代でも心停止・アナフィラキシーショック・敗血症・また気管支喘息時の気管支拡張薬として使用されている。睡眠時無呼吸症候群で高血圧が合併する一つの理由としてPNMTの発現上昇が考えられるようになってきている。',
         },
         {
           detailInfo: '',
@@ -104,8 +128,9 @@ export const useQuestionList = () => {
             'Tyrosine を出発材料として adrenaline が作られるまでの代謝経路は？それを触媒する酵素は？',
           choices: [],
           answerImg: [synthesizeCatecholamine],
-          answer: '準備中',
-          commentary: '',
+          answer: 'チロシン→L-DOPA→ドーパミン→ノルアドレナリン→アドレナリン',
+          commentary:
+            '酵素はチロシンヒドロキシラーゼ、ドーパデカルボキシラーゼ、ドーパミンβ-ヒドロキシラーゼ、PNMT（N-メチル化転移酵素）',
         },
         // {
         //   detailInfo: '',
