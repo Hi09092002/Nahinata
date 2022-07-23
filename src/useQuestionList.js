@@ -86,7 +86,7 @@ export const useQuestionList = () => {
           answerImg: [],
           answer:
             'polyA部位（ポリアデニル化部分）の10~30塩基上流に存在するDNA領域。ヒトの場合はほぼAAUAAA配列を含む。',
-          commentary: '',
+          commentary: 'ポリA鎖を形成する',
         },
         {
           detailInfo: '',
