@@ -18,7 +18,7 @@ export const useQuestionList = () => {
           detailInfo: '',
           questionImg: [],
           questionSentence:
-            'Exon とは？Intron とは？どんな構造上の特徴があるのか？',
+            'Exon とは？Intron とは？どんな構造上の特徴があるのか？《DNA模型の大文字→Exon/小文字→Intronなど》',
           choices: [],
           answerImg: [flankingRegion],
           answer:
@@ -29,7 +29,8 @@ export const useQuestionList = () => {
         {
           detailInfo: '',
           questionImg: [],
-          questionSentence: '5’-flanking region とは？',
+          questionSentence:
+            '5’-flanking region とは？《DNA模型の001~009小文字領域》',
           choices: [],
           answerImg: [flankingRegion],
           answer:
@@ -39,7 +40,8 @@ export const useQuestionList = () => {
         {
           detailInfo: '',
           questionImg: [],
-          questionSentence: '3’-flanking region とは？',
+          questionSentence:
+            '3’-flanking region とは？《DNA模型の112~114小文字領域》',
           choices: [],
           answerImg: [flankingRegion],
           answer:
@@ -49,7 +51,7 @@ export const useQuestionList = () => {
         {
           detailInfo: '',
           questionImg: [],
-          questionSentence: 'TATA box とは何？',
+          questionSentence: 'TATA box とは何？《DNA模型の008: ...tagaaa...》',
           choices: [],
           answerImg: [promoter],
           answer:
@@ -70,7 +72,8 @@ export const useQuestionList = () => {
         {
           detailInfo: '',
           questionImg: [],
-          questionSentence: 'GC box とは？TATA box との違いは？',
+          questionSentence:
+            'GC box とは？TATA box との違いは？《DNA模型007:..gggcgg../006:..ccgccc..》',
           choices: [],
           answerImg: [corePromoter],
           answer:
@@ -81,7 +84,8 @@ export const useQuestionList = () => {
         {
           detailInfo: '',
           questionImg: [],
-          questionSentence: 'Polyadenylation signal とは？',
+          questionSentence:
+            'Polyadenylation signal とは？《DNA模型113~:...AATAAA...》',
           choices: [],
           answerImg: [],
           answer:
@@ -91,7 +95,8 @@ export const useQuestionList = () => {
         {
           detailInfo: '',
           questionImg: [],
-          questionSentence: 'splicing の donor・acceptor とは？例外は？',
+          questionSentence:
+            'splicing の donor・acceptor とは？例外は？《DNA模型020,081:gt.../071,087:...ag》',
           choices: [],
           answerImg: [donorAcceptorSite, removeIntron],
           answer:
