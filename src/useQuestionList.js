@@ -51,7 +51,7 @@ export const useQuestionList = () => {
         {
           detailInfo: '',
           questionImg: [],
-          questionSentence: 'TATA box とは何？《DNA模型の008: ...tagaaa...》',
+          questionSentence: 'TATA box とは何？《DNA模型の008)...tagaaa...》',
           choices: [],
           answerImg: [promoter],
           answer:
@@ -73,7 +73,7 @@ export const useQuestionList = () => {
           detailInfo: '',
           questionImg: [],
           questionSentence:
-            'GC box とは？TATA box との違いは？《DNA模型007:..gggcgg../006:..ccgccc..》',
+            'GC box とは？TATA box との違いは？《DNA模型007)..gggcgg../006)..ccgccc..》',
           choices: [],
           answerImg: [corePromoter],
           answer:
@@ -85,7 +85,7 @@ export const useQuestionList = () => {
           detailInfo: '',
           questionImg: [],
           questionSentence:
-            'Polyadenylation signal とは？《DNA模型113~:...AATAAA...》',
+            'Polyadenylation signal とは？《DNA模型113~)...AATAAA...》',
           choices: [],
           answerImg: [],
           answer:
@@ -96,7 +96,7 @@ export const useQuestionList = () => {
           detailInfo: '',
           questionImg: [],
           questionSentence:
-            'splicing の donor・acceptor とは？例外は？《DNA模型020,081:gt.../071,087:...ag》',
+            'splicing の donor・acceptor とは？例外は？《DNA模型020,081)gt.../071,087)...ag》',
           choices: [],
           answerImg: [donorAcceptorSite, removeIntron],
           answer:
