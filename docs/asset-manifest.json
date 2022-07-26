@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/anywhere-Insulin19220111/static/css/main.2255ca1a.css",
-    "main.js": "/anywhere-Insulin19220111/static/js/main.aab804e9.js",
+    "main.js": "/anywhere-Insulin19220111/static/js/main.8e41972d.js",
     "static/media/splicing.png": "/anywhere-Insulin19220111/static/media/splicing.4955c5e24414e3130a61.png",
     "static/media/titleImg.JPG": "/anywhere-Insulin19220111/static/media/titleImg.aaf438e083550d371412.JPG",
     "static/media/removeIntron.png": "/anywhere-Insulin19220111/static/media/removeIntron.bbef96749439afadbbca.png",
@@ -12,10 +12,10 @@
     "static/media/donorAcceptorSite.png": "/anywhere-Insulin19220111/static/media/donorAcceptorSite.86226a711345e2de834e.png",
     "index.html": "/anywhere-Insulin19220111/index.html",
     "main.2255ca1a.css.map": "/anywhere-Insulin19220111/static/css/main.2255ca1a.css.map",
-    "main.aab804e9.js.map": "/anywhere-Insulin19220111/static/js/main.aab804e9.js.map"
+    "main.8e41972d.js.map": "/anywhere-Insulin19220111/static/js/main.8e41972d.js.map"
   },
   "entrypoints": [
     "static/css/main.2255ca1a.css",
-    "static/js/main.aab804e9.js"
+    "static/js/main.8e41972d.js"
   ]
 }
