@@ -173,10 +173,10 @@ export const Setting = ({
         <Image
           src={titleImg}
           alt="TitleImage"
-          m={0}
-          p="1"
+          m="auto"
+          p="2"
           mb={-14}
-          borderRadius="lg"
+          borderRadius="xl"
         />
         <Flex ml={4} mr="4">
           {checkMsg === '条件を満たした質問が存在しません' ? (

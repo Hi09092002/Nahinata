@@ -47,6 +47,13 @@ function App() {
     savingHistory = savingHistory.substring(0, savingHistory.length - 1)
     jsCookie.set('history', savingHistory)
     console.log('saveHistory:' + jsCookie.get('history'))
+    let jsonData = {
+      app: 'anywhere-Insulin19220111',
+      latestUpdate: new Date().getTime(),
+      status: settingDetail,
+      history: savingHistory,
+    }
+    localStorage.setItem('anywhere-Insulin19220111', JSON.stringify(jsonData))
   }
   return (
     <>
