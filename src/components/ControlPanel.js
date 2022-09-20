@@ -14,6 +14,10 @@ import {
   Divider,
   Text,
   Tag,
+  CircularProgress,
+  CircularProgressLabel,
+  Flex,
+  Box,
 } from '@chakra-ui/react'
 import { SettingsIcon, ChevronDownIcon } from '@chakra-ui/icons'
 export const ControlPanel = ({ showSettingDetail, showHistory }) => {
@@ -23,8 +27,12 @@ export const ControlPanel = ({ showSettingDetail, showHistory }) => {
   const scrollToTheBottom = () => {
     let element = document.documentElement
     let bottom = element.scrollHeight - element.clientHeight
-    window.scroll(0, bottom)
+    window.scrollTo({
+      top: bottom,
+      behavior: 'smooth',
+    })
   }
+  let isAnsweredPoint = history[history.length - 1].isAnswered ? 0 : 1
   return (
     <>
       <Stack
@@ -36,17 +44,42 @@ export const ControlPanel = ({ showSettingDetail, showHistory }) => {
         right={'5'}
         alignItems={'end'}
       >
-        <Button
-          color={'gray.600'}
-          variant="outline"
-          borderRadius={'lg'}
-          bgColor={'gray.50'}
-          h="45px"
-          w={'45px'}
-          onClick={onOpen}
-        >
-          <SettingsIcon w={'25px'} h="25px" />
-        </Button>
+        {history[history.length - 1].remainingQuestionList.length > 0 ||
+        history[history.length - 1].isAnswered === false ? (
+          <Button
+            // color={'gray.600'}
+            borderColor={'white'}
+            borderWidth="2px"
+            variant="solid"
+            borderRadius={'lg'}
+            // bgColor={'white'}
+            h="45px"
+            w={'45px'}
+            onClick={onOpen}
+            colorScheme="blackAlpha"
+            boxShadow="dark-lg"
+          >
+            <SettingsIcon w={'25px'} h="25px" color={'white'} />
+          </Button>
+        ) : (
+          <Button
+            color={'white'}
+            opacity="0.9"
+            borderColor={'white'}
+            borderWidth="2px"
+            variant="solid"
+            borderRadius={'lg'}
+            h="45px"
+            w={'45px'}
+            onClick={onOpen}
+            // bgColor="red"
+            background="linear-gradient(#e66465, green);"
+            // colorScheme="blackAlpha"
+            boxShadow="dark-lg"
+          >
+            <SettingsIcon w={'25px'} h="25px" color={'white'} />
+          </Button>
+        )}
       </Stack>
       <Modal isOpen={isOpen} onClose={onClose}>
         <ModalOverlay />
@@ -76,10 +109,41 @@ export const ControlPanel = ({ showSettingDetail, showHistory }) => {
             ))}
             <Divider orientation="horizontal" mt={3} mb="1" />
             <Text>現在の成績:</Text>
-            <Text fontWeight={'bold'} pl="2">
+            {/* <Text fontWeight={'bold'} pl="2">
               現在{history[history.length - 1].questionNum}問目 / 残り
               {history[history.length - 1].remainingQuestionList.length}問
-            </Text>
+            </Text> */}
+            <Flex ml={'4'} mt={3} mb="-2" alignItems={'center'}>
+              <CircularProgress
+                color="teal"
+                trackColor="gray.200"
+                value={
+                  (100 *
+                    (history[history.length - 1].questionNum -
+                      isAnsweredPoint)) /
+                  (history[history.length - 1].questionNum +
+                    history[history.length - 1].remainingQuestionList.length)
+                }
+              >
+                <CircularProgressLabel>
+                  {Math.floor(
+                    (100 *
+                      (history[history.length - 1].questionNum -
+                        isAnsweredPoint)) /
+                      (history[history.length - 1].questionNum +
+                        history[history.length - 1].remainingQuestionList
+                          .length),
+                  )}
+                  %
+                </CircularProgressLabel>
+              </CircularProgress>
+              <Box ml={2}>
+                <Text fontWeight={'bold'} pl="2">
+                  現在{history[history.length - 1].questionNum}問目 / 残り
+                  {history[history.length - 1].remainingQuestionList.length}問
+                </Text>
+              </Box>
+            </Flex>
           </ModalBody>
 
           <ModalFooter>
@@ -106,7 +170,9 @@ export const ControlPanel = ({ showSettingDetail, showHistory }) => {
         alignItems={'end'}
       >
         <Button
-          colorScheme="teal"
+          // colorScheme="teal"
+          bgColor={'teal'}
+          opacity="0.6"
           variant="solid"
           borderRadius={'full'}
           borderWidth="2px"
@@ -114,8 +180,9 @@ export const ControlPanel = ({ showSettingDetail, showHistory }) => {
           h="50px"
           w={'50px'}
           onClick={scrollToTheBottom}
+          boxShadow="dark-lg"
         >
-          <ChevronDownIcon w={'40px'} h="40px" />
+          <ChevronDownIcon w={'40px'} h="40px" color="white" />
         </Button>
       </Stack>
     </>

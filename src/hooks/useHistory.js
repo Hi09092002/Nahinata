@@ -98,7 +98,8 @@ export const useHistory = () => {
         newRemainingQuestion.id = (groupIndex * 1000 + questionIndex).toString()
         newRemainingQuestion.groupTag = group.groupTag
         if (!newRemainingQuestion.detailInfo) {
-          newRemainingQuestion.detailInfo = '(' + (questionIndex + 1).toString() + ')'
+          newRemainingQuestion.detailInfo =
+            '(' + (questionIndex + 1).toString() + ')'
         }
 
         if (newRemainingQuestion.askedQuestionList) {
@@ -183,6 +184,10 @@ export const useHistory = () => {
           ),
           newHistory.askingQuestion,
         ]
+      }
+      // 表示が多くなりすぎないように調節
+      if (newHistory.askedQuestionList.length > 10) {
+        newHistory.askedQuestionList.shift()
       }
       newHistory.askingQuestion = {}
       let randomNum = Math.floor(

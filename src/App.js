@@ -8,7 +8,7 @@ import { useSetting } from './hooks/useSetting'
 import { useHistory } from './hooks/useHistory'
 import { ChoicePanel } from './components/ChoicePanel'
 import { useTechnicalTerm } from './useTechnicalTerm'
-import jsCookie from 'js-cookie'
+// import jsCookie from 'js-cookie'
 
 function App() {
   const { showQuestionList } = useQuestionList()
@@ -25,7 +25,7 @@ function App() {
     deleteWordFilter,
     updateAllSettings,
   } = useSetting()
-  const settingDetail = showSettingDetail()
+  let settingDetail = showSettingDetail()
   const {
     showHistory,
     selectQuestionList,
@@ -37,23 +37,33 @@ function App() {
     loadHistory,
   } = useHistory()
   const history = showHistory()
-  // ここからCookieを利用した設定の引継ぎ
-  const saveHistory = (latestHistory) => {
-    let savingHistory = latestHistory.questionNum + ','
-    latestHistory.remainingQuestionList.forEach((question) => {
-      savingHistory += question.id
-      savingHistory += ','
-    })
-    savingHistory = savingHistory.substring(0, savingHistory.length - 1)
-    jsCookie.set('history', savingHistory)
-    console.log('saveHistory:' + jsCookie.get('history'))
+  const thisAppNameTag = 'anywhere-biochemistry'
+  // ここからWebStorageを利用した設定の引継ぎ
+  let loadData = {
+    app: `${thisAppNameTag}`,
+    latestUpdate: new Date().getTime(),
+  }
+  if (localStorage.getItem(thisAppNameTag)) {
+    loadData = JSON.parse(localStorage.getItem(thisAppNameTag))
+  }
+  const saveHistory = (latestHistory, newSetting) => {
+    let savingHistory = ''
+    if (latestHistory && latestHistory.remainingQuestionList) {
+      savingHistory = latestHistory.questionNum + ','
+      latestHistory.remainingQuestionList.forEach((question) => {
+        savingHistory += question.id
+        savingHistory += ','
+      })
+      savingHistory = savingHistory.substring(0, savingHistory.length - 1)
+    }
     let jsonData = {
-      app: 'anywhere-Insulin19220111',
+      app: `${thisAppNameTag}`,
       latestUpdate: new Date().getTime(),
-      status: settingDetail,
+      status: newSetting,
       history: savingHistory,
     }
-    localStorage.setItem('anywhere-Insulin19220111', JSON.stringify(jsonData))
+    localStorage.setItem(thisAppNameTag, JSON.stringify(jsonData))
+    console.log(localStorage.getItem(thisAppNameTag))
   }
   return (
     <>
@@ -71,7 +81,7 @@ function App() {
           colorScheme="teal"
           variant={'outline'}
         >
-          Ver.0.9
+          Ver.1.3
         </Badge>
         <Badge m={1} mt="0" borderRadius="full" px="2" colorScheme="teal">
           生化学
@@ -81,51 +91,59 @@ function App() {
       {settingDetail.isSet ? (
         <></>
       ) : (
-        <Setting
-          questionList={questionList}
-          showSettingDetail={showSettingDetail}
-          updateQuestionOrder={updateQuestionOrder}
-          toggleQuestionRange={toggleQuestionRange}
-          updateQuestionMode={updateQuestionMode}
-          selectQuestionList={selectQuestionList}
-          nextQuestion={nextQuestion}
-          makeSetting={makeSetting}
-          addWordFilter={addWordFilter}
-          deleteWordFilter={deleteWordFilter}
-          updateAllSettings={updateAllSettings}
-          loadHistory={loadHistory}
-        />
+        <Box maxW={'lg'} mr="auto" ml={'auto'}>
+          <Setting
+            questionList={questionList}
+            loadData={loadData}
+            history={history}
+            saveHistory={saveHistory}
+            showSettingDetail={showSettingDetail}
+            updateQuestionOrder={updateQuestionOrder}
+            toggleQuestionRange={toggleQuestionRange}
+            updateQuestionMode={updateQuestionMode}
+            selectQuestionList={selectQuestionList}
+            nextQuestion={nextQuestion}
+            makeSetting={makeSetting}
+            addWordFilter={addWordFilter}
+            deleteWordFilter={deleteWordFilter}
+            updateAllSettings={updateAllSettings}
+            loadHistory={loadHistory}
+          />
+        </Box>
       )}
       {settingDetail.isSet ? (
-        <>
-          {/* <ResultBar
+        <Box bgColor={'blackAlpha.100'} mt="-100px" pt={'100px'} minH="1500px">
+          <Box maxW="2xl" mr="auto" ml={'auto'}>
+            {/* <ResultBar
             showHistory={showHistory}
             showSettingDetail={showSettingDetail}
           /> */}
-          <QuestionsLog
-            // questionList={questionList}
-            showHistory={showHistory}
-            nextQuestion={nextQuestion}
-            checkAnswer={checkAnswer}
-            // hideAnswer={hideAnswer}
-            showSettingDetail={showSettingDetail}
-            reviewQuestion={reviewQuestion}
-            reviewAskingQuestion={reviewAskingQuestion}
-            saveHistory={saveHistory}
-            technicalTerm={technicalTerm}
-          />
-          {settingDetail.mode === 'practice' &&
-          history[history.length - 1].askingQuestion.choices.length > 1 ? (
-            <ChoicePanel />
-          ) : (
-            <></>
-          )}
-          <Box h={'200px'} width="100px"></Box>
-          <ControlPanel
-            showSettingDetail={showSettingDetail}
-            showHistory={showHistory}
-          />
-        </>
+            <QuestionsLog
+              // questionList={questionList}
+              loadData={loadData}
+              showHistory={showHistory}
+              nextQuestion={nextQuestion}
+              checkAnswer={checkAnswer}
+              // hideAnswer={hideAnswer}
+              showSettingDetail={showSettingDetail}
+              reviewQuestion={reviewQuestion}
+              reviewAskingQuestion={reviewAskingQuestion}
+              saveHistory={saveHistory}
+              technicalTerm={technicalTerm}
+            />
+            {settingDetail.mode === 'practice' &&
+            history[history.length - 1].askingQuestion.choices.length > 1 ? (
+              <ChoicePanel />
+            ) : (
+              <></>
+            )}
+            <Box h={'300px'} width="100px"></Box>
+            <ControlPanel
+              showSettingDetail={showSettingDetail}
+              showHistory={showHistory}
+            />
+          </Box>
+        </Box>
       ) : (
         <></>
       )}

@@ -25,6 +25,7 @@ import {
   useDisclosure,
   Flex,
   Spacer,
+  Skeleton,
 } from '@chakra-ui/react'
 import {
   CheckCircleIcon,
@@ -35,10 +36,13 @@ import {
 import '../App.css'
 import { SearchWord } from './SearchWord'
 import { useState } from 'react'
-import jsCookie from 'js-cookie'
+// import jsCookie from 'js-cookie'
 import titleImg from '../img/titleImg.JPG'
 export const Setting = ({
   questionList,
+  loadData,
+  history,
+  saveHistory,
   showSettingDetail,
   updateQuestionOrder,
   toggleQuestionRange,
@@ -50,11 +54,11 @@ export const Setting = ({
   deleteWordFilter,
   updateAllSettings,
   loadHistory,
+  loadedSetting,
 }) => {
   const { isOpen, onOpen, onClose } = useDisclosure()
   const settingDetail = showSettingDetail()
   const [checkMsg, setCheckMsg] = useState()
-  const toast = useToast()
   const checkSelection = () => {
     let selectedQuestionList = []
     questionList.forEach((group) => {
@@ -104,49 +108,25 @@ export const Setting = ({
     }
   }
   // ここからCookieを使った設定の引継ぎ
-  let savedSettingDetail = showSettingDetail()
-  let getCookiesFlag = 0
-  // let isLoaded
-  jsCookie.set('locale', 'ja-JP')
-  if (jsCookie.get('questionOrder')) {
-    savedSettingDetail.questionOrder = jsCookie.get('questionOrder')
-    getCookiesFlag = 1
-  }
 
-  if (jsCookie.get('questionRange')) {
-    savedSettingDetail.questionRange = jsCookie.get('questionRange').split(',')
-    getCookiesFlag = 1
-  }
-  if (jsCookie.get('wordFilter')) {
-    savedSettingDetail.wordFilter = jsCookie.get('wordFilter').split(',')
-    getCookiesFlag = 1
-  }
-  // if (isLoaded !== true && getCookiesFlag === 1) {
-  //   console.log('savedSettingDetail:' + isLoaded + getCookiesFlag)
-  //   toast({
-  //     title: '前回の設定を引継ぎました',
-  //     position: 'top',
-  //     status: 'info',
-  //     isClosable: true,
-  //   })
-  //   // updateAllSettings(savedSettingDetail)
-  //   isLoaded = true
+  // if (jsCookie.get('questionOrder')) {
+  //   savedSettingDetail.questionOrder = jsCookie.get('questionOrder')
   // }
-  const saveSetting = (settingDetail) => {
-    jsCookie.set('questionOrder', settingDetail.questionOrder)
-    jsCookie.set('questionRange', settingDetail.questionRange)
-    jsCookie.set('wordFilter', settingDetail.wordFilter)
-    console.log(jsCookie.get())
-  }
-  let remainingNum = 0
-  if (jsCookie.get('history')) {
-    remainingNum = jsCookie.get('history').split(',').length - 1
-    console.log(jsCookie.get('history').split(','))
-  }
+
+  // if (jsCookie.get('questionRange')) {
+  //   savedSettingDetail.questionRange = jsCookie.get('questionRange').split(',')
+  // }
+  // if (jsCookie.get('wordFilter')) {
+  //   savedSettingDetail.wordFilter = jsCookie.get('wordFilter').split(',')
+  // }
+  // if (jsCookie.get('history')) {
+  //   remainingNum = jsCookie.get('history').split(',').length - 1
+  //   console.log(jsCookie.get('history').split(','))
+  // }
   return (
     <>
       <Box
-        maxW="sm"
+        maxW="lg"
         minH={'150px'}
         transitionDelay="3s"
         className="Headline1"
@@ -173,10 +153,11 @@ export const Setting = ({
         <Image
           src={titleImg}
           alt="TitleImage"
-          m="auto"
-          p="2"
+          m={0}
+          p="1"
           mb={-14}
-          borderRadius="xl"
+          borderRadius="lg"
+          fallback={<Skeleton height={'sm'} />}
         />
         <Flex ml={4} mr="4">
           {checkMsg === '条件を満たした質問が存在しません' ? (
@@ -203,16 +184,18 @@ export const Setting = ({
                 selectQuestionList(questionList, settingDetail)
                 nextQuestion(settingDetail)
                 makeSetting()
-                saveSetting(settingDetail)
+                saveHistory(history[history.length - 1], settingDetail)
               }}
             >
               はじめから
             </Button>
           )}
           <Spacer />
-
-          {jsCookie.get('history') &&
-          jsCookie.get('history').split(',').length > 1 ? (
+          {loadData &&
+          loadData !== {} &&
+          loadData.history &&
+          loadData.status &&
+          loadData.history.split(',').length > 1 ? (
             <Button
               bgGradient="linear(to bottom right, green.300, green.800)"
               color={'white'}
@@ -222,28 +205,24 @@ export const Setting = ({
               borderColor="whiteAlpha"
               opacity={'0.9'}
               onClick={() => {
-                // updateQuestionMode('practice')
-                loadHistory(jsCookie.get('history'), questionList)
-                updateAllSettings({
-                  isSet: false,
-                  mode: 'training',
-                  questionOrder: jsCookie.get('questionOrder'),
-                  questionRange: jsCookie.get('questionRange').split(','),
-                  wordFilter: jsCookie.get('wordFilter').split(','),
-                })
-                nextQuestion(settingDetail)
+                loadHistory(loadData.history, questionList)
+                updateAllSettings(loadData.status)
+                nextQuestion(loadData.status)
                 makeSetting()
-                saveSetting(settingDetail)
+                saveHistory(history[history.length - 1], loadData.status)
+                // 現在非同期バグが発生しており、ロードしたsettingをこの形でないと反映できない。がんばれ、未来の俺！
+                setTimeout(() => {
+                  updateAllSettings(loadData.status)
+                }, 2000)
               }}
             >
-              続きから(あと{remainingNum}問)
+              続きから(あと{loadData.history.split(',').length - 1}問)
             </Button>
           ) : (
             <Button
               bgGradient="linear(to bottom right, green.300, green.800)"
               color={'white'}
               variant="solid"
-              onClick={() => updateQuestionMode('practice')}
               isDisabled
               // borderRadius={'full'}
             >
@@ -283,6 +262,14 @@ export const Setting = ({
             </List>
             <Divider orientation="horizontal" mt={3} mb="1" />
             <Text>アップデート履歴</Text>
+            <Text fontSize={'sm'}>09-16_Ver1.3-ボタンを透明に</Text>
+            <Text fontSize={'sm'}>
+              09-08_Ver1.2-タブレット向けにデザイン調節
+            </Text>
+            <Text fontSize={'sm'}>09-07_Ver1.1-WebStorageを採用</Text>
+            <Text fontSize={'sm'}>
+              08-01_Ver1.0-デザインを改善.正式リリース
+            </Text>
             <Text fontSize={'sm'}>07-10_Ver0.9-辞書機能を試験実装</Text>
             <Text fontSize={'sm'}>06-01_Ver0.8-重くなりすぎないように改善</Text>
             <Text fontSize={'sm'}>05-25_Ver0.7-”続きから再開”機能を仮実装</Text>
@@ -302,86 +289,87 @@ export const Setting = ({
           </ModalFooter>
         </ModalContent>
       </Modal>
+      <Box mr={'auto'} ml="auto" maxW={'sm'}>
+        {checkMsg === '条件を満たした質問が存在しません' ? (
+          <Alert status="error" fontWeight={'semibold'} maxW="lg">
+            <AlertIcon />
+            {checkMsg}
+          </Alert>
+        ) : (
+          <>
+            {checkMsg ? (
+              <Alert status="success" maxW={'lg'}>
+                <AlertIcon />
+                {checkMsg}
+              </Alert>
+            ) : (
+              <></>
+            )}
+          </>
+        )}
 
-      {checkMsg === '条件を満たした質問が存在しません' ? (
-        <Alert status="error" fontWeight={'semibold'}>
-          <AlertIcon />
-          {checkMsg}
-        </Alert>
-      ) : (
-        <>
-          {checkMsg ? (
-            <Alert status="success">
-              <AlertIcon />
-              {checkMsg}
-            </Alert>
-          ) : (
-            <></>
-          )}
-        </>
-      )}
-
-      <RadioGroup defaultValue={settingDetail.questionOrder}>
-        <Stack spacing={5} direction="row" p={2}>
-          <Radio
-            colorScheme="red"
-            value="random"
-            onChange={() => {
-              updateQuestionOrder('random')
-              saveSetting(settingDetail)
-            }}
-          >
-            ランダム出題
-          </Radio>
-          <Radio
-            colorScheme="green"
-            value="ascend"
-            onChange={() => {
-              updateQuestionOrder('ascend')
-              saveSetting(settingDetail)
-            }}
-          >
-            順番通り出題
-          </Radio>
-        </Stack>
-      </RadioGroup>
-      <CheckboxGroup
-        colorScheme="green"
-        defaultValue={settingDetail.questionRange}
-      >
-        <Stack
-          w={'sm'}
-          spacing={[2, 4]}
-          direction={['column']}
-          bg="blackAlpha.100"
-          p={2}
-          mb="5"
-        >
-          {questionList.map((group, index) => (
-            <Checkbox
-              value={group.groupTag}
-              key={index}
+        <RadioGroup defaultValue={settingDetail.questionOrder}>
+          <Stack spacing={5} direction="row" p={2}>
+            <Radio
+              colorScheme="red"
+              value="random"
               onChange={() => {
-                toggleQuestionRange(group.groupTag)
-                checkSelection()
-                saveSetting(settingDetail)
+                updateQuestionOrder('random')
+                // saveSetting(settingDetail)
               }}
             >
-              {group.groupTag}(
-              {group.groupContents ? group.groupContents.length : '0'}問)
-            </Checkbox>
-          ))}
-        </Stack>
-      </CheckboxGroup>
-      <SearchWord
-        showSettingDetail={showSettingDetail}
-        addWordFilter={addWordFilter}
-        deleteWordFilter={deleteWordFilter}
-        questionList={questionList}
-        checkSelection={checkSelection}
-        saveSetting={saveSetting}
-      />
-      <Divider orientation="horizontal" />
+              ランダム出題
+            </Radio>
+            <Radio
+              colorScheme="green"
+              value="ascend"
+              onChange={() => {
+                updateQuestionOrder('ascend')
+                // saveSetting(settingDetail)
+              }}
+            >
+              順番通り出題
+            </Radio>
+          </Stack>
+        </RadioGroup>
+        <CheckboxGroup
+          colorScheme="green"
+          defaultValue={settingDetail.questionRange}
+        >
+          <Stack
+            w={'sm'}
+            spacing={[2, 4]}
+            direction={['column']}
+            bg="blackAlpha.100"
+            p={2}
+            mb="5"
+          >
+            {questionList.map((group, index) => (
+              <Checkbox
+                value={group.groupTag}
+                key={index}
+                onChange={() => {
+                  toggleQuestionRange(group.groupTag)
+                  checkSelection()
+                  // saveSetting(settingDetail)
+                }}
+              >
+                {group.groupTag}(
+                {group.groupContents ? group.groupContents.length : '0'}問)
+              </Checkbox>
+            ))}
+          </Stack>
+        </CheckboxGroup>
+        <SearchWord
+          showSettingDetail={showSettingDetail}
+          addWordFilter={addWordFilter}
+          deleteWordFilter={deleteWordFilter}
+          questionList={questionList}
+          checkSelection={checkSelection}
+          // saveSetting={saveSetting}
+        />
+      </Box>
+      <Divider orientation="horizontal" maxW={'lg'} />
       <Text fontSize="xs" textColor={'blackAlpha.500'} ml="4">
         ©2022- IgaTatApps
       </Text>

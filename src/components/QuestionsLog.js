@@ -13,6 +13,7 @@ import {
   // useDisclosure,
   Collapse,
   Tooltip,
+  Skeleton,
 } from '@chakra-ui/react'
 import { ArrowDownIcon, RepeatIcon, ExternalLinkIcon } from '@chakra-ui/icons'
 import { ResultBar } from './ResultBar'
@@ -21,6 +22,7 @@ import { useState } from 'react'
 
 export const QuestionsLog = ({
   // questionList,
+  loadData,
   showHistory,
   nextQuestion,
   checkAnswer,
@@ -38,7 +40,7 @@ export const QuestionsLog = ({
     if (history[history.length - 1].remainingQuestionList.length === 0) {
       toast({
         position: 'top-right',
-        title: 'Good Job!',
+        title: 'GOOD JOB',
         description: '全ての問題が終わりました！',
         status: 'success',
         duration: 9000,
@@ -74,6 +76,7 @@ export const QuestionsLog = ({
   }
   let history = showHistory()
   let settingDetail = showSettingDetail()
+  console.log(settingDetail)
 
   console.log(history[history.length - 1].askedQuestionList)
   // const scrollToTheBottom = () => {
@@ -93,11 +96,12 @@ export const QuestionsLog = ({
             .map((question, index) => (
               <>
                 <Box
-                  maxW="lg"
+                  maxW="2xl"
+                  bgColor={'white'}
                   borderWidth="1px"
                   borderRadius="lg"
                   overflow="hidden"
-                  mb={3}
+                  mb={1}
                   mt="3"
                   key={index + 'QuestionBox'}
                 >
@@ -107,6 +111,7 @@ export const QuestionsLog = ({
                         src={image}
                         alt="写真読み込みエラー"
                         key={index + imageNum + 'QuestionImage'}
+                        fallback={<Skeleton height="100px" />}
                       />
                     ))}
                   <Box p="6">
@@ -155,18 +160,26 @@ export const QuestionsLog = ({
                   </Box>
                 </Box>
                 <Box
-                  maxW="lg"
-                  borderWidth="1px"
+                  maxW="2xl"
+                  mb={'100px'}
+                  borderWidth="2px"
+                  borderColor={'red.100'}
                   borderRadius="lg"
                   overflow="hidden"
-                  bg={'red.50'}
+                  bg={'red.100'}
                   key={index + 'AnswerBox'}
                 >
-                  {question.answerImg.map((image) => (
-                    <Image src={image} alt="写真読み込みエラー" />
-                  ))}
+                  <Box w={'100%'} bgColor="white" m={0} p="0">
+                    {question.answerImg.map((image) => (
+                      <Image
+                        src={image}
+                        alt="写真読み込みエラー"
+                        fallback={<Skeleton height="100px" />}
+                      />
+                    ))}
+                  </Box>
 
-                  <Box p="6" pb={0}>
+                  <Box p="4" pb={0}>
                     <Box display="flex" alignItems="baseline">
                       <Badge variant="solid" colorScheme="red">
                         解答
@@ -201,6 +214,7 @@ export const QuestionsLog = ({
                       >
                         <IconButton
                           colorScheme={'red'}
+                          opacity="0.3"
                           variant="ghost"
                           aria-label="review this question"
                           onClick={() => {
@@ -214,7 +228,7 @@ export const QuestionsLog = ({
                               isClosable: true,
                             })
                           }}
-                          icon={<RepeatIcon />}
+                          icon={<RepeatIcon boxSize={'1.5em'} color="black" />}
                         />
                       </Tooltip>
                     </Flex>
@@ -237,11 +251,12 @@ export const QuestionsLog = ({
       {history[history.length - 1].askingQuestion.questionSentence ? (
         <>
           <Box
-            maxW="lg"
+            maxW="2xl"
+            bgColor={'white'}
             borderWidth="1px"
             borderRadius="lg"
             overflow="hidden"
-            mb={3}
+            mb={1}
             mt="3"
             className="DownSlideIn"
           >
@@ -249,8 +264,9 @@ export const QuestionsLog = ({
               (image, imageNum) => (
                 <Image
                   src={image}
-                  alt="ERROR:この文章が見えた時は作成者に報告してください"
+                  alt="画像読み込みエラー"
                   key={imageNum + 'QuestionImage'}
+                  fallback={<Skeleton height="100px" />}
                 />
               ),
             )}
@@ -277,13 +293,13 @@ export const QuestionsLog = ({
                   .reduce(
                     (prev, currentTerms) => {
                       return currentTerms.term.reduce((previousArray, term) => {
-                        console.log(previousArray)
+                        // console.log(previousArray)
                         return previousArray.reduce(
                           (previousStr, currentStr) => {
-                            console.log(currentStr)
-                            console.log(
-                              currentStr.split(new RegExp(`(${term})`, 'g')),
-                            )
+                            // console.log(currentStr)
+                            // console.log(
+                            // currentStr.split(new RegExp(`(${term})`, 'g')),
+                            // )
                             let newStr = []
                             if (
                               currentStr.match(new RegExp(`(${term})`, 'g'))
@@ -346,18 +362,25 @@ export const QuestionsLog = ({
           <Collapse in={isOpen} animateOpacity>
             {history[history.length - 1].isAnswered ? (
               <Box
-                maxW="lg"
-                borderWidth="1px"
+                maxW="2xl"
+                borderWidth="2px"
+                borderColor={'red.100'}
                 borderRadius="lg"
                 overflow="hidden"
-                bg={'red.50'}
+                bg={'red.100'}
                 // className="DownSlideIn"
               >
-                {history[history.length - 1].askingQuestion.answerImg.map(
-                  (image) => (
-                    <Image src={image} alt="写真読み込みエラー" />
-                  ),
-                )}
+                <Box w={'100%'} bgColor="white" m={0} p="0">
+                  {history[history.length - 1].askingQuestion.answerImg.map(
+                    (image) => (
+                      <Image
+                        src={image}
+                        alt="写真読み込みエラー"
+                        fallback={<Skeleton height="100px" />}
+                      />
+                    ),
+                  )}
+                </Box>
 
                 <Box p="6" pb={0}>
                   <Box display="flex" alignItems="baseline">
@@ -495,6 +518,7 @@ export const QuestionsLog = ({
                     >
                       <IconButton
                         colorScheme={'red'}
+                        opacity="0.3"
                         variant="ghost"
                         aria-label="review this question"
                         onClick={() => {
@@ -513,7 +537,7 @@ export const QuestionsLog = ({
                             isClosable: true,
                           })
                         }}
-                        icon={<RepeatIcon />}
+                        icon={<RepeatIcon color="black" boxSize={'1.5em'} />}
                       />
                     </Tooltip>
                   </Flex>
@@ -535,11 +559,13 @@ export const QuestionsLog = ({
       {history[history.length - 1].isAnswered &&
       history[history.length - 1].remainingQuestionList.length > 0 ? (
         <Button
+          autoFocus
           m={1}
           ml="3"
           rightIcon={<ArrowDownIcon />}
           colorScheme="teal"
           variant={'outline'}
+          bgColor="white"
           onClick={() => {
             nextQuestion(settingDetail)
             // scrollToTheBottom()
@@ -555,17 +581,20 @@ export const QuestionsLog = ({
         <></>
       ) : (
         <Button
+          autoFocus
           m={1}
           ml="3"
-          mt={-2}
+          mt={0}
           rightIcon={<ArrowDownIcon />}
           colorScheme="red"
           variant={'solid'}
           onClick={() => {
+            console.log('setting確認')
+            console.log(settingDetail)
             checkAnswer()
             setIsOpen(true)
             toastGoodJob()
-            saveHistory(history[history.length - 1])
+            saveHistory(history[history.length - 1], settingDetail)
             // setTimeout(() => scrollToTheBottom(), 500)
           }}
         >
