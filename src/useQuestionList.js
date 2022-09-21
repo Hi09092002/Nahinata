@@ -7,6 +7,9 @@ import donorAcceptorSite from './img/answer/donorAcceptorSite.png'
 import flankingRegion from './img/answer/flankingRegion.png'
 import splicing from './img/answer/splicing.png'
 import removeIntron from './img/answer/removeIntron.png'
+import tRNA from './img/answer/tRNA.png'
+import snRNA from './img/answer/snRNA.png'
+import promotor from './img/answer/promotor.png'
 
 export const useQuestionList = () => {
   const [questionList, setQuestionList] = useState([
@@ -136,6 +139,31 @@ export const useQuestionList = () => {
           answer: 'チロシン→L-DOPA→ドーパミン→ノルアドレナリン→アドレナリン',
           commentary:
             '酵素はチロシンヒドロキシラーゼ、ドーパデカルボキシラーゼ、ドーパミンβ-ヒドロキシラーゼ、PNMT（N-メチル化転移酵素）',
+        },
+        // {
+        //   detailInfo: '',
+        //   questionImg: [],
+        //   questionSentence: '',
+        //   choices: [],
+        //   answerImg: [],
+        //   answer: '',
+        //   commentary: '',
+        // },
+      ],
+    },
+    {
+      groupTag: '実習課題',
+      groupContents: [
+        {
+          detailInfo: '核酸1',
+          questionImg: [],
+          questionSentence:
+            '真核生物にはどのようなRNA種があるか、それぞれのRNA種の(1)total RNAに占める割合、(2)生合成過程と細胞内局在、(3)構造上の特徴、(4)機能について述べよ。',
+          choices: [],
+          answerImg: [tRNA, snRNA, splicing],
+          answer:
+            '（リボソームrRNA）約80%。核小体でひとつながりの前駆体として転写・切断（真核生物では4種類）され、その後200か所以上の場所で修飾を受ける。リボソームとして粗面小胞体や細胞質に局在する。多数のrRNAとタンパク質が結合してリボソームという顆粒として存在するのが特徴で、翻訳時にアミノ酸がひとつずつ結合していく際のペプチド結合の形成を触媒する作用をもつ。　（転移tRNA）約15%。一本の前駆体RNAが転写された後、切断され、100種類以上の修飾を受けて完成する。グローバルリーフモデルという二次構造がさらに折りたたまれてL型の構造をとるのが特徴的。翻訳時にリボソームまでアンチコドンに対応するアミノ酸を運ぶ。　（メッセンジャーmRNA）約5%。RNAポリメラーゼⅡによって核内で生成され、5’末端にキャップ、3’末端にポリアデニル化(polyA鎖)の修飾を受け、核外のリボソームに付着しタンパク合成に関与した後、速やかに分解される。一本鎖構造が特徴的。RNAポリメラーゼによってDNAから転写されたタンパク質の配列情報をコードしている。　（核内低分子snRNA）微量。RNAポリメラーゼⅡまたはRNAポリメラーゼⅢによって転写され、核内で活動する。低分子RNAで、タンパク質のセットと常に結合して複合体を形成している。核内のmRNA前駆体のプロセシングや転写因子の調節、RNAポリメラーゼⅡの調節を行っており、プラダー・ウィリー症候群の異常領域と関連している。　https://ruo.mbl.co.jp/bio/product/epigenetics/article/RNA.html',
+          commentary: '',
         },
         // {
         //   detailInfo: '',
