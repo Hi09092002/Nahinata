@@ -140,6 +140,25 @@ export const useQuestionList = () => {
           commentary:
             '酵素はチロシンヒドロキシラーゼ、ドーパデカルボキシラーゼ、ドーパミンβ-ヒドロキシラーゼ、PNMT（N-メチル化転移酵素）',
         },
+        {
+          detailInfo: '核酸2',
+          questionImg: [],
+          questionSentence:
+            '一般に遺伝子情報発現の調節機構としてどのような可能性が考えられるか。また、今回の実習で検討した遺伝子についてはどのような調節を受けていると考えられるか？ハウスキーピング遺伝子と組織（細胞）特異的発現をする遺伝子について考えてみよう。',
+          choices: [],
+          answerImg: [],
+          answer: '',
+          commentary: '',
+        },
+        {
+          detailInfo: '核酸3',
+          questionImg: [],
+          questionSentence: '遺伝子情報...',
+          choices: [],
+          answerImg: [],
+          answer: '',
+          commentary: '',
+        },
         // {
         //   detailInfo: '',
         //   questionImg: [],
