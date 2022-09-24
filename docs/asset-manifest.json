@@ -1,23 +1,25 @@
 {
   "files": {
     "main.css": "/anywhere-Insulin19220111/static/css/main.2255ca1a.css",
-    "main.js": "/anywhere-Insulin19220111/static/js/main.4fb2d5fe.js",
+    "main.js": "/anywhere-Insulin19220111/static/js/main.f21a1a54.js",
     "static/media/splicing.png": "/anywhere-Insulin19220111/static/media/splicing.4955c5e24414e3130a61.png",
     "static/media/titleImg.JPG": "/anywhere-Insulin19220111/static/media/titleImg.aaf438e083550d371412.JPG",
     "static/media/removeIntron.png": "/anywhere-Insulin19220111/static/media/removeIntron.bbef96749439afadbbca.png",
     "static/media/promotor.png": "/anywhere-Insulin19220111/static/media/promotor.6d7ead58b6ea938d9697.png",
     "static/media/synthesizeCatecholamine.png": "/anywhere-Insulin19220111/static/media/synthesizeCatecholamine.3dfa41b552934320dc8b.png",
+    "static/media/geneDuplication.png": "/anywhere-Insulin19220111/static/media/geneDuplication.d1bfa66ca56ea08f8eec.png",
     "static/media/tRNA.png": "/anywhere-Insulin19220111/static/media/tRNA.6909fa01835d3ee126ec.png",
     "static/media/snRNA.png": "/anywhere-Insulin19220111/static/media/snRNA.0aaf3a3de002ed907e62.png",
     "static/media/flankingRegion.png": "/anywhere-Insulin19220111/static/media/flankingRegion.17afeca804c4a92db735.png",
+    "static/media/insulinLikePeptides.png": "/anywhere-Insulin19220111/static/media/insulinLikePeptides.d1b34dce0b19247f34fc.png",
     "static/media/corePromoter.png": "/anywhere-Insulin19220111/static/media/corePromoter.85bf0e792ed0075ed41a.png",
     "static/media/donorAcceptorSite.png": "/anywhere-Insulin19220111/static/media/donorAcceptorSite.86226a711345e2de834e.png",
     "index.html": "/anywhere-Insulin19220111/index.html",
     "main.2255ca1a.css.map": "/anywhere-Insulin19220111/static/css/main.2255ca1a.css.map",
-    "main.4fb2d5fe.js.map": "/anywhere-Insulin19220111/static/js/main.4fb2d5fe.js.map"
+    "main.f21a1a54.js.map": "/anywhere-Insulin19220111/static/js/main.f21a1a54.js.map"
   },
   "entrypoints": [
     "static/css/main.2255ca1a.css",
-    "static/js/main.4fb2d5fe.js"
+    "static/js/main.f21a1a54.js"
   ]
 }

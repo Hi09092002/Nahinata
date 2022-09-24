@@ -10,6 +10,8 @@ import removeIntron from './img/answer/removeIntron.png'
 import tRNA from './img/answer/tRNA.png'
 import snRNA from './img/answer/snRNA.png'
 import promotor from './img/answer/promotor.png'
+import insulinLikePeptides from './img/answer/insulinLikePeptides.png'
+import geneDuplication from './img/answer/geneDuplication.png'
 
 export const useQuestionList = () => {
   const [questionList, setQuestionList] = useState([
@@ -146,18 +148,44 @@ export const useQuestionList = () => {
           questionSentence:
             '一般に遺伝子情報発現の調節機構としてどのような可能性が考えられるか。また、今回の実習で検討した遺伝子についてはどのような調節を受けていると考えられるか？ハウスキーピング遺伝子と組織（細胞）特異的発現をする遺伝子について考えてみよう。',
           choices: [],
-          answerImg: [],
-          answer: '',
-          commentary: '',
+          answerImg: [flankingRegion],
+          answer:
+            '一般的な調節機構としてDNAのメチル化・ヒストンのリン酸化/メチル化/アセチル化などの遺伝子修飾と、リプレッサー・アクチベーター・エンハンサーサイレンサーなどによる転写調節、キャッピングの調節・スプライシング・ポリAテールの付加・配列特異的な核外輸送などによる転写後調節が挙げられる。今回の膵臓では消化酵素などを刺激に応答して生成する必要があるため、セカンドメッセンジャーによって柔軟に抑制・促進が切り替わる方式の転写調節が活発である可能性がたかい（後日詳しく調べます）',
+          commentary:
+            '遺伝子修飾は転写調節に比べて恒久的な遺伝子発現調節機構で、今回の場合はセカンドメッセンジャーで転写調節を行うために必要な受容体・タンパク質・酵素をコードする部分にDNA修飾がされていると考えられる。',
         },
         {
-          detailInfo: '核酸3',
+          detailInfo: '核酸3-1',
           questionImg: [],
-          questionSentence: '遺伝子情報...',
+          questionSentence:
+            '(1)insulin 遺伝子について、遺伝子重複の過程とその意義を考察せよ。',
+          choices: [],
+          answerImg: [insulinLikePeptides],
+          answer: '',
+          commentary:
+            'インスリンとインスリン様成長因子IGF(IGF-Ⅰ・IGF-Ⅱ)は、50％程度のアミノ酸配列が同じであるため、高次構造も酷似している。ただし、インスリンとIGFでは切断部位が異なり成熟型分子は異なる。',
+        },
+        {
+          detailInfo: '核酸3-2',
+          questionImg: [],
+          questionSentence:
+            '(2)ribosomal protein S15遺伝子について、遺伝子重複の過程とその意義を考察せよ。',
           choices: [],
           answerImg: [],
           answer: '',
-          commentary: '',
+          commentary:
+            'リボソームプロテインS15は、家族性パーキンソン病原因遺伝子産物LRRK2によってリン酸化を受ける。',
+        },
+        {
+          detailInfo: '核酸3-3',
+          questionImg: [],
+          questionSentence:
+            '(3)遺伝子重複の過程とその意義について、一般的にどう考えるか、考察せよ。',
+          choices: [],
+          answerImg: [geneDuplication],
+          answer:
+            '遺伝子重複は遺伝的組み換えの異常・レトロトランスポゾンの転移・染色体全体の重複などによって遺伝子を含むDNA領域が重複する現象のことである。重複した遺伝子の一方は選択圧から開放されるため、変異が速やかに蓄積され、進化の重要な役割を担っていると考えられている。',
+          commentary: '例：ヘモグロビン・ミオグロビンなど。',
         },
         // {
         //   detailInfo: '',
