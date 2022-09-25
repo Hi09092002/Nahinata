@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/anywhere-Insulin19220111/static/css/main.2255ca1a.css",
-    "main.js": "/anywhere-Insulin19220111/static/js/main.7d7ad579.js",
+    "main.js": "/anywhere-Insulin19220111/static/js/main.a83ed098.js",
     "static/media/splicing.png": "/anywhere-Insulin19220111/static/media/splicing.4955c5e24414e3130a61.png",
     "static/media/titleImg.JPG": "/anywhere-Insulin19220111/static/media/titleImg.aaf438e083550d371412.JPG",
     "static/media/removeIntron.png": "/anywhere-Insulin19220111/static/media/removeIntron.bbef96749439afadbbca.png",
@@ -13,13 +13,14 @@
     "static/media/flankingRegion.png": "/anywhere-Insulin19220111/static/media/flankingRegion.17afeca804c4a92db735.png",
     "static/media/insulinLikePeptides.png": "/anywhere-Insulin19220111/static/media/insulinLikePeptides.d1b34dce0b19247f34fc.png",
     "static/media/corePromoter.png": "/anywhere-Insulin19220111/static/media/corePromoter.85bf0e792ed0075ed41a.png",
+    "static/media/DNArepair.png": "/anywhere-Insulin19220111/static/media/DNArepair.3e2109f73414a235e460.png",
     "static/media/donorAcceptorSite.png": "/anywhere-Insulin19220111/static/media/donorAcceptorSite.86226a711345e2de834e.png",
     "index.html": "/anywhere-Insulin19220111/index.html",
     "main.2255ca1a.css.map": "/anywhere-Insulin19220111/static/css/main.2255ca1a.css.map",
-    "main.7d7ad579.js.map": "/anywhere-Insulin19220111/static/js/main.7d7ad579.js.map"
+    "main.a83ed098.js.map": "/anywhere-Insulin19220111/static/js/main.a83ed098.js.map"
   },
   "entrypoints": [
     "static/css/main.2255ca1a.css",
-    "static/js/main.7d7ad579.js"
+    "static/js/main.a83ed098.js"
   ]
 }
