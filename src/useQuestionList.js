@@ -13,6 +13,9 @@ import promotor from './img/answer/promotor.png'
 import insulinLikePeptides from './img/answer/insulinLikePeptides.png'
 import geneDuplication from './img/answer/geneDuplication.png'
 import DNArepair from './img/answer/DNArepair.png'
+import standardFreeEnergy from './img/answer/standardFreeEnergy.png'
+import SFEquestion from './img/question/SFEquestion.png'
+import SFEquestion2 from './img/question/SFEquestion2.png'
 
 export const useQuestionList = () => {
   const [questionList, setQuestionList] = useState([
@@ -217,6 +220,40 @@ export const useQuestionList = () => {
             '【酵素活性】経時的吸光度変化？（分光光度計で吸光度の経時変化をとらえた酵素活性測定法）【比活性】酵素試料タンパク質1mgあたりに含まれる酵素量[Unit/mg]。',
           commentary:
             '基質と生成物が何らかの方法で区別できれば酵素活性の測定が可能となる。ある条件において1分間に1μmolの基質を生成物に変えるために必要な酵素量が1Unitである。生体材料から酵素を精製するときは、比活性の増加を目安にして、「何倍に精製された」と称することが多い。',
+        },
+        // {
+        //   detailInfo: '',
+        //   questionImg: [],
+        //   questionSentence: '',
+        //   choices: [],
+        //   answerImg: [],
+        //   answer: '',
+        //   commentary: '',
+        // },
+      ],
+    },
+    {
+      groupTag: '授業中',
+      groupContents: [
+        {
+          detailInfo: '9/29',
+          questionImg: [SFEquestion],
+          questionSentence:
+            '(1)解糖系の反応の 	１つの、ジヒドロキシアセトンリン酸(DHAP)のグリセルアルデヒド3-リン酸(GAP)への異性化反応についてΔG⁰（標準自由エネルギー変化）を計算してください。平衡状態では、DHAPに対するGAPの濃度の比は、0.0475(25℃,pH7.0)です。In0.0475=-3.05 (2)初めのDHAP濃度が2.0*10⁻⁴mol/L,GAPの濃度が3.0*10⁻⁶mol/Lであるとき、この異性化反応のδGを計算してください(25.0℃,pH7.0)。In0.015=-4.20',
+          choices: [],
+          answerImg: [standardFreeEnergy],
+          answer: '(1)1805.98kal/mol (2)-0.69kcal/mol',
+          commentary: 'いずれも公式参照',
+        },
+        {
+          detailInfo: '9/29',
+          questionImg: [SFEquestion2],
+          questionSentence: 'スライド参照',
+          choices: [],
+          answerImg: [],
+          answer: '-53kcal・mol⁻¹',
+          commentary:
+            'ΔG⁰ = -2*23.1kcal/mol/V*1.14V = -53kcal/mol ΔG⁰が負なので発エルゴン反応',
         },
         // {
         //   detailInfo: '',
