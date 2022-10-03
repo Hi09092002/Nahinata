@@ -38,7 +38,7 @@ function App() {
     loadHistory,
   } = useHistory()
   const history = showHistory()
-  const thisAppNameTag = 'anywhere-2seiriNMU'
+  const thisAppNameTag = 'anywhere-Insulin19220111'
   // ここからWebStorageを利用した設定の引継ぎ
   let loadData = {
     app: `${thisAppNameTag}`,
