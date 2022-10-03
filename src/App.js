@@ -1,5 +1,5 @@
 import './App.css'
-import { Box, Heading, Badge, Flex, Text } from '@chakra-ui/react'
+import { Box, Heading, Badge, Flex, Text, useToast } from '@chakra-ui/react'
 import { Setting } from './components/Setting'
 import { QuestionsLog } from './components/QuestionsLog'
 import { ControlPanel } from './components/ControlPanel'
@@ -11,6 +11,7 @@ import { useTechnicalTerm } from './useTechnicalTerm'
 // import jsCookie from 'js-cookie'
 
 function App() {
+  const toast = useToast()
   const { showQuestionList } = useQuestionList()
   const questionList = showQuestionList()
   const { showTechnicalTerm } = useTechnicalTerm()
@@ -37,7 +38,7 @@ function App() {
     loadHistory,
   } = useHistory()
   const history = showHistory()
-  const thisAppNameTag = 'anywhere-biochemistry'
+  const thisAppNameTag = 'anywhere-2seiriNMU'
   // ここからWebStorageを利用した設定の引継ぎ
   let loadData = {
     app: `${thisAppNameTag}`,
@@ -81,7 +82,7 @@ function App() {
           colorScheme="teal"
           variant={'outline'}
         >
-          Ver.1.3
+          Ver.1.5
         </Badge>
         <Badge m={1} mt="0" borderRadius="full" px="2" colorScheme="teal">
           生化学
@@ -93,6 +94,7 @@ function App() {
       ) : (
         <Box maxW={'lg'} mr="auto" ml={'auto'}>
           <Setting
+            toast={toast}
             questionList={questionList}
             loadData={loadData}
             history={history}
@@ -108,6 +110,7 @@ function App() {
             deleteWordFilter={deleteWordFilter}
             updateAllSettings={updateAllSettings}
             loadHistory={loadHistory}
+            technicalTerm={technicalTerm}
           />
         </Box>
       )}
@@ -120,6 +123,7 @@ function App() {
           /> */}
             <QuestionsLog
               // questionList={questionList}
+              toast={toast}
               loadData={loadData}
               showHistory={showHistory}
               nextQuestion={nextQuestion}

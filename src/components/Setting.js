@@ -37,8 +37,9 @@ import '../App.css'
 import { SearchWord } from './SearchWord'
 import { useState } from 'react'
 // import jsCookie from 'js-cookie'
-import titleImg from '../img/titleImg.JPG'
+import titleImg from '../img/titleImg.png'
 export const Setting = ({
+  toast,
   questionList,
   loadData,
   history,
@@ -54,7 +55,7 @@ export const Setting = ({
   deleteWordFilter,
   updateAllSettings,
   loadHistory,
-  loadedSetting,
+  technicalTerm,
 }) => {
   const { isOpen, onOpen, onClose } = useDisclosure()
   const settingDetail = showSettingDetail()
@@ -157,7 +158,7 @@ export const Setting = ({
           p="1"
           mb={-14}
           borderRadius="lg"
-          fallback={<Skeleton height={'sm'} />}
+          fallback={<Skeleton height={'100px'} />}
         />
         <Flex ml={4} mr="4">
           {checkMsg === '条件を満たした質問が存在しません' ? (
@@ -262,6 +263,8 @@ export const Setting = ({
             </List>
             <Divider orientation="horizontal" mt={3} mb="1" />
             <Text>アップデート履歴</Text>
+            <Text fontSize={'sm'}>10-03_Ver1.5-頻出キーワード確認を追加</Text>
+            <Text fontSize={'sm'}>10-02_Ver1.4-キーワード検索を便利に</Text>
             <Text fontSize={'sm'}>09-16_Ver1.3-ボタンを透明に</Text>
             <Text fontSize={'sm'}>
               09-08_Ver1.2-タブレット向けにデザイン調節
@@ -342,6 +345,7 @@ export const Setting = ({
             direction={['column']}
             bg="blackAlpha.100"
             p={2}
+            pl="4"
             mb="5"
           >
             {questionList.map((group, index) => (
@@ -360,15 +364,16 @@ export const Setting = ({
             ))}
           </Stack>
         </CheckboxGroup>
-        <SearchWord
-          showSettingDetail={showSettingDetail}
-          addWordFilter={addWordFilter}
-          deleteWordFilter={deleteWordFilter}
-          questionList={questionList}
-          checkSelection={checkSelection}
-          // saveSetting={saveSetting}
-        />
       </Box>
+      <SearchWord
+        toast={toast}
+        showSettingDetail={showSettingDetail}
+        addWordFilter={addWordFilter}
+        deleteWordFilter={deleteWordFilter}
+        questionList={questionList}
+        checkSelection={checkSelection}
+        technicalTerm={technicalTerm}
+      />
       <Divider orientation="horizontal" maxW={'lg'} />
       <Text fontSize="xs" textColor={'blackAlpha.500'} ml="4">
         ©2022- IgaTatApps

@@ -6,7 +6,7 @@ export const useSetting = () => {
     isSet: false,
     mode: 'training',
     questionOrder: 'ascend',
-    questionRange: [''],
+    questionRange: ['心電図'],
     wordFilter: [],
   })
   const showSettingDetail = () => {

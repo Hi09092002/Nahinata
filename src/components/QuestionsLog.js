@@ -6,7 +6,7 @@ import {
   Badge,
   Button,
   Text,
-  useToast,
+  // useToast,
   IconButton,
   Flex,
   Spacer,
@@ -32,9 +32,10 @@ export const QuestionsLog = ({
   reviewAskingQuestion,
   saveHistory,
   technicalTerm,
+  toast,
 }) => {
   const [isOpen, setIsOpen] = useState(true)
-  const toast = useToast()
+  // const toast = useToast()
 
   const toastGoodJob = () => {
     if (history[history.length - 1].remainingQuestionList.length === 0) {
