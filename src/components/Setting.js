@@ -37,7 +37,7 @@ import '../App.css'
 import { SearchWord } from './SearchWord'
 import { useState } from 'react'
 // import jsCookie from 'js-cookie'
-import titleImg from '../img/titleImg.png'
+import titleImg from '../img/titleImg.JPG'
 export const Setting = ({
   toast,
   questionList,
