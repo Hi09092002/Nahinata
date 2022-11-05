@@ -1,5 +1,74 @@
 import { useState } from 'react'
+
 // import q1 from './img/question/220613-1.JPG'
+import biochemistry_2020_1_1 from './img/answer/biochemistry_2020_1_1.jpg'
+import biochemistry_2020_1_2 from './img/answer/biochemistry_2020_1_2.jpg'
+import biochemistry_2020_1_3 from './img/answer/biochemistry_2020_1_3.jpg'
+import biochemistry_2020_1_4 from './img/answer/biochemistry_2020_1_4.jpg'
+import biochemistry_2020_1_5 from './img/answer/biochemistry_2020_1_5.jpg'
+import biochemistry_2020_1_6 from './img/answer/biochemistry_2020_1_6.jpg'
+import biochemistry_2020_2_1 from './img/answer/biochemistry_2020_2_1.jpg'
+import biochemistry_2020_2_2 from './img/answer/biochemistry_2020_2_2.jpg'
+import biochemistry_2020_2_3 from './img/answer/biochemistry_2020_2_3.jpg'
+import biochemistry_2020_2_4 from './img/answer/biochemistry_2020_2_4.jpg'
+import biochemistry_2020_2_5 from './img/answer/biochemistry_2020_2_5.jpg'
+import biochemistry_2020_4_1 from './img/answer/biochemistry_2020_4_1.jpg'
+import biochemistry_2020_4_2 from './img/answer/biochemistry_2020_4_2.jpg'
+import biochemistry_2020_5_1 from './img/answer/biochemistry_2020_5_1.jpg'
+import biochemistry_2020_5_2 from './img/answer/biochemistry_2020_5_2.jpg'
+import biochemistry2021_7_4 from './img/answer/biochemistry2021_7_4.JPG'
+import biochemistry2021_7_3 from './img/answer/biochemistry2021_7_3.JPG'
+import biochemistry2021_7_2 from './img/answer/biochemistry2021_7_2.JPG'
+import biochemistry2021_7_1 from './img/answer/biochemistry2021_7_1.JPG'
+import biochemistry2021_6_3 from './img/answer/biochemistry2021_6_3.JPG'
+import biochemistry2021_6_2 from './img/answer/biochemistry2021_6_2.JPG'
+import biochemistry2021_6_1 from './img/answer/biochemistry2021_6_1.JPG'
+import biochemistry2021_5_3 from './img/answer/biochemistry2021_5_3.JPG'
+import biochemistry2021_5_2 from './img/answer/biochemistry2021_5_2.JPG'
+import biochemistry2021_5_1 from './img/answer/biochemistry2021_5_1.JPG'
+import biochemistry2021_4_3 from './img/answer/biochemistry2021_4_3.JPG'
+import biochemistry2021_4_2 from './img/answer/biochemistry2021_4_2.JPG'
+import biochemistry2021_4_1 from './img/answer/biochemistry2021_4_1.JPG'
+import biochemistry2021_3 from './img/answer/biochemistry2021_3.JPG'
+import biochemistry2021_2 from './img/answer/biochemistry2021_2.JPG'
+import biochemistry2021_1_3 from './img/answer/biochemistry2021_1_3.JPG'
+import biochemistry2021_1_2 from './img/answer/biochemistry2021_1_2.JPG'
+import biochemistry2021_1_1 from './img/answer/biochemistry2021_1_1.JPG'
+import biochemistry2020_3_question from './img/answer/biochemistry2020_3_question.jpg'
+import biochemistry2020_3_answer from './img/answer/biochemistry2020_3_answer.jpg'
+import biochemistry2019_8 from './img/answer/biochemistry2019_8.jpg'
+import biochemistry2019_6_ans from './img/answer/biochemistry2019_6_ans.jpg'
+import biochemistry2019_5 from './img/answer/biochemistry2019_5.jpg'
+import biochemistry2019_4_2 from './img/answer/biochemistry2019_4_2.jpg'
+import biochemistry2019_4_1 from './img/answer/biochemistry2019_4_1.jpg'
+import biochemistry2019_3_3 from './img/answer/biochemistry2019_3_3.jpg'
+import biochemistry2019_3_2 from './img/answer/biochemistry2019_3_2.jpg'
+import biochemistry2019_3_1 from './img/answer/biochemistry2019_3_1.jpg'
+import biochemistry2019_2_3 from './img/answer/biochemistry2019_2_3.jpg'
+import biochemistry2019_2_2 from './img/answer/biochemistry2019_2_2.jpg'
+import biochemistry2019_2_1 from './img/answer/biochemistry2019_2_1.jpg'
+import biochemistry2019_1_2 from './img/answer/biochemistry2019_1_2.jpg'
+import biochemistry2019_1_1 from './img/answer/biochemistry2019_1_1.jpg'
+import biochemistry2018_7 from './img/answer/biochemistry2018_7.jpg'
+import biochemistry2018_4_4 from './img/answer/biochemistry2018_4_4.jpg'
+import biochemistry2018_4_1 from './img/answer/biochemistry2018_4_1.jpg'
+import biochemistry2018_3 from './img/answer/biochemistry2018_3.JPG'
+import biochemistry2018_2 from './img/answer/biochemistry2018_2.jpg'
+import biochemistry2017_5_3 from './img/answer/biochemistry2017_5_3.JPG'
+import biochemistry2017_5_2 from './img/answer/biochemistry2017_5_2.JPG'
+import biochemistry2017_5_1 from './img/answer/biochemistry2017_5_1.JPG'
+import biochemistry2016_5_3 from './img/answer/biochemistry2016_5_3.JPG'
+import biochemistry2016_5_2 from './img/answer/biochemistry2016_5_2.JPG'
+import biochemistry2016_5_1 from './img/answer/biochemistry2016_5_1.JPG'
+import biochemistry2016_3_3 from './img/answer/biochemistry2016_3_3.jpg'
+import biochemistry2016_3_2 from './img/answer/biochemistry2016_3_2.jpg'
+import biochemistry2016_3_1 from './img/answer/biochemistry2016_3_1.jpg'
+import biochemistry2016_2 from './img/answer/biochemistry2016_2.jpg'
+import biochemistry2018_5 from './img/answer/biochemistry2018_5.png'
+import biochemistry2018_4_3 from './img/answer/biochemistry2018_4_3.png'
+import biochemistry2018_4_2 from './img/answer/biochemistry2018_4_2.png'
+import biochemistry2018_1 from './img/answer/biochemistry2018_1.png'
+
 import corePromoter from './img/answer/corePromoter.png'
 import promoter from './img/answer/promotor.png'
 import synthesizeCatecholamine from './img/answer/synthesizeCatecholamine.png'
@@ -591,7 +660,11 @@ export const useQuestionList = () => {
           questionSentence:
             '胃を全摘手術した際に欠乏するビタミン、そのビタミンの欠乏により引き起こされる貧血について明確にしるし述べなさい。',
           choices: [],
-          answerImg: [],
+          answerImg: [
+            biochemistry2021_1_1,
+            biochemistry2021_1_2,
+            biochemistry2021_1_3,
+          ],
           answer:
             'ビタミンB12が欠乏する。ビタミンB12が欠乏すると、メチオニンシンターゼの活性が低下し、THFが不足する。これにより、赤血球のDNA合成が滞り、骨髄中に未成熟の巨赤芽球が蓄積し、血中の赤血球が異常な大型血球に置き換わる、巨赤芽球性貧血が起こる。特に、ビタミンB12の不足による巨赤芽球性貧血を悪性貧血と呼ぶ。',
           commentary:
@@ -603,7 +676,7 @@ export const useQuestionList = () => {
           questionSentence:
             '酵素の活性と温度の関係について述べなさい。（150字以内）',
           choices: [],
-          answerImg: [],
+          answerImg: [biochemistry2021_2],
           answer:
             '通常の反応と同じように温度を上げると酵素の活性は上昇する。ただし、温度を上げすぎると酵素のタンパク質が変性して失活するので活性は急激に低下する。したがって、それぞれの酵素には活性が最大になる最適温度が存在する。(105字)',
           commentary: '',
@@ -614,7 +687,7 @@ export const useQuestionList = () => {
           questionSentence:
             ' グルコースアラニン回路について説明について述べよ。',
           choices: [],
-          answerImg: [],
+          answerImg: [biochemistry2021_3],
           answer:
             '遊離アンモニアは毒性が高いので、アミノ酸に変えて生体にとって無害な状態にした後に血流によって肝臓に運ばれる。グルコースアラニン回路はその運搬系の一つであり、主として筋肉一肝臓間でのやり取りに関わっている。まず筋肉で解糖系により生じたビルビン酸にアンモニアを付加してアラニンとし、肝臓〜輸送する。肝臓ではアミノ基転移反応によってそのアラニンからピルビン酸を再生し、アンモニアを脱離するが、それぞれアンモニアは尿素回路へ入った後に尿素として尿から排出、ピルビン酸は糖新生経路へ入ってグルコースの生成に携わる。こうしてピルビン酸からグルコースが生成され今度は肝臓から筋肉に輸送される。',
           commentary: '',
@@ -625,7 +698,11 @@ export const useQuestionList = () => {
           questionSentence:
             '空腹時や好気的運動時には遊離脂肪酸の血中濃度が上昇すると考えられるが、その理由について肝臓と筋肉、脂肪でどのような代謝が怒っているか説明しなさい。ただしまとまりの反応は〇〇経路として良い。（500 字以内）',
           choices: [],
-          answerImg: [],
+          answerImg: [
+            biochemistry2021_4_1,
+            biochemistry2021_4_2,
+            biochemistry2021_4_3,
+          ],
           answer:
             'まず、肝臓では脂肪酸はβ酸化され、アセチル CoAが多量に作られる。作られたアセチル CoAは一部 TCA 回路に入り、大部分がケトン体の合成に使用される。ケトン体は肝臓から血中に送り出され、全身の組織のエネルギー源として利用される。筋肉では肝臓と同様に脂肪酸をβ酸化してアセチル CoA を得る。その後、アセチル CoA をTCA 回路によっCO2 まで分解し、電子伝達系と酸化的リン酸化によってエネルギーを産生する。脂肪酸はトリアシルグリセロールとして脂肪組織に貯蔵されている。空腹時や好気的運動時には、グルカゴンやアドレナリンの作用により脂肪組織でホルモン感受性リパーゼが活性化し、トリアシルグリセロールの分解が進行する。それにより得られた脂肪酸がアルブミンと結合して親水性となり、遊離脂肪酸として血中に放出されることで血中脂肪酸濃度が上昇する。この脂肪酸は筋肉と肝臓で使用される。一方、トリアシルグリセロールの分解時に同時に産生されたグリセロールは肝臓で糖新生の素材として使用される。(446字)',
           commentary:
@@ -637,7 +714,11 @@ export const useQuestionList = () => {
           questionSentence:
             '解答系のNAD＋について、⑴ 赤血球ではどのようにしてNADHに再生しているのか。⑵ これらの反応を継続して行うために必要な組織とどのような経路を辿るか。',
           choices: [],
-          answerImg: [],
+          answerImg: [
+            biochemistry2021_5_1,
+            biochemistry2021_5_2,
+            biochemistry2021_5_3,
+          ],
           answer:
             '（1）赤血球にはミトコンドリアが存在しないので、酸素を還元してNADHを酸化することができない。そこで、代わりに解糖系の代謝産物であるピルビン酸を還元して乳酸にすることで、NADHを酸化してNAD+を再生している。（2）（1）で生成された乳酸を処理するために、肝臓が必要である。乳酸→ピルビン酸→オキサロ酢酸→リンゴ酸→オキサロ酢酸→ホスホエノールピルビン酸→解糖系の逆行でグルコース、の順に反応経路をたどる。',
           commentary:
@@ -648,7 +729,11 @@ export const useQuestionList = () => {
           questionImg: [],
           questionSentence: 'exonとintronについて説明しなさい。',
           choices: [],
-          answerImg: [],
+          answerImg: [
+            biochemistry2021_6_1,
+            biochemistry2021_6_2,
+            biochemistry2021_6_3,
+          ],
           answer:
             'exonはメッセンジャーRNA前駆体から成熟メッセンジャーRNAに変換される際に、スプライシングを受けて残るメッセンジャーRNA前駆体の領域に相当するDNA上の領域である。一方、intronはexonに挟まれたDNA領域で、スプライシングによって除去されるメッセンジャーRNA 前駆体の領域に相当するDNA上の領域である。',
           commentary:
@@ -659,7 +744,12 @@ export const useQuestionList = () => {
           questionImg: [],
           questionSentence: '半不連続的複製について説明しなさい。',
           choices: [],
-          answerImg: [],
+          answerImg: [
+            biochemistry2021_7_1,
+            biochemistry2021_7_2,
+            biochemistry2021_7_3,
+            biochemistry2021_7_4,
+          ],
           answer:
             'DNA は相補的な二本差であり、複製に必要なDNAポリメラーゼは5’→3’の方向へしか複製を進めることができない。二本鎖のうち、3’→5’方向の鎖を鋳型にして合成される鎖は DNAポリメラーゼによる伸長方向と複製フォークの進行とが同一方向になり、5’→3’へと連続的に合成される。一方、5’→3’方向の鎖を鋳型にして合成される鎖では、岡崎フラグメントと呼ばれる短い DNA鎖が5’→3’方向に合成され、DNAリガーゼによって一本の鎖に合成される。これを半不連続的複製という。',
           commentary: '',
@@ -686,7 +776,14 @@ export const useQuestionList = () => {
           questionSentence:
             'ミトコンドリアの電子伝達系におけるATP合成機構について説明しなさい。',
           choices: [],
-          answerImg: [],
+          answerImg: [
+            biochemistry_2020_1_1,
+            biochemistry_2020_1_2,
+            biochemistry_2020_1_3,
+            biochemistry_2020_1_4,
+            biochemistry_2020_1_5,
+            biochemistry_2020_1_6,
+          ],
           answer:
             'ミトコンドリアにおいて電子伝達系と酸化的リン酸化は緊密に共役している。まず、電子複合体が電子を供給する毎にマトリックスから膜間腔へと H＋を汲み出す。このH＋の濃度差によってプロトン勾配が生じて ATP 合成酵素がマトリックス内へと入り込む。これにより電子伝達で生じたエネルギーを ATP として捕捉し合成できる。このようなエネルギー変換の過程をとることで、ATP 合成のために高エネルギー中間体を使う必要がなく持続的な ATP 合成が行える。',
           commentary:
@@ -698,7 +795,13 @@ export const useQuestionList = () => {
           questionSentence:
             'アンモニアは生体内で有毒であるが、ヒトのアミノ酸の合成および分解においてはアンモニアが低濃度に抑えられるのはなぜか説明しなさい。',
           choices: [],
-          answerImg: [],
+          answerImg: [
+            biochemistry_2020_2_1,
+            biochemistry_2020_2_2,
+            biochemistry_2020_2_3,
+            biochemistry_2020_2_4,
+            biochemistry_2020_2_5,
+          ],
           answer:
             'アミノ酸はアミノ基を外すと糖代謝の中間体となり糖新生に利用できるため、まずアミノ基を外す反応がおこる。これをアミノ基転移反応といい、これによってグルタミン酸が生じる。このグルタミン酸は分解されてα-ケトグルタル酸とアンモニアとなる。ここで生じたアンモニアを肝臓へと運んで尿素とする必要があるのだが、アンモニアは有毒であるため肝臓までの輸送の際は比較的無害な物質へと変換されて運ばれる。この輸送法は２つあり、１つ目はグルタミンシンターゼである。このグルタミンシンターゼではアンモニアをグルタミン酸と結合させてグルタミンとし、肝臓まで送って再びアンモニアとグルタミン酸へと分解する。ここで生じたグルタミン酸は再利用される。もう１つはグルコース-アラニン経路である。こちらはアンモニアをピルビン酸と結合させてアラニンとして肝臓まで送る。肝臓でアラニンは再びアンモニアとピルビン酸へ分解され、ピルビン酸は糖新生でグルコースとされたのち解糖系を経て再びピルビン酸として利用される。このように２つの経路で運ばれたアンモニアは尿素回路にのり無毒化されていく。以上のように、体内において出来るだけ有毒なアンモニアが存在しないようになっていると言える。',
           commentary:
@@ -706,11 +809,11 @@ export const useQuestionList = () => {
         },
         {
           detailInfo: '3',
-          questionImg: [],
+          questionImg: [biochemistry2020_3_question],
           questionSentence:
             'ある酵素触媒反応の反応速度と基質濃度の関係は、阻害剤非存在下で以下のラインウィーバー・バークプロットに示される。この反応を阻害する阻害剤Iについて、阻害剤Iの阻害作用は競合的であった。阻害剤I存在下でのラインウィーバー・バークプロットがどのようになるか、以下のグラフに描きこみなさい。また、競合阻害によって起こる速度論的パラメーター(KmやVmax)の変化を150字以内で説明しなさい。',
           choices: [],
-          answerImg: [],
+          answerImg: [biochemistry2020_3_answer],
           answer:
             '競合阻害剤は酵素の活性部位に可逆的に結合し、基質の結合を妨げる。競合阻害剤が存在しても最大反応速度Vmax は変化しない。一方、阻害剤の濃度を増加させると、見か けのミカエリス定数Kmは増加する。図において、阻害剤Iの非存在下および存在下でのプロットはy軸状の 1/Vmax で交わるが、阻害剤Iの存在下ではx切片の負の値が0に近づいており見かけのKmが増加したことが分かる。よって競合阻害である。(199字)',
           commentary: '',
@@ -721,7 +824,7 @@ export const useQuestionList = () => {
           questionSentence:
             '11-cis-レチナールの生理作用と欠乏症状について、100 字以上 200 字以下で説明しな さい。',
           choices: [],
-          answerImg: [],
+          answerImg: [biochemistry_2020_4_1, biochemistry_2020_4_2],
           answer:
             '11-cis-レチナールはビタミン A 由来の物質である。11-cis-レチナールはオプシンと結合してロドプシンとなる。このロドプシンは光を感受し視覚サイクルに関与する。そのためこの 11-cis-レチナールが欠乏すると夜盲症や眼球乾燥症といった主に眼球に関する症状がみられると言える(142字)',
           commentary: '',
@@ -732,7 +835,7 @@ export const useQuestionList = () => {
           questionSentence:
             '代謝とは生命維持に関わる連続的な化学反応のことである。ヒトの肝臓の細胞におけるミトコンドリア中のアセチル CoA と細胞質中のアセチル CoA の生理的意義を、代謝の観点から比較して述べなさい。',
           choices: [],
-          answerImg: [],
+          answerImg: [biochemistry_2020_5_1, biochemistry_2020_5_2],
           answer:
             '摂食後体内にはグルコースが大量に存在するためグルコースをエネルギーへと変換しようとする。グルコースははじめに解糖系に乗り最終的にピルビン酸へと変化する。このピルビン酸はミトコンドリア内でアセチル CoA へと変換されて TCA 回路でクエン酸が生じる。これによって TCA 回路がまわり ATP 合成へと進む。一方、クエン酸は過剰になると細胞質に輸送されてアセチル CoA となり脂肪酸合成へと進む。そして空腹時のエネル ギー不足に応じて蓄えられていた脂肪酸は分解されていくことにより再びミトコンドリア内でアセチル CoA として存在して、TCA 回路に再び乗りエネルギー不足を解消する。また 飢餓時は脂肪酸の過剰な分解によりミトコンドリア内でアセチル CoA が大量にあることとなり、ケトン体として代わりのエネルギー源として活躍する。このようにミトコンドリア内でのアセチル CoA は主にエネルギー生成へと、細胞質内のアセチル CoA はエネルギー貯蔵へと進める物質として意義があると言える。',
           commentary:
@@ -748,7 +851,7 @@ export const useQuestionList = () => {
           answer:
             'カスケード反応とは多段階反応のことであり、はじめの刺激を段階を踏んで増幅させてすばやく反応を起こすことである。例えばグリコーゲン合成分解によるリン酸化カスケード反応である。摂食時グルコースは体内に大量にあるためグリコーゲンとして蓄積しようとする。その際インスリンが膵ランゲルハンス細胞から分泌されてグリコーゲンシンターゼを活性化しグリコーゲンホスホリラーゼは不活性化されてグリコーゲン合成の向きに進む。一方空腹時は逆でアドレナリンやグルカゴンの分泌でグリコーゲンシンターゼは不活性化されてグリコーゲンホスホリラーゼを活性することで分解の向きへと進む。このようにカスケード反応を使いグリコーゲン代謝の素早い調節を行うことができる。(314字)',
           commentary:
-            'はじめの１行目がポイントで、素早い反応を行うのに効果的という旨を必ず書くこと。他は好きなものを書けばよし。',
+            'はじめの１行目がポイントで、素早い反応を行うのに効果的という旨を必ず書くこと。他は好きなものを書けばよし。アラキドン酸カスケードなど。',
         },
         {
           detailInfo: '7',
@@ -795,7 +898,7 @@ export const useQuestionList = () => {
           questionSentence:
             'ジヒドロ葉酸レダクターゼはテトラヒドロ葉酸(THF)の生成を触媒する NADPH 依存性レダクターゼである。 (1)NADPH の生体内における役割を説明せよ。(50 字以内)（2）ジヒドロ葉酸レダクターゼの阻害剤が抗がん剤に応用されているのはなぜか。THF の生理作用にも言及して説明せよ。(200 字以内)',
           choices: [],
-          answerImg: [],
+          answerImg: [biochemistry2019_1_1, biochemistry2019_1_2],
           answer:
             '（1）細胞障害性をもつ活性酸素種の一種である過酸化水素を消去する際に酸化されたグルタチオンを再還元する。（2）THFは、葉酸の活性型であり、一炭素単位の運搬体として機能し、メチオニン、プリンヌクレオチド、TMP の合成に関わるため、細胞分裂の盛んな組織に多く、細胞増殖や成長に必要な物質である。そのため、阻害剤を用いて、THF の生成を触媒するジヒドロ葉酸レダクターゼを阻害することで、がん細胞の増殖と成長を抑えることができるからである。 この際、正常細胞も標的となるが、がん細胞の方が増殖が速いため、より影響を受ける。(205字)',
           commentary: '',
@@ -805,7 +908,11 @@ export const useQuestionList = () => {
           questionImg: [],
           questionSentence: '化学浸透圧説について説明せよ。',
           choices: [],
-          answerImg: [],
+          answerImg: [
+            biochemistry2019_2_1,
+            biochemistry2019_2_2,
+            biochemistry2019_2_3,
+          ],
           answer:
             '電子伝達系で遊離したエネルギーは H+の電気化学ポテンシャルに変換され、 ATP 合成酵素はこのH+駆 動力を利用して ATP 合成を行う、という説。すべての生命に普遍的な生体エネルギー変換の原理を説明でき、ATP 合成のために、物質(高エネルギー中間体)を一々使う必要がなく、ATP合成を持続的に行える。',
           commentary: '',
@@ -816,7 +923,11 @@ export const useQuestionList = () => {
           questionSentence:
             'PIP2(ホスファチジルイノシトール 4,5 ビスリン酸)のシグナル伝達について説明せよ。',
           choices: [],
-          answerImg: [],
+          answerImg: [
+            biochemistry2019_3_1,
+            biochemistry2019_3_2,
+            biochemistry2019_3_3,
+          ],
           answer:
             'ホルモンが GPCR に特異的に結合すると、G タンパク質の α サブユニットの GDP-GTP 交換反応が起こる。活性化したαサブユニットは PLC を活性化し、活性化した PLC は PIP2 を DG(ジアシルグリセロール)と IP3(イノシトール 1,4,5-トリスリン酸)に切断する。細胞膜に残った DG は PKC を活性化する。また、IP3 が小胞体の IP3 依存性 Ca2+チャネルに結合して Ca2+を 細胞質内に大量に放出させ、その Ca2+も PKC を活性化させる。活性化された PKC がタンパク質をリン酸化することで、細胞内応答が起こる。',
           commentary: '',
@@ -827,7 +938,7 @@ export const useQuestionList = () => {
           questionSentence:
             'ライソゾーム病(リソソーム病)とは何か。またその機序について説明せよ。(200 字以内)',
           choices: [],
-          answerImg: [],
+          answerImg: [biochemistry2019_4_1, biochemistry2019_4_2],
           answer:
             'リソゾーム中には数多くの分解酵素が存在しており、老廃物・不要物の分解を行う。この分解酵素の一つが先天的に欠損しているために起こる病気がリソゾーム病である。欠損する酵素の種類によって 色々な病気があり、症状も異なってくる。リソソームの中に分解されない老廃物が次第に蓄積していくことで病気が進行していく。(150字)',
           commentary: '',
@@ -838,7 +949,7 @@ export const useQuestionList = () => {
           questionSentence:
             'グリコーゲン代謝において、合成と分解はそれぞれグリコーゲンシンターゼとグリコーゲンホスファターゼによって相反的に調節されている。（1）なぜ相反的に調節されているのか説明せよ。(100 字以内) （2）グリコーゲンシンターゼとグリコーゲンホスファターゼはどのようにして相反的に調節されているか、説明せよ。(300 字以内)',
           choices: [],
-          answerImg: [],
+          answerImg: [biochemistry2019_5],
           answer:
             '（1）もし同化経路と異化経路が同じ酵素により制御されていれば、異化経路(エネルギー産生) が触媒されるのと同時に、分子の合成(同化経路)も触媒されてしまう。これでは反応の緻密な制御ができない。同化経路と異化経路が異なる酵素によって触媒されると、片方の経路の活性のみが上昇するため反応の方向性を決定することができ、代謝の緻密な制御が可能となる。(168字)（2）グリコーゲンシンターゼとグリコーゲンホスホリラーゼはともにアロステリックな調節を受けている。血糖値が高いと、グリコーゲンシンターゼはグルコース 6 リン酸(G6-P)に よって活性化され、グリコーゲンホスホリラーゼは ATP と G6-P によって阻害される。その結果、グリコーゲン合成が進む。運動時には、筋肉や肝臓では細胞内 Ca2+濃度が上昇し、ATP が消費され AMP が生じる。 グリコーゲンホスホリラーゼは Ca2+と AMP により活性化され、グリコーゲン分解が進む。 また肝臓では、Ca2+によりプロテインキナーゼ C が活性化されグリコーゲンシンターゼがリン酸化不活化されてグリコーゲン合成は抑制される。(311字)',
           commentary: '',
@@ -849,7 +960,7 @@ export const useQuestionList = () => {
           questionSentence:
             'DNA の複製おいて、複製フォークが進むにつれ、3’→5’方向の親鎖に対しては DNA ポリメラーゼで連続的に合成できるが、5’→3’方向の親鎖に対しては既知の DNA ポリメラーゼでは連続的に合成できない。しかし 5’→3’方向へも複製フォークが進むと同時に DNA は合成されているように見える。これはなぜか、図を用いて説明せよ。',
           choices: [],
-          answerImg: [],
+          answerImg: [biochemistry2019_6_ans],
           answer:
             '3’→5’方向の親鎖の複製が進み、5’→3’方向の親鎖がある程度露出するたびに、DNAポリメラーゼが新しいプライマーRNAに結合し、岡崎フラグメントを作り始める。その後、DNAポリメラーゼが断片の合成を完了すると、プライマーRNA除去され、DNAに置換される。その切れ目をDNAリガーゼが共有結合でつなぎ、岡崎フラグメントを連結する。これにより、5’→3’方向へもDNAを合成することができる。',
           commentary: '',
@@ -871,7 +982,7 @@ export const useQuestionList = () => {
           questionSentence:
             'HbA1c とは何か。また、HbA1c を糖尿病の診断に用いることの意義を血糖値との違いに言及して説明せよ。',
           choices: [],
-          answerImg: [],
+          answerImg: [biochemistry2019_8],
           answer:
             'HbA1c とはグルコースが結合したヘモグロビンである。生理的条件下において赤血球の ヘモグロビンは寿命 120 日間でゆっくりと血糖と結合して糖化するが、この結合の程度は過去 1~2 か月間における血中のグルコース平均濃度に比例する。したがって HbA1c 値測定は過去 1~2 か月間における平均血糖値を反映しており、血糖コントロールの指標となる。 糖尿病患者は血中のグルコース濃度が慢性的に高いためこの HbA1c の濃度が高くなる。よって HbA1c 値測定は糖尿病を判断する指標として用いられる。',
           commentary: '',
@@ -887,7 +998,7 @@ export const useQuestionList = () => {
           questionSentence:
             '糖化へモグロビンとは何か?生成機構と臨床における意義も含めて説明しなさい。',
           choices: [],
-          answerImg: [],
+          answerImg: [biochemistry2018_1],
           answer:
             '糖化ヘモグロビンは、ヘモグロビン β 鎖末端のバリンの NH2 基にグルコースが結合したもので、AGEs になる前の中間物質である。糖化ヘモグロビン量は、過去 1〜2 ヶ月の平均の血糖を反映しているので、血糖コントロールの指標となり、糖尿病の判定基準にも用いられる。また、溶血性貧血など、赤血球寿命が短縮する場合は、糖化ヘモグロビンの値は低くなる。',
           commentary: '',
@@ -898,7 +1009,7 @@ export const useQuestionList = () => {
           questionSentence:
             'ジオキシゲナーゼは何の反応を触媒するかを答えよ。また、これの先天的欠損によって起こる病とその症状について述べよ。',
           choices: [],
-          answerImg: [],
+          answerImg: [biochemistry2018_2],
           answer:
             '空気中の酸素分子を必須アミノ酸であるトリプトファンに取り込む反応(ジオキシゲナーゼ反応)を触媒する。アルカプトン尿症が起こり、症状は、ホモゲンチジン酸尿、大関節の関節炎、軟骨・コラーゲン組織への色素沈着がある。',
           commentary: '',
@@ -909,7 +1020,7 @@ export const useQuestionList = () => {
           questionSentence:
             'ワルファリン投与時の二重逆数プロットの変化、血液凝固反応における還元型ビタミンKの生理的意義について説明せよ。',
           choices: [],
-          answerImg: [],
+          answerImg: [biochemistry2018_3],
           answer:
             'ワルファリンはビタミン K エポキシドレダクターゼを競合阻害する。これによって、二重逆数プロットのグラフは、x切片が大きくなり、y切片は変化せず、傾きは大きくなる。血液凝固反応における還元型ビタミン K はタンパク質中のグルタミン酸残基のカルボキシル化(Glu→Gla)を触媒し、ビタミン K 依存性カルボキシラーぜの補酵素として機能する。 血液凝固因子の Gla 残基が Ca2+をキレート化し生理作用を示す。',
           commentary: '',
@@ -920,7 +1031,12 @@ export const useQuestionList = () => {
           questionSentence:
             '（１）コレステロールは血中でどのように運ばれるか説明せよ。 （2）スタチン系治療薬Aが、HMG-CoAリダクターゼを阻害する時の阻害様式について説明せよ。 （3）LDL受容体が細胞内に取り込まれるのはどんな場合か?また、その機構について説明せよ。 （4）スタチン系治療薬Aが血中コレステロール濃度を下げる機構について説明せよ。',
           choices: [],
-          answerImg: [],
+          answerImg: [
+            biochemistry2018_4_1,
+            biochemistry2018_4_2,
+            biochemistry2018_4_3,
+            biochemistry2018_4_4,
+          ],
           answer:
             '（1）コレステロールは両親媒性だが血中ではほとんどが疎水性の高いコレステロールエステルになり、リポタンパク質のコアに取り込まれて運搬される。（2）スタチン系治療薬 A は HMG-CoA と構造類似物質のため、HMG-CoA リダクターゼの競合阻害剤となる。酵素である HMG-CoA リダクターゼの活性部位への結合を、本来の基質である HMG-CoA と競合的に行うことで、HMG-CoA リダクターゼを阻害する。（3）LDL 受容体が細胞内に取り込まれるのは LDL を取り込むときである。LDL 受容体が LDL 上の ApoB-100 に結合し、エンドサイトーシスを開始する。LDL はエンドソーム内に移行し、LDL 受容体は分離されて小胞内に入り、細胞表面へとリサイクルされる。（4）アセチル CoA からコレステロールが生成される過程で、HMG-CoA が酵素である HMG- CoA リダクターゼによりメバロン酸へ変換される。スタチン系治療薬 A は、HMG-CoA リダクターゼの競合阻害剤としてこの反応を阻害することで、血中コレステロール濃度を下 げる。',
           commentary: '',
@@ -931,7 +1047,7 @@ export const useQuestionList = () => {
           questionSentence:
             '遺伝子からmRNAが合成される過程とその調節機構について説明せよ。',
           choices: [],
-          answerImg: [],
+          answerImg: [biochemistry2018_5],
           answer:
             '転写の開始は，TATA ボックスや CAAT ボックス，GC ボックスといったコンセンサス配列を含むプロモーター領域に基本転写因子と呼ばれるタンパク質が結合することによって起こる.続いて基本転写因子同士や基本転写因子と RNA ポリメラーゼIIが結合する.RNA ポリメラーゼによって DNA 配列の転写産物が合成され始め伸張していくがその方向は 5’ から 3’方向である.DNA 配列の中にはエンハンサーと呼ばれるものがあり，ここにあくち ベーターと呼ばれる転写因子が結合することによって転写開始の効率は上がる.こうして できた m RNA 前駆体はその後，転写後修飾を受ける.具体的には 5’末端へのキャップ構造の付加と3’末端へのポリ A テール付加である.そしてイントロンを除去してエキソンを繋 ぎ合わせるスプライシングの過程を経て m RNA が完成する.',
           commentary: '',
@@ -952,7 +1068,7 @@ export const useQuestionList = () => {
           questionSentence:
             'V-ATPaseとは何か?また、哺乳動物における生理的役割は何か?説明せよ。',
           choices: [],
-          answerImg: [],
+          answerImg: [biochemistry2018_7],
           answer:
             'プロトン輸送 ATP アーゼであり、細胞内コンパートメントの酸性化を担うタンパク質である。オルガネラ小胞の膜に存在するタンパク質で、ATP を燃料とし回転運動でプロトンを輸送しオルガネラ内を酸性化しタンパク質の品質管理や神経伝達、免疫反応を支える役割。',
           commentary: '',
@@ -1011,7 +1127,11 @@ export const useQuestionList = () => {
           questionImg: [],
           questionSentence: 'Exon と Intron について説明しなさい。',
           choices: [],
-          answerImg: [],
+          answerImg: [
+            biochemistry2017_5_1,
+            biochemistry2017_5_2,
+            biochemistry2017_5_3,
+          ],
           answer:
             'exonはメッセンジャーRNA前駆体から成熟メッセンジャーRNAに変換される際に、スプライシングを受けて残るメッセンジャーRNA前駆体の領域に相当するDNA上の領域である。一方、intronはexonに挟まれたDNA領域で、スプライシングによって除去されるメッセンジャーRNA 前駆体の領域に相当するDNA上の領域である。',
           commentary: '',
@@ -1049,7 +1169,7 @@ export const useQuestionList = () => {
           questionSentence:
             '壊血病の治癒、予防としてのアスコルビン酸の生理的作用(150〜300 字)',
           choices: [],
-          answerImg: [],
+          answerImg: [biochemistry2016_2],
           answer:
             'まず、アセチルCoAは、グルコース、脂肪酸、糖原性アミノ酸、ケトン体を原料として合成される。グルコースは、解糖されてピルビン酸となり、このピルビン酸を基質としてアセ チル CoA が生成する。脂肪酸は、トリアシルグリセロール(TAG)の形で脂肪細胞に貯蔵されていたものが、分解されて血中に放出され、各組織でβ酸化を受けて多くのアセチル CoA となる。糖原性アミノ酸の場合は、アミノ基を転移されて残った炭素骨格からアセチルCoAが合成される。これは主に肝臓で行われる。ケトン体は、飢餓時に肝臓でアセチルCoAから合成され、血中に放出され、各組織に取り込まれて再びアセチルCoAに戻される。 これにより、ケトン体からアセチルCoAが合成される。次に、アセチルCoAを原料として、脂肪酸、ケトン体、コレステロールが合成される。脂肪酸は、エネルギー過剰時にアセチルCoAを原料として肝臓で合成される。ケトン体は、 上記のように飢餓時に肝臓でアセチルCoAから合成される。コレステロールは全身の様々な組織で合成される。最後に、アセチルCoA自体は、TCAサイクルを回ることで、CO2とH2Oに分解され、排出される。(503字)',
           commentary: '',
@@ -1059,7 +1179,11 @@ export const useQuestionList = () => {
           questionImg: [],
           questionSentence: 'アセチル CoA の代謝について(200〜500 字)',
           choices: [],
-          answerImg: [],
+          answerImg: [
+            biochemistry2016_3_1,
+            biochemistry2016_3_2,
+            biochemistry2016_3_3,
+          ],
           answer:
             'まず、コラーゲン繊維は3本のポリペプチドからなる三重らせん構造をしているが、各ポリペプチド鎖のリシン残基・プロリン残基は水酸化されている。この水酸基が互いに架橋構造を作ることでコラーゲン繊維は張力に強くなり、ひいては細胞外マトリックス(ECM) の強度も上がる。 ここで、リシン残基・プロリン残基の水酸化酵素の補酵素が、アスコルビン酸すなわちビタミンCであるから、アスコルビン酸はコラーゲン繊維やECMの強度を保つのに寄与している。従って、アスコルビン酸によって、ECMや皮下組織の強度が保たれ、歯肉や皮下組織の強度も保たれるので、そこからの出血も防がれ、壊血病が予防・治癒される。(291字)',
           commentary: '',
@@ -1077,9 +1201,13 @@ export const useQuestionList = () => {
         {
           detailInfo: '5',
           questionImg: [],
-          questionSentence: 'エキソンとイントロンについてそれぞれ説明',
+          questionSentence: 'エキソンとイントロンについてそれぞれ説明せよ',
           choices: [],
-          answerImg: [],
+          answerImg: [
+            biochemistry2016_5_1,
+            biochemistry2016_5_2,
+            biochemistry2016_5_3,
+          ],
           answer:
             'exonはメッセンジャーRNA前駆体から成熟メッセンジャーRNAに変換される際に、スプライシングを受けて残るメッセンジャーRNA前駆体の領域に相当するDNA上の領域である。一方、intronはexonに挟まれたDNA領域で、スプライシングによって除去されるメッセンジャーRNA 前駆体の領域に相当するDNA上の領域である。',
           commentary: '',
