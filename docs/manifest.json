@@ -1,6 +1,6 @@
 {
-  "short_name": "どこでも試験対策・生化学",
-  "name": "生化学対策",
+  "name": "どこでも試験対策・生化学",
+  "short_name": "生化学対策",
   "icons": [
     {
       "src": "favicon.ico",
@@ -20,6 +20,6 @@
   ],
   "start_url": ".",
   "display": "standalone",
-  "theme_color": "#000000",
+  "theme_color": "#ffffff",
   "background_color": "#ffffff"
 }
