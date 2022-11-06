@@ -377,11 +377,11 @@ export const useTechnicalTerm = () => {
       explanation:
         '一連の化学反応を効率よく行うため、酵素群が密接して反応を触媒すること。例：ピルビン酸デヒドロゲナーゼ複合体など',
     },
-    {
-      term: ['補酵素A', 'CoA'],
-      explanation:
-        '補酵素のひとつで、アシル基の運搬体としてはたらく。例：アセチルCoAなど',
-    },
+    // {
+    //   term: ['補酵素A', 'CoA'],
+    //   explanation:
+    //     '補酵素のひとつで、アシル基の運搬体としてはたらく。例：アセチルCoAなど',
+    // },
     {
       term: ['Ligase', '連結酵素'],
       explanation:
