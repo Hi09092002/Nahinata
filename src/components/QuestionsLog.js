@@ -51,20 +51,14 @@ export const QuestionsLog = ({
   }
   const toastDictionary = (sentence) => {
     toast({
-      title: `${
-        technicalTerm.find((terms) => terms.term.indexOf(sentence) !== -1)
-          .term[0]
-      }`,
+      title: `${technicalTerm
+        .find((terms) => terms.term.indexOf(sentence) !== -1)
+        .term.join(' / ')}`,
       description: `${
         technicalTerm.find((terms) => {
           return terms.term.indexOf(sentence) !== -1
         }).explanation
-      }　#${technicalTerm
-        .find((terms) => {
-          return terms.term.indexOf(sentence) !== -1
-        })
-        .term.slice(1)
-        .join(' #')}`,
+      }`,
       status: 'info',
       containerStyle: {
         maxWidth: 'sm',
