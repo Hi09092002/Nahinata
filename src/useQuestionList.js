@@ -1,6 +1,13 @@
 import { useState } from 'react'
 
 // import q1 from './img/question/220613-1.JPG'
+import ribonucleotide from './img/answer/ribonucleotide.png'
+import oligoDTprimer from './img/answer/oligoDTprimer.png'
+import electrophoresisDNA from './img/answer/electrophoresisDNA.png'
+import DNAsynthesize from './img/answer/DNAsynthesize.png'
+import coagulation from './img/answer/coagulation.png'
+import S15Gene from './img/question/S15Gene.png'
+import insulinGene from './img/question/insulinGene.png'
 import biochemistry_2020_1_1 from './img/answer/biochemistry_2020_1_1.jpg'
 import biochemistry_2020_1_2 from './img/answer/biochemistry_2020_1_2.jpg'
 import biochemistry_2020_1_3 from './img/answer/biochemistry_2020_1_3.jpg'
@@ -217,20 +224,220 @@ export const useQuestionList = () => {
         },
       ],
     },
+    {
+      groupTag: '実習-核酸',
+      groupContents: [
+        {
+          detailInfo: '',
+          questionImg: [],
+          questionSentence:
+            '実習1日目、採集した血液1~1.5mLを20mLのTE溶液に加えた。このTE溶液には10mM Tris-HCl(pH 8.0)と1mM EDTAが含まれている。EDTAが入っている理由は？',
+          answerImg: [coagulation],
+          answer:
+            'EDTAはCa²⁺のキレート剤で、血液凝固反応に必須のCa²⁺を除去するはたらきがある。',
+          commentary:
+            'EDTA(エチレンジアミン四酢酸)のほかにクエン酸ナトリウムもCa²⁺のキレート剤。ワーファリンは肝臓でビタミンKに拮抗することで抗凝固作用を示す。ヘパリンはアンチトロンビンⅢを活性化することで抗凝固作用を示す',
+        },
+        {
+          detailInfo: '',
+          questionImg: [],
+          questionSentence:
+            '実習1日目。遠心後のDNA溶液にProteinase K入りのK bufferを加え、56℃で45分間インキュベートした。この時間に何が起こっているか、なぜ56℃なのか？',
+          answerImg: [],
+          answer:
+            '一般的な酵素は体温前後で活性をもつ事が多く、リソソームに含まれる核酸分解酵素も37℃前後で活性をもつが、Proteinase Kは56℃で活性が最大となり、精製したDNAを分解することなくタンパク質を分解することができる。',
+          commentary:
+            'Proteinase K関連は頻出。プロテインアーゼKは非特異的にタンパク質を加水分解するため、DNAに結合しているヒストンなどのタンパク質や、リソソーム内の酵素群も分解・失活させることができる。常温で保存可能。',
+        },
+        {
+          detailInfo: '',
+          questionImg: [],
+          questionSentence:
+            '実習1日目。56℃で45分間Proteinase Kを活動させた後、DNA溶液を95℃で10分間インキュベートした。この時間に何を行っているか？',
+          answerImg: [],
+          answer:
+            'Proteinase Kを失活させている。活性が残っているとこの後のPCR反応で使う酵素が分解されてしまう。',
+          commentary:
+            '95℃下ではDNAも熱変性を起こすが、温度を下げれば元に戻る。',
+        },
+        {
+          detailInfo: '課題1',
+          questionImg: [],
+          questionSentence:
+            '真核生物にはどのようなRNA種があるか、それぞれのRNA種の(1)total RNAに占める割合、(2)生合成過程と細胞内局在、(3)構造上の特徴、(4)機能について述べよ。',
+          answerImg: [tRNA, snRNA, splicing],
+          answer:
+            '【リボソーム/rRNA】約80%。核小体でひとつながりの前駆体として転写・切断（真核生物では4種類）され、その後200か所以上の場所で修飾を受ける。リボソームとして粗面小胞体や細胞質に局在する。多数のrRNAとタンパク質が結合してリボソームという顆粒として存在するのが特徴で、翻訳時にアミノ酸がひとつずつ結合していく際のペプチド結合の形成を触媒する作用をもつ。　【転移/tRNA】約15%。一本の前駆体RNAが転写された後、切断され、100種類以上の修飾を受けて完成する。グローバルリーフモデルという二次構造がさらに折りたたまれてL型の構造をとるのが特徴的。翻訳時にリボソームまでアンチコドンに対応するアミノ酸を運ぶ。　【メッセンジャー/mRNA】約5%。RNAポリメラーゼⅡによって核内で生成され、5’末端にキャップ、3’末端にポリアデニル化(polyA鎖)の修飾を受け、核外のリボソームに付着しタンパク合成に関与した後、速やかに分解される。一本鎖構造が特徴的。RNAポリメラーゼによってDNAから転写されたタンパク質の配列情報をコードしている。',
+          commentary: '今回はリボソームRNAとをコードしている',
+        },
+
+        {
+          detailInfo: '',
+          questionImg: [],
+          questionSentence:
+            '実習1日目。精製したRNAを分光光度計で定量する。260nm付近の波の形を調べるのはなぜか。260nm付近の吸光度でRNA以外に何が測定されうるか？',
+          answerImg: [],
+          answer:
+            'ATP(259nm)、タンパク質(約280nm)が混ざっていないことを調べるため。',
+          commentary:
+            'DNAは同じ260nmであるため、混ざっていたとしても調べることができない。',
+        },
+        {
+          detailInfo: '',
+          questionImg: [],
+          questionSentence:
+            '実習2日目、抽出したRNAから逆転写酵素によってcDNAを合成した。このcDNAとは何か。また、なぜRNAはPCRで増幅できないのか。',
+          answerImg: [],
+          answer:
+            'complementary DNA(DNAの相補鎖)。RNAはDNAとは異なり1本鎖であるため。',
+          commentary:
+            'cDNAはmRNAに対応する塩基配列であるため、イントロンが含まれておらず、転写調節の影響を受ける。',
+        },
+        {
+          detailInfo: '',
+          questionImg: [],
+          questionSentence:
+            '実習2日目、抽出したRNAから逆転写酵素によってcDNAを合成した。このときプライマーはどういった種類のものを使ったか、Oligo dT primerとの違いは何か。',
+          answerImg: [oligoDTprimer],
+          answer:
+            'Random primer。ランダムな6個の塩基配列をもったオリゴヌクレオチド。ポリAテールに特異的であるオリゴdTプライマーと違って、mRNAだけでなく様々なRNAの一部分を逆転写することができる。',
+          commentary:
+            '例えばヒストンタンパク質をコードするmRNAはポリAを持っていない。ランダムプライマーは検出範囲は広いが、RNAに対するプライマーの濃度を厳密に調節しないと狙った結果を出すことが難しい。今回の実験では、RNAに対してプライマーの量が多すぎて、短いcDNAばかりとなり、AST1のcDNAを増幅させて検出することができなかった。',
+        },
+        {
+          detailInfo: '',
+          questionImg: [],
+          questionSentence:
+            '実習2日目、抽出したRNAから逆転写酵素によってcDNAを合成した。この逆転写反応では逆転写酵素の他にRNAse inhibitorを加えたが、RNAse inhibitorとは何か。',
+          answerImg: [],
+          answer:
+            'RNA分解酵素阻害剤。鋳型であるRNAを壊さないために加える。RNAseは比較的細胞内のどこにでも存在している。',
+          commentary: '',
+        },
+        {
+          detailInfo: '',
+          questionImg: [],
+          questionSentence:
+            '実習2日目。PCRによってinsulin・ribosomal protein S15（とAST1）遺伝子の一部を増幅した。PCRとは何の略称か。また、PCR反応で必要なものは何か。',
+          answerImg: [],
+          answer:
+            'Polymerase Chain Reaction。必要になるのはDNA、プライマー、dNTP混合液、DNAポリメラーゼ。',
+          commentary:
+            'PCRで増幅することで少ない試料からでも十分量のDNAを得ることができる。',
+        },
+        {
+          detailInfo: '',
+          questionImg: [],
+          questionSentence:
+            '実習2日目。PCRや逆転写反応で使ったdNTP溶液とは何か',
+          answerImg: [DNAsynthesize],
+          answer:
+            'dATP/dGTP/dCTP/dTTP(TTP)のmix。DNA合成で必要なヌクレオチド + 高エネルギーリン酸結合2個',
+          commentary: 'デオキシリボース(d) + 塩基A/T/G/C + リン酸3個(TP)',
+        },
+        {
+          detailInfo: '',
+          questionImg: [],
+          questionSentence:
+            '実習2日目。PCRによってinsulin・ribosomal protein S15（とAST1）遺伝子の一部を増幅した。PCRの仕組みを簡潔に説明せよ。',
+          answerImg: [],
+          answer:
+            '(1)熱変性によって水素結合を壊してDNAを1本鎖にする。(2)1本鎖DNAにプライマーを結合（アニーリング）させる。(3)DNAポリメラーゼによる伸長反応を進める　(4)(1)~(3)を25~30回繰り返す。',
+          commentary:
+            '高温下でも失活しないDNAポリメラーゼ（高度好熱菌由来）を用いる。通常のDNAポリメラーゼを用いてしまうと1サイクルごとに失活するDNAポリメラーゼを補わなければいけなくなる。',
+        },
+        {
+          detailInfo: '',
+          questionImg: [],
+          questionSentence:
+            '実習3日目、アガロースゲルで電気泳動を行った。アガロースゲルとは何か。また、アガロースゲルで電気泳動することによってどのようなことがわかるか。',
+          answerImg: [electrophoresisDNA],
+          answer:
+            'アガロースゲルとは寒天（多糖類）のゲルのことで、分子量が大きいほど通り抜けにくくなることを利用して、DNAの分子量の分布を調べることができる。',
+          commentary:
+            'タンパク質とは異なり、DNAには負電荷を帯びたリン酸基が含まれるため、常に負の電荷を帯びている。よってそのまま電気泳動しても陽極に引き寄せられる。アガロースの濃度を変えることで計測できる分子量の範囲を変えることができる（もっと分子量の大きなものを電気泳動させたいときはアガロースの濃度を下げる）。',
+        },
+        {
+          detailInfo: '',
+          questionImg: [],
+          questionSentence:
+            '実習3日目、アガロースゲルで電気泳動を行った。電気泳動用のbufferとしてLoading Bufferを加えたが、この目的を2つ挙げよ',
+          answerImg: [],
+          answer:
+            '(1)サンプルに色を付けて確認しやすくする　(2)比重を水より重くしてゲル内に入りやすくする',
+          commentary:
+            'Loading buf.は分子量が小さく負に帯電しているため、電気泳動を止める時間の目安になる。',
+        },
+        {
+          detailInfo: '',
+          questionImg: [],
+          questionSentence:
+            '実習3日目、アガロースゲルで電気泳動を行った。このときアガロースゲルにGelRedなどのインカレーターを含めた意義を答えよ。',
+          answerImg: [],
+          answer:
+            'GelRedにはDNAの二重らせん構造に入り込んで紫外線照射で発光する色素が含まれており、これを用いてDNAの分布を調べるため。',
+          commentary:
+            'Loading buf.はDNAと結合していないため電気泳動結果を調べることができない。色素をアガロースゲルに含めることで電気泳動していない（例えば浮いている）DNAは光らなくなる。',
+        },
+        {
+          detailInfo: '',
+          questionImg: [insulinGene],
+          questionSentence:
+            '実習3日目。アガロースゲルで電気泳動を行った結果、genomic DNAからinsulinに相当するDNAが2本のバンドとして出てきた。これはどういうことなのか、説明せよ。',
+          answerImg: [],
+          answer:
+            'insulin2の遺伝子はイントロンを含んだ配列、insulin1遺伝子はイントロンを含まない配列であり、それぞれ分子量が異なるから。',
+          commentary:
+            '膵臓cDNAではmRNA成熟過程でスプライシングが行われるため、insulin2由来であったとしてもcDNAの配列にイントロンは含まれない→膵臓cDNAのバンドは1本。',
+        },
+        {
+          detailInfo: '課題3-1',
+          questionImg: [insulinGene],
+          questionSentence:
+            '(1)insulin 遺伝子について、遺伝子重複の過程とその意義を考察せよ。',
+          choices: [],
+          answerImg: [],
+          answer:
+            '【過程】遺伝子重複により、偽遺伝子として複数存在する。【意義】インスリンは生命に重要なホルモンである',
+          commentary:
+            'インスリンは遺伝子領域が2か所存在するが、実験でPCR増幅する部分には片方（type1）しかイントロン領域が存在しないので、シーケンス→電気泳動の結果によって区別できる',
+        },
+        {
+          detailInfo: '課題3-2',
+          questionImg: [S15Gene],
+          questionSentence:
+            '(2)ribosomal protein S15遺伝子について、遺伝子重複の過程とその意義を考察せよ。',
+          answerImg: [DNArepair],
+          answer:
+            '【過程】卵子細胞でmRNAからまれに逆転写され、Processed 偽遺伝子として定着する（生殖細胞として遺伝する）【意義】リボソームRNA遺伝子は通常の生育に常時多量の産物が必要なハウスキーピング遺伝子の一つである。',
+          commentary:
+            '人体では逆転写はごくまれにしか起こらないが、卵子細胞は存在期間が非常に長いので起こり得る。ribosomal protein S15 遺伝子は卵子細胞でも発現している。偽遺伝子は転写に関わる非翻訳領域をもたないので、通常は役割をもたない。',
+        },
+        {
+          detailInfo: '課題3-3',
+          questionImg: [],
+          questionSentence:
+            '(3)遺伝子重複の過程とその意義について、一般的にどう考えるか、考察せよ。',
+          choices: [],
+          answerImg: [geneDuplication],
+          answer:
+            '遺伝子重複は遺伝的組み換えの異常・レトロトランスポゾンの転移・染色体全体の重複などによって遺伝子を含むDNA領域が重複する現象のことである。重複した遺伝子の一方は選択圧から開放されるため、変異が速やかに蓄積され、進化の重要な役割を担っていると考えられている。',
+          commentary: '',
+        },
+        // {
+        //   detailInfo: '',
+        //   questionImg: [],
+        //   questionSentence: '',
+        //   answerImg: [],
+        //   answer: '',
+        //   commentary: '',
+        // },
+      ],
+    },
     // {
     //   groupTag: '実習課題',
     //   groupContents: [
-    //     {
-    //       detailInfo: '核酸1',
-    //       questionImg: [],
-    //       questionSentence:
-    //         '真核生物にはどのようなRNA種があるか、それぞれのRNA種の(1)total RNAに占める割合、(2)生合成過程と細胞内局在、(3)構造上の特徴、(4)機能について述べよ。',
-    //       choices: [],
-    //       answerImg: [tRNA, snRNA, splicing],
-    //       answer:
-    //         '【リボソームrRNA】約80%。核小体でひとつながりの前駆体として転写・切断（真核生物では4種類）され、その後200か所以上の場所で修飾を受ける。リボソームとして粗面小胞体や細胞質に局在する。多数のrRNAとタンパク質が結合してリボソームという顆粒として存在するのが特徴で、翻訳時にアミノ酸がひとつずつ結合していく際のペプチド結合の形成を触媒する作用をもつ。　【転移tRNA】約15%。一本の前駆体RNAが転写された後、切断され、100種類以上の修飾を受けて完成する。グローバルリーフモデルという二次構造がさらに折りたたまれてL型の構造をとるのが特徴的。翻訳時にリボソームまでアンチコドンに対応するアミノ酸を運ぶ。　【メッセンジャーmRNA】約5%。RNAポリメラーゼⅡによって核内で生成され、5’末端にキャップ、3’末端にポリアデニル化(polyA鎖)の修飾を受け、核外のリボソームに付着しタンパク合成に関与した後、速やかに分解される。一本鎖構造が特徴的。RNAポリメラーゼによってDNAから転写されたタンパク質の配列情報をコードしている。　（核内低分子snRNA）微量。RNAポリメラーゼⅡまたはRNAポリメラーゼⅢによって転写され、核内で活動する。低分子RNAで、タンパク質のセットと常に結合して複合体を形成している。核内のmRNA前駆体のプロセシングや転写因子の調節、RNAポリメラーゼⅡの調節を行っており、プラダー・ウィリー症候群の異常領域と関連している。',
-    //       commentary: '',
-    //     },
+
     //     {
     //       detailInfo: '核酸2',
     //       questionImg: [],
@@ -242,42 +449,7 @@ export const useQuestionList = () => {
     //         '一般的な調節機構としてDNAのメチル化・ヒストンのリン酸化/メチル化/アセチル化などの遺伝子修飾と、リプレッサー・アクチベーター・エンハンサーサイレンサーなどによる転写調節、キャッピングの調節・スプライシング・ポリAテールの付加・配列特異的な核外輸送などによる転写後調節が挙げられる。今回の膵臓では消化酵素などを刺激に応答して生成する必要があるため、セカンドメッセンジャーによって柔軟に抑制・促進が切り替わる方式の転写調節が活発である可能性がたかい（後日詳しく調べます）',
     //       commentary:
     //         '遺伝子修飾は転写調節に比べて恒久的な遺伝子発現調節機構で、今回の場合はセカンドメッセンジャーで転写調節を行うために必要な受容体・タンパク質・酵素をコードする部分にDNA修飾がされていると考えられる。',
-    //     },
-    //     {
-    //       detailInfo: '核酸3-1',
-    //       questionImg: [],
-    //       questionSentence:
-    //         '(1)insulin 遺伝子について、遺伝子重複の過程とその意義を考察せよ。',
-    //       choices: [],
-    //       answerImg: [],
-    //       answer:
-    //         '【過程】遺伝子重複により、偽遺伝子として複数存在する。【意義】インスリンは生命に重要なホルモンである',
-    //       commentary:
-    //         'インスリンは遺伝子領域が2か所存在するが、実験でPCR増幅する部分には片方（type1）しかイントロン領域が存在しないので、シーケンス→電気泳動の結果によって区別できる',
-    //     },
-    //     {
-    //       detailInfo: '核酸3-2',
-    //       questionImg: [],
-    //       questionSentence:
-    //         '(2)ribosomal protein S15遺伝子について、遺伝子重複の過程とその意義を考察せよ。',
-    //       choices: [],
-    //       answerImg: [DNArepair],
-    //       answer:
-    //         '【過程】卵子細胞でmRNAからまれに逆転写され、Processed 偽遺伝子として定着する（生殖細胞として遺伝する）【意義】リボソームRNA遺伝子は通常の生育に多量の産物が必要なハウスキーピング遺伝子の一つである。',
-    //       commentary:
-    //         'リボソームプロテインS15は、家族性パーキンソン病原因遺伝子産物LRRK2によってリン酸化を受ける。',
-    //     },
-    //     {
-    //       detailInfo: '核酸3-3',
-    //       questionImg: [],
-    //       questionSentence:
-    //         '(3)遺伝子重複の過程とその意義について、一般的にどう考えるか、考察せよ。',
-    //       choices: [],
-    //       answerImg: [geneDuplication],
-    //       answer:
-    //         '遺伝子重複は遺伝的組み換えの異常・レトロトランスポゾンの転移・染色体全体の重複などによって遺伝子を含むDNA領域が重複する現象のことである。重複した遺伝子の一方は選択圧から開放されるため、変異が速やかに蓄積され、進化の重要な役割を担っていると考えられている。',
-    //       commentary: '例：ヘモグロビン・ミオグロビンなど。',
-    //     },
+    //     }
     //     {
     //       detailInfo: '酵素1',
     //       questionImg: [],
@@ -294,7 +466,6 @@ export const useQuestionList = () => {
     //     //   detailInfo: '',
     //     //   questionImg: [],
     //     //   questionSentence: '',
-    //     //   choices: [],
     //     //   answerImg: [],
     //     //   answer: '',
     //     //   commentary: '',

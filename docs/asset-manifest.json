@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/anywhere-Insulin19220111/static/css/main.2255ca1a.css",
-    "main.js": "/anywhere-Insulin19220111/static/js/main.6fec694d.js",
+    "main.js": "/anywhere-Insulin19220111/static/js/main.d27a94c3.js",
     "static/media/biochemistry2018_4_2.png": "/anywhere-Insulin19220111/static/media/biochemistry2018_4_2.3f1b252e9120e9aacb9f.png",
     "static/media/biochemistry2018_5.png": "/anywhere-Insulin19220111/static/media/biochemistry2018_5.3b24e87a75aaae5d167a.png",
     "static/media/biochemistry_2020_2_1.jpg": "/anywhere-Insulin19220111/static/media/biochemistry_2020_2_1.c1cb639c9d72cfd03c8a.jpg",
@@ -64,8 +64,11 @@
     "static/media/biochemistry2021_7_1.JPG": "/anywhere-Insulin19220111/static/media/biochemistry2021_7_1.0f39728b15e8a29d6544.JPG",
     "static/media/biochemistry2019_3_2.jpg": "/anywhere-Insulin19220111/static/media/biochemistry2019_3_2.1a20141ae6ca6c32da3a.jpg",
     "static/media/biochemistry2016_3_2.jpg": "/anywhere-Insulin19220111/static/media/biochemistry2016_3_2.700e4d9e37734784556b.jpg",
+    "static/media/DNAsynthesize.png": "/anywhere-Insulin19220111/static/media/DNAsynthesize.8ad3416e17616804662f.png",
+    "static/media/ribonucleotide.png": "/anywhere-Insulin19220111/static/media/ribonucleotide.64e0ecca5731128048b9.png",
     "static/media/splicing.png": "/anywhere-Insulin19220111/static/media/splicing.4955c5e24414e3130a61.png",
     "static/media/biochemistry2019_3_3.jpg": "/anywhere-Insulin19220111/static/media/biochemistry2019_3_3.db14897a1176f71f5109.jpg",
+    "static/media/coagulation.png": "/anywhere-Insulin19220111/static/media/coagulation.78db40e333afae14b97f.png",
     "static/media/biochemistry2016_3_3.jpg": "/anywhere-Insulin19220111/static/media/biochemistry2016_3_3.7988be1b9834a1b23950.jpg",
     "static/media/titleImg.JPG": "/anywhere-Insulin19220111/static/media/titleImg.aaf438e083550d371412.JPG",
     "static/media/SFEquestion.png": "/anywhere-Insulin19220111/static/media/SFEquestion.47b804eed6aaf5abfab7.png",
@@ -78,8 +81,12 @@
     "static/media/SFEquestion2.png": "/anywhere-Insulin19220111/static/media/SFEquestion2.1e87df09568647741dbf.png",
     "static/media/tRNA.png": "/anywhere-Insulin19220111/static/media/tRNA.6909fa01835d3ee126ec.png",
     "static/media/snRNA.png": "/anywhere-Insulin19220111/static/media/snRNA.0aaf3a3de002ed907e62.png",
+    "static/media/insulinGene.png": "/anywhere-Insulin19220111/static/media/insulinGene.93a67f3c17c320295867.png",
+    "static/media/electrophoresisDNA.png": "/anywhere-Insulin19220111/static/media/electrophoresisDNA.0cfb8e2b846547f5a672.png",
+    "static/media/S15Gene.png": "/anywhere-Insulin19220111/static/media/S15Gene.97a0b9b0ca44d13a1775.png",
     "static/media/flankingRegion.png": "/anywhere-Insulin19220111/static/media/flankingRegion.17afeca804c4a92db735.png",
     "static/media/insulinLikePeptides.png": "/anywhere-Insulin19220111/static/media/insulinLikePeptides.d1b34dce0b19247f34fc.png",
+    "static/media/oligoDTprimer.png": "/anywhere-Insulin19220111/static/media/oligoDTprimer.5b2f08e0608a3f8fa853.png",
     "static/media/corePromoter.png": "/anywhere-Insulin19220111/static/media/corePromoter.85bf0e792ed0075ed41a.png",
     "static/media/DNArepair.png": "/anywhere-Insulin19220111/static/media/DNArepair.3e2109f73414a235e460.png",
     "static/media/biochemistry2020_3_answer.jpg": "/anywhere-Insulin19220111/static/media/biochemistry2020_3_answer.dbc231832f8e91848e61.jpg",
@@ -87,10 +94,10 @@
     "static/media/biochemistry2020_3_question.jpg": "/anywhere-Insulin19220111/static/media/biochemistry2020_3_question.22c9684c1e37da7d2415.jpg",
     "index.html": "/anywhere-Insulin19220111/index.html",
     "main.2255ca1a.css.map": "/anywhere-Insulin19220111/static/css/main.2255ca1a.css.map",
-    "main.6fec694d.js.map": "/anywhere-Insulin19220111/static/js/main.6fec694d.js.map"
+    "main.d27a94c3.js.map": "/anywhere-Insulin19220111/static/js/main.d27a94c3.js.map"
   },
   "entrypoints": [
     "static/css/main.2255ca1a.css",
-    "static/js/main.6fec694d.js"
+    "static/js/main.d27a94c3.js"
   ]
 }
