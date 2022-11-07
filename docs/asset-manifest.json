@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/anywhere-Insulin19220111/static/css/main.2255ca1a.css",
-    "main.js": "/anywhere-Insulin19220111/static/js/main.c9a5e638.js",
+    "main.js": "/anywhere-Insulin19220111/static/js/main.7027cc81.js",
     "static/media/biochemistry2018_4_2.png": "/anywhere-Insulin19220111/static/media/biochemistry2018_4_2.3f1b252e9120e9aacb9f.png",
     "static/media/biochemistry2018_5.png": "/anywhere-Insulin19220111/static/media/biochemistry2018_5.3b24e87a75aaae5d167a.png",
     "static/media/biochemistry_2020_2_1.jpg": "/anywhere-Insulin19220111/static/media/biochemistry_2020_2_1.c1cb639c9d72cfd03c8a.jpg",
@@ -70,9 +70,12 @@
     "static/media/biochemistry2019_3_3.jpg": "/anywhere-Insulin19220111/static/media/biochemistry2019_3_3.db14897a1176f71f5109.jpg",
     "static/media/coagulation.png": "/anywhere-Insulin19220111/static/media/coagulation.78db40e333afae14b97f.png",
     "static/media/biochemistry2016_3_3.jpg": "/anywhere-Insulin19220111/static/media/biochemistry2016_3_3.7988be1b9834a1b23950.jpg",
+    "static/media/uncouplingProtein.png": "/anywhere-Insulin19220111/static/media/uncouplingProtein.45e644c3e112bb45aa15.png",
     "static/media/titleImg.JPG": "/anywhere-Insulin19220111/static/media/titleImg.aaf438e083550d371412.JPG",
     "static/media/SFEquestion.png": "/anywhere-Insulin19220111/static/media/SFEquestion.47b804eed6aaf5abfab7.png",
     "static/media/removeIntron.png": "/anywhere-Insulin19220111/static/media/removeIntron.bbef96749439afadbbca.png",
+    "static/media/cytoplasmAcetylCoA.png": "/anywhere-Insulin19220111/static/media/cytoplasmAcetylCoA.9e9e6da451046867ea4e.png",
+    "static/media/glucokinase.png": "/anywhere-Insulin19220111/static/media/glucokinase.60f2d3977cebe574d3bf.png",
     "static/media/promotor.png": "/anywhere-Insulin19220111/static/media/promotor.6d7ead58b6ea938d9697.png",
     "static/media/standardFreeEnergy.png": "/anywhere-Insulin19220111/static/media/standardFreeEnergy.1e8ce857349856a67de7.png",
     "static/media/SDSMicelle.png": "/anywhere-Insulin19220111/static/media/SDSMicelle.87ddc783caecf4c4fc71.png",
@@ -95,10 +98,10 @@
     "static/media/biochemistry2020_3_question.jpg": "/anywhere-Insulin19220111/static/media/biochemistry2020_3_question.22c9684c1e37da7d2415.jpg",
     "index.html": "/anywhere-Insulin19220111/index.html",
     "main.2255ca1a.css.map": "/anywhere-Insulin19220111/static/css/main.2255ca1a.css.map",
-    "main.c9a5e638.js.map": "/anywhere-Insulin19220111/static/js/main.c9a5e638.js.map"
+    "main.7027cc81.js.map": "/anywhere-Insulin19220111/static/js/main.7027cc81.js.map"
   },
   "entrypoints": [
     "static/css/main.2255ca1a.css",
-    "static/js/main.c9a5e638.js"
+    "static/js/main.7027cc81.js"
   ]
 }
