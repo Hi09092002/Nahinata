@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/anywhere-Insulin19220111/static/css/main.2255ca1a.css",
-    "main.js": "/anywhere-Insulin19220111/static/js/main.f99ffb75.js",
+    "main.js": "/anywhere-Insulin19220111/static/js/main.b3729163.js",
     "static/media/biochemistry2018_4_2.png": "/anywhere-Insulin19220111/static/media/biochemistry2018_4_2.3f1b252e9120e9aacb9f.png",
     "static/media/biochemistry2018_5.png": "/anywhere-Insulin19220111/static/media/biochemistry2018_5.3b24e87a75aaae5d167a.png",
     "static/media/biochemistry_2020_2_1.jpg": "/anywhere-Insulin19220111/static/media/biochemistry_2020_2_1.c1cb639c9d72cfd03c8a.jpg",
@@ -70,6 +70,7 @@
     "static/media/splicing.png": "/anywhere-Insulin19220111/static/media/splicing.4955c5e24414e3130a61.png",
     "static/media/biochemistry2019_3_3.jpg": "/anywhere-Insulin19220111/static/media/biochemistry2019_3_3.db14897a1176f71f5109.jpg",
     "static/media/coagulation.png": "/anywhere-Insulin19220111/static/media/coagulation.78db40e333afae14b97f.png",
+    "static/media/plasmid.png": "/anywhere-Insulin19220111/static/media/plasmid.d489bb51372339fe53c4.png",
     "static/media/biochemistry2016_3_3.jpg": "/anywhere-Insulin19220111/static/media/biochemistry2016_3_3.7988be1b9834a1b23950.jpg",
     "static/media/uncouplingProtein.png": "/anywhere-Insulin19220111/static/media/uncouplingProtein.45e644c3e112bb45aa15.png",
     "static/media/titleImg.JPG": "/anywhere-Insulin19220111/static/media/titleImg.aaf438e083550d371412.JPG",
@@ -99,10 +100,10 @@
     "static/media/biochemistry2020_3_question.jpg": "/anywhere-Insulin19220111/static/media/biochemistry2020_3_question.22c9684c1e37da7d2415.jpg",
     "index.html": "/anywhere-Insulin19220111/index.html",
     "main.2255ca1a.css.map": "/anywhere-Insulin19220111/static/css/main.2255ca1a.css.map",
-    "main.f99ffb75.js.map": "/anywhere-Insulin19220111/static/js/main.f99ffb75.js.map"
+    "main.b3729163.js.map": "/anywhere-Insulin19220111/static/js/main.b3729163.js.map"
   },
   "entrypoints": [
     "static/css/main.2255ca1a.css",
-    "static/js/main.f99ffb75.js"
+    "static/js/main.b3729163.js"
   ]
 }

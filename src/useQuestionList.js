@@ -1,6 +1,7 @@
 import { useState } from 'react'
 
 // import q1 from './img/question/220613-1.JPG'
+import plasmid from './img/answer/plasmid.png'
 import metabolism from './img/answer/metabolism.png'
 import uncouplingProtein from './img/answer/uncouplingProtein.png'
 import glucokinase from './img/answer/glucokinase.png'
@@ -1498,14 +1499,17 @@ export const useQuestionList = () => {
           commentary:
             '大腸菌を用いて精製したASTとF4画分のSDS-PAGEの結果を比べることで、分子量の観点からASTの存在を確認できる実験。（酵素の実験では活性の観点からASTの存在を確認しようとした）バンドがぼやけるのはモノクローナル抗体を使ったため（ASTのランダムな一部分と配列が同じなら抗体が結合してしまう）。',
         },
-        // {
-        //   detailInfo: '',
-        //   questionImg: [],
-        //   questionSentence: '',
-        //   answerImg: [],
-        //   answer: '',
-        //   commentary: '',
-        // },
+        {
+          detailInfo: 'レポート1日目',
+          questionImg: [],
+          questionSentence:
+            '今回使用したプレート上で大腸菌が生育するために必要な遺伝子は何か。また、その理由は何か',
+          answerImg: [plasmid],
+          answer:
+            'ペニシリン系抗生物質の分解酵素β-lactamaseをコードするAmp(R)遺伝子。培地にアンピシリンが含まれていて、通常では増殖することができないため。',
+          commentary:
+            'プラスミドが導入されていない大腸菌も死滅するわけではないため、導入大腸菌がアンピシリンを分解した後遅れてコロニーを形成することがある。',
+        },
         // {
         //   detailInfo: '',
         //   questionImg: [],
