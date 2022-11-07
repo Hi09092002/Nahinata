@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/anywhere-Insulin19220111/static/css/main.2255ca1a.css",
-    "main.js": "/anywhere-Insulin19220111/static/js/main.7027cc81.js",
+    "main.js": "/anywhere-Insulin19220111/static/js/main.f99ffb75.js",
     "static/media/biochemistry2018_4_2.png": "/anywhere-Insulin19220111/static/media/biochemistry2018_4_2.3f1b252e9120e9aacb9f.png",
     "static/media/biochemistry2018_5.png": "/anywhere-Insulin19220111/static/media/biochemistry2018_5.3b24e87a75aaae5d167a.png",
     "static/media/biochemistry_2020_2_1.jpg": "/anywhere-Insulin19220111/static/media/biochemistry_2020_2_1.c1cb639c9d72cfd03c8a.jpg",
@@ -30,6 +30,7 @@
     "static/media/biochemistry2018_4_1.jpg": "/anywhere-Insulin19220111/static/media/biochemistry2018_4_1.7370cf802b2a2d411b1a.jpg",
     "static/media/biochemistry2021_5_2.JPG": "/anywhere-Insulin19220111/static/media/biochemistry2021_5_2.6523500c8717b169af9a.JPG",
     "static/media/biochemistry2019_2_3.jpg": "/anywhere-Insulin19220111/static/media/biochemistry2019_2_3.8b68c05b158ae84cdd84.jpg",
+    "static/media/metabolism.png": "/anywhere-Insulin19220111/static/media/metabolism.ac0bdb6a600d547b1ee9.png",
     "static/media/biochemistry_2020_1_4.jpg": "/anywhere-Insulin19220111/static/media/biochemistry_2020_1_4.856dceb5b0e2b5d78635.jpg",
     "static/media/biochemistry2021_4_2.JPG": "/anywhere-Insulin19220111/static/media/biochemistry2021_4_2.39ad8477fcf92058dff5.JPG",
     "static/media/biochemistry2018_4_4.jpg": "/anywhere-Insulin19220111/static/media/biochemistry2018_4_4.bc94204e323ec4fb88db.jpg",
@@ -98,10 +99,10 @@
     "static/media/biochemistry2020_3_question.jpg": "/anywhere-Insulin19220111/static/media/biochemistry2020_3_question.22c9684c1e37da7d2415.jpg",
     "index.html": "/anywhere-Insulin19220111/index.html",
     "main.2255ca1a.css.map": "/anywhere-Insulin19220111/static/css/main.2255ca1a.css.map",
-    "main.7027cc81.js.map": "/anywhere-Insulin19220111/static/js/main.7027cc81.js.map"
+    "main.f99ffb75.js.map": "/anywhere-Insulin19220111/static/js/main.f99ffb75.js.map"
   },
   "entrypoints": [
     "static/css/main.2255ca1a.css",
-    "static/js/main.7027cc81.js"
+    "static/js/main.f99ffb75.js"
   ]
 }
