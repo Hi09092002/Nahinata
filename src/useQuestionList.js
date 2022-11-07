@@ -1,6 +1,10 @@
 import { useState } from 'react'
 
 // import q1 from './img/question/220613-1.JPG'
+import Xgal from './img/answer/Xgal.png'
+import operon from './img/answer/operon.png'
+import lacZ from './img/answer/lacZ.png'
+import introducedAST1 from './img/answer/introducedAST1.png'
 import plasmid from './img/answer/plasmid.png'
 import metabolism from './img/answer/metabolism.png'
 import uncouplingProtein from './img/answer/uncouplingProtein.png'
@@ -1510,30 +1514,37 @@ export const useQuestionList = () => {
           commentary:
             'プラスミドが導入されていない大腸菌も死滅するわけではないため、導入大腸菌がアンピシリンを分解した後遅れてコロニーを形成することがある。',
         },
-        // {
-        //   detailInfo: '',
-        //   questionImg: [],
-        //   questionSentence: '',
-        //   answerImg: [],
-        //   answer: '',
-        //   commentary: '',
-        // },
-        // {
-        //   detailInfo: '',
-        //   questionImg: [],
-        //   questionSentence: '',
-        //   answerImg: [],
-        //   answer: '',
-        //   commentary: '',
-        // },
-        // {
-        //   detailInfo: '',
-        //   questionImg: [],
-        //   questionSentence: '',
-        //   answerImg: [],
-        //   answer: '',
-        //   commentary: '',
-        // },
+        {
+          detailInfo: 'レポート1日目',
+          questionImg: [],
+          questionSentence:
+            'プレート上で色の異なる（青色の）コロニーが出現した理由は何か。',
+          answerImg: [Xgal, plasmid, lacZ],
+          answer:
+            '今回導入するpBluescriptSK(-)プラスミドにはlacZ-α断片が、大腸菌にはlacZ-ω断片が含まれている。これら両方がそろうことで活性をもったβガラクトシダーゼが生成され、X-galが分解・酸化縮合し青色色素ブロモクロロインジゴを生成した。一方pBluescriptSK(-)-ASTプラスミドではlacZ-α領域の途中のMCS領域をEcoRIで切断し終止コドンを含むAST1遺伝子をTAクローニング法で導入しているため、lacZ-α断片が完全な形で生成されず、X-galから青色色素を生成しない。',
+          commentary:
+            'AST1が導入されていると終止コドンによってlacZ-α遺伝子は大部分が翻訳されない。これによって、AST1が導入されたかどうかを視覚的に確認することができる。（アンピシリン耐性遺伝子AmpRとは導入経路が異なるため、どちらも確認する必要がある。）',
+        },
+        {
+          detailInfo: 'レポート1日目',
+          questionImg: [],
+          questionSentence: 'IPTGが寒天プレートに含まれている理由はなにか。',
+          answerImg: [operon],
+          answer:
+            'プラスミド導入大腸菌はlacリプレッサーを過剰発現しており、ASTの発現が抑制されている。培地に添加されたIPTGがlacリプレッサーと結合することによって、リプレッサーがはずれ、lacオペロンの転写の抑制が解除されるため。',
+          commentary:
+            'lacZ-α遺伝子は、大腸菌ラクトースオペロンのlacプロモーター由来のプロモーターの支配下にあり、βガラクトシド（およびその誘導体IPTGなど）によって転写活性が上昇する。自然界では、lacオペロンは大腸菌のエネルギー源であるグルコースが存在せず、ラクトースを利用できる場合に産生される。外来遺伝子産物は、宿主の増殖に悪影響を及ぼす恐れがあるため、増殖が十分進むまで発現を制御しておく必要がある。IPTGはアロラクトースの類似体。',
+        },
+        {
+          detailInfo: 'レポート1日目',
+          questionImg: [],
+          questionSentence:
+            'AST1の予想される分子量は何kDa程度か。（アミノ酸の平均分子量は110Daとして計算する）また、その根拠は何か。',
+          answerImg: [introducedAST1],
+          answer: '約50.6kDa',
+          commentary:
+            'lacZ由来119bp + TAクローニングによる1bp + AST1の5’非翻訳領域21bp =total141bp →47アミノ酸分だけ野生型ASTに比べて大きくなる。野生型AST1は413アミノ酸なので、大腸菌から生成されるAST1の分子量は合計460アミノ酸→50600Daに相当する。数値的には分子量に等しいが、厳密にはDa(Dalton)は分子量の単位ではない。',
+        },
         // {
         //   detailInfo: '',
         //   questionImg: [],
