@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/anywhere-Insulin19220111/static/css/main.2255ca1a.css",
-    "main.js": "/anywhere-Insulin19220111/static/js/main.bf7c9f03.js",
+    "main.js": "/anywhere-Insulin19220111/static/js/main.0464c8f2.js",
     "static/media/biochemistry2018_4_2.png": "/anywhere-Insulin19220111/static/media/biochemistry2018_4_2.3f1b252e9120e9aacb9f.png",
     "static/media/biochemistry2018_5.png": "/anywhere-Insulin19220111/static/media/biochemistry2018_5.3b24e87a75aaae5d167a.png",
     "static/media/biochemistry_2020_2_1.jpg": "/anywhere-Insulin19220111/static/media/biochemistry_2020_2_1.c1cb639c9d72cfd03c8a.jpg",
@@ -83,6 +83,7 @@
     "static/media/glucokinase.png": "/anywhere-Insulin19220111/static/media/glucokinase.60f2d3977cebe574d3bf.png",
     "static/media/promotor.png": "/anywhere-Insulin19220111/static/media/promotor.6d7ead58b6ea938d9697.png",
     "static/media/standardFreeEnergy.png": "/anywhere-Insulin19220111/static/media/standardFreeEnergy.1e8ce857349856a67de7.png",
+    "static/media/SAM.png": "/anywhere-Insulin19220111/static/media/SAM.1d2ecb289ef946590e74.png",
     "static/media/lacZ.png": "/anywhere-Insulin19220111/static/media/lacZ.5eb4c9bc4ad34a72e9e0.png",
     "static/media/SDSMicelle.png": "/anywhere-Insulin19220111/static/media/SDSMicelle.87ddc783caecf4c4fc71.png",
     "static/media/synthesizeCatecholamine.png": "/anywhere-Insulin19220111/static/media/synthesizeCatecholamine.3dfa41b552934320dc8b.png",
@@ -106,10 +107,10 @@
     "static/media/biochemistry2020_3_question.jpg": "/anywhere-Insulin19220111/static/media/biochemistry2020_3_question.22c9684c1e37da7d2415.jpg",
     "index.html": "/anywhere-Insulin19220111/index.html",
     "main.2255ca1a.css.map": "/anywhere-Insulin19220111/static/css/main.2255ca1a.css.map",
-    "main.bf7c9f03.js.map": "/anywhere-Insulin19220111/static/js/main.bf7c9f03.js.map"
+    "main.0464c8f2.js.map": "/anywhere-Insulin19220111/static/js/main.0464c8f2.js.map"
   },
   "entrypoints": [
     "static/css/main.2255ca1a.css",
-    "static/js/main.bf7c9f03.js"
+    "static/js/main.0464c8f2.js"
   ]
 }

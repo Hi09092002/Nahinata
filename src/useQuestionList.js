@@ -1,6 +1,7 @@
 import { useState } from 'react'
 
 // import q1 from './img/question/220613-1.JPG'
+import SAM from './img/answer/SAM.png'
 import ammonia from './img/answer/ammonia.png'
 import RTPCR from './img/answer/RTPCR.png'
 import Xgal from './img/answer/Xgal.png'
@@ -1511,7 +1512,17 @@ export const useQuestionList = () => {
           answer:
             '暗室で蛍光するバンドをX線フィルムに現像しようとしたが、あまりはっきりと映らなかった。その後免疫染色によって位置関係を確認した。AST1に相当するバンドの他、その2量体や別の長さのバンドも確認できた。',
           commentary:
-            '大腸菌を用いて精製したASTとF4画分のSDS-PAGEの結果を比べることで、分子量の観点からASTの存在を確認できる実験。（酵素の実験では活性の観点からASTの存在を確認しようとした）バンドがぼやけるのはモノクローナル抗体を使ったため（ASTのランダムな一部分と配列が同じなら抗体が結合してしまう）。',
+            '大腸菌を用いて精製したASTとF4画分のSDS-PAGEの結果を比べることで、分子量の観点からASTの存在を確認できる実験。（酵素の実験では活性の観点からASTの存在を確認しようとした）バンドがぼやけるのはモノクローナル抗体を使ったため（ASTのランダムな一部分と配列が同じなら抗体が結合してしまう）。その他、バンドの濃さで絶対量を比べることができる・CBB染色など',
+        },
+        {
+          detailInfo: '',
+          questionImg: [],
+          questionSentence: 'kDaの読み方と意味は？',
+          answerImg: [],
+          answer:
+            'キロダルトン。タンパク質などの巨大分子で、厳密な分子量が求めにくいものの大きさをいうときの単位で、厳密には分子量ではない（分子量は無名数で単位なし）。',
+          commentary:
+            'Daは数値的には分子量に等しいが、分子量は1molあたりの相対質量で無名数であるのに対し、ダルトンは「分子1個の質量」を表すのに使う。分子量の概念に当てはまらない染色体・リボソームなどのタンパク質の質量を表すのに用いられる。',
         },
         {
           detailInfo: 'レポート1日目',
@@ -1556,7 +1567,7 @@ export const useQuestionList = () => {
             'lacZ由来119bp + TAクローニングによる1bp + AST1の5’非翻訳領域21bp =total141bp →47アミノ酸分だけ野生型ASTに比べて大きくなる。野生型AST1は413アミノ酸なので、大腸菌から生成されるAST1の分子量は合計460アミノ酸→50600Daに相当する。数値的には分子量に等しいが、厳密にはDa(Dalton)は分子量の単位ではない。',
         },
         {
-          detailInfo: 'レポート2日目',
+          detailInfo: 'レポート3日目',
           questionImg: [],
           questionSentence:
             'イムノブロットのシグナルが検出されたのはどのサンプルか。また、シグナルの位置・強度にはどのような関係が認められたか。',
@@ -1567,7 +1578,7 @@ export const useQuestionList = () => {
             'これによってAST1だと思われる抽出物が、AST1に対応する塩基配列から合成された正真正銘のAST1と同じくらいの分子量であることを確認できた。→酵素実習ではAST1のような作用を持つタンパク質を抽出できただけで、本当にAST1である確認が不十分であった。例えばミトコンドリアには同じ作用をもつが分子量が小さい（約30kDa?）AST2が存在する。',
         },
         {
-          detailInfo: 'レポート2日目',
+          detailInfo: 'レポート3日目',
           questionImg: [],
           questionSentence:
             '第1日目に予想したAST1の推定分子量とイムノブロットのシグナルから推定された分子量について比較し、差異がある場合にはその理由を考察しなさい。',
@@ -1585,14 +1596,7 @@ export const useQuestionList = () => {
         //   answer: '',
         //   commentary: '',
         // },
-        // {
-        //   detailInfo: '',
-        //   questionImg: [],
-        //   questionSentence: '',
-        //   answerImg: [],
-        //   answer: '',
-        //   commentary: '',
-        // },
+
         // {
         //   detailInfo: '',
         //   questionImg: [],
@@ -1611,11 +1615,11 @@ export const useQuestionList = () => {
           questionImg: [],
           questionSentence:
             '制限酵素が認識する塩基配列は6~8塩基程度のものが多く、ある制限酵素が発現している細菌自身のDNA鎖の中にもその認識配列は存在する。では、この細菌のDNA鎖が自身の制限酵素で切断・破壊されることはないのだろうか？',
-          answerImg: [],
+          answerImg: [SAM],
           answer:
             'メチル化などで自身のDNAを修飾することによって、切断を免れている。',
           commentary:
-            '例えば大腸菌は自身のDNAをメチル化することによって、外来DNAを区別して分解する。',
+            '例えば大腸菌は自身のDNAをメチル化することによって、外来DNAを区別して分解する。このときのメチル基供与体はS-アデノシルメチオニン(SAM)で、メチオニンとATPから生成され、メチル基転移反応を行った後はN-メチルTHF(葉酸由来)とメチルコバラミン(ビタミンB12由来)によってSAMに再合成されるか、ピリドキシン(ビタミンB₆)などによってシステインへ合成される。',
         },
         {
           detailInfo: '課題2',
@@ -1625,7 +1629,7 @@ export const useQuestionList = () => {
           answerImg: [],
           answer:
             'isoschizomerは同じ配列を認識する制限酵素のことで、同じ形の切断端を作る。',
-          commentary: '',
+          commentary: '関連：アイソザイム',
         },
         {
           detailInfo: '課題3',
