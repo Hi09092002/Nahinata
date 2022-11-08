@@ -214,7 +214,7 @@ export const Setting = ({
                 // 現在非同期バグが発生しており、ロードしたsettingをこの形でないと反映できない。がんばれ、未来の俺！
                 setTimeout(() => {
                   updateAllSettings(loadData.status)
-                }, 2000)
+                }, 1500)
               }}
             >
               続きから(あと{loadData.history.split(',').length - 1}問)
