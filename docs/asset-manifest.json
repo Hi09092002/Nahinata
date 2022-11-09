@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/anywhere-Insulin19220111/static/css/main.2255ca1a.css",
-    "main.js": "/anywhere-Insulin19220111/static/js/main.f5293071.js",
+    "main.js": "/anywhere-Insulin19220111/static/js/main.aec1db11.js",
     "static/media/biochemistry2018_4_2.png": "/anywhere-Insulin19220111/static/media/biochemistry2018_4_2.3f1b252e9120e9aacb9f.png",
     "static/media/biochemistry2018_5.png": "/anywhere-Insulin19220111/static/media/biochemistry2018_5.3b24e87a75aaae5d167a.png",
     "static/media/biochemistry_2020_2_1.jpg": "/anywhere-Insulin19220111/static/media/biochemistry_2020_2_1.c1cb639c9d72cfd03c8a.jpg",
@@ -64,6 +64,7 @@
     "static/media/biochemistry2021_7_2.JPG": "/anywhere-Insulin19220111/static/media/biochemistry2021_7_2.e99dd5153e3c2ed2e847.JPG",
     "static/media/biochemistry_2020_4_2.jpg": "/anywhere-Insulin19220111/static/media/biochemistry_2020_4_2.bbc06361bebe3859b358.jpg",
     "static/media/biochemistry2021_7_1.JPG": "/anywhere-Insulin19220111/static/media/biochemistry2021_7_1.0f39728b15e8a29d6544.JPG",
+    "static/media/VATPase.png": "/anywhere-Insulin19220111/static/media/VATPase.76d5df02c0a8e37ab5b9.png",
     "static/media/biochemistry2019_3_2.jpg": "/anywhere-Insulin19220111/static/media/biochemistry2019_3_2.1a20141ae6ca6c32da3a.jpg",
     "static/media/biochemistry2016_3_2.jpg": "/anywhere-Insulin19220111/static/media/biochemistry2016_3_2.700e4d9e37734784556b.jpg",
     "static/media/DNAsynthesize.png": "/anywhere-Insulin19220111/static/media/DNAsynthesize.8ad3416e17616804662f.png",
@@ -107,10 +108,10 @@
     "static/media/biochemistry2020_3_question.jpg": "/anywhere-Insulin19220111/static/media/biochemistry2020_3_question.22c9684c1e37da7d2415.jpg",
     "index.html": "/anywhere-Insulin19220111/index.html",
     "main.2255ca1a.css.map": "/anywhere-Insulin19220111/static/css/main.2255ca1a.css.map",
-    "main.f5293071.js.map": "/anywhere-Insulin19220111/static/js/main.f5293071.js.map"
+    "main.aec1db11.js.map": "/anywhere-Insulin19220111/static/js/main.aec1db11.js.map"
   },
   "entrypoints": [
     "static/css/main.2255ca1a.css",
-    "static/js/main.f5293071.js"
+    "static/js/main.aec1db11.js"
   ]
 }

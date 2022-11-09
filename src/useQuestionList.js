@@ -1,6 +1,7 @@
 import { useState } from 'react'
 
 // import q1 from './img/question/220613-1.JPG'
+import VATPase from './img/answer/VATPase.png'
 import SAM from './img/answer/SAM.png'
 import ammonia from './img/answer/ammonia.png'
 import RTPCR from './img/answer/RTPCR.png'
@@ -893,8 +894,9 @@ export const useQuestionList = () => {
             biochemistry2019_2_3,
           ],
           answer:
-            '電子伝達系で遊離したエネルギーは H+の電気化学ポテンシャルに変換され、 ATP 合成酵素はこのH+駆 動力を利用して ATP 合成を行う、という説。すべての生命に普遍的な生体エネルギー変換の原理を説明でき、ATP 合成のために、物質(高エネルギー中間体)を一々使う必要がなく、ATP合成を持続的に行える。',
-          commentary: '',
+            '電子伝達系で遊離したエネルギーは H⁺の電気化学ポテンシャルに変換され、 ATP 合成酵素はこのH⁺駆動力を利用して ATP 合成を行う、という説。すべての生命に普遍的な生体エネルギー変換の原理を説明でき、ATP 合成のために、物質(高エネルギー中間体)をいちいち使う必要がなく、ATP合成を持続的に行える。',
+          commentary:
+            '酸化的リン酸化におけるATPシンターゼ（複合体Ⅴ）は電子伝達鎖によって生じたプロトン勾配のエネルギーを使ってATPを合成するが、これとは真逆で、ATPを使用してリソソームなどでプロトン勾配を作り出す酵素V-ATPaseも細胞内には存在する。このV-ATPaseはリソソームやオルガネラの酸性化だけでなく、破骨細胞や発生初期の極性の形成に重要な役割を担っている。→特別講義「疾患発症に関わる酸性オルガネラの高次構造」',
         },
         {
           detailInfo: '3',
@@ -1651,6 +1653,51 @@ export const useQuestionList = () => {
         //   answer: '',
         //   commentary: '',
         // },
+        // {
+        //   detailInfo: '',
+        //   questionImg: [],
+        //   questionSentence: '',
+        //   answerImg: [],
+        //   answer: '',
+        //   commentary: '',
+        // },
+      ],
+    },
+    {
+      groupTag: '特別講義特集',
+      groupContents: [
+        {
+          detailInfo: '11/01',
+          questionImg: [],
+          questionSentence: 'V-ATPaseとは何か、どういった細胞にみられるか',
+          answerImg: [VATPase],
+          answer:
+            'V-ATPaseは、ATPをエネルギー源とした回転運動によりプロトンを輸送し、オルガネラ内を酸性化することで、多くの重要な生命活動を支えるタンパク質である。リソソームやエンドソームといった酸性オルガネラ小胞の膜に存在し、小胞内部を酸性化することで、タンパク質の品質管理や神経伝達、免疫反応などを支える重要なプロトンポンプタンパク質である。',
+          commentary:
+            'ミトコンドリア膜のATPシンターゼ（酸化的リン酸化）の逆の反応を行う酵素で、ATPシンターゼと似た構造をしている。別名、液胞型ATP分解酵素。V-ATPaseの最初の活性を発見したのは大隅教授らしい。',
+        },
+        {
+          detailInfo: '11/01',
+          questionImg: [],
+          questionSentence:
+            'オルガネラとは何か。また、酸性オルガネラとは何か。',
+          answerImg: [],
+          answer:
+            '細胞内にあって、一定の機能を持つようになった小胞体の総称。細胞内小器官のこと。内部がpH6.5~4.5になっているオルガネラを、酸性オルガネラと呼ぶ。',
+          commentary:
+            '細胞にはゴルジ体・小胞体・ミトコンドリアなど様々な細胞小器官（オルガネラ）が含まれる。例えばリソソームは、含んでいる分解酵素を活性化するために細胞内を酸性(pH 5.0付近)に維持しなければならない。このように内部の酸性環境を形成・維持するために、V-ATPaseは活動する。',
+        },
+        {
+          detailInfo: '11/01',
+          questionImg: [],
+          questionSentence:
+            'V-ATPaseのサブユニットに変異があると、骨形成が一方的に進む大理石病や、遠位尿細管のアシドーシス、感音性の難聴、がん細胞が転移しやすくなったりする。これらがどういった過程で生じるのか、説明せよ。',
+          answerImg: [],
+          answer:
+            'V-ATPaseは破骨細胞の骨分解に関与していたり、集合管上皮細胞によるH⁺分泌に関与していたり、内耳のリンパ液の調節に関与していたり、がん細胞の周りの足場を溶かしたりするので、これに変異があると様々な異常が生じる。',
+          commentary:
+            'その他糖鎖付加にも関与していて、皮膚が異常に弛緩する常染色体劣性遺伝病（エーラース・ダンロス症候群？）を引き起こす変異もある。',
+        },
         // {
         //   detailInfo: '',
         //   questionImg: [],
