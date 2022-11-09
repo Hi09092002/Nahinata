@@ -1,6 +1,12 @@
 import { useState } from 'react'
 
 // import q1 from './img/question/220613-1.JPG'
+import taqman from './img/answer/taqman.png'
+import SNP from './img/answer/SNP.png'
+import sequencing from './img/answer/sequencing.png'
+import mtDNA from './img/answer/mtDNA.jpeg'
+import HIV from './img/answer/HIV.jpg'
+import alcohol from './img/answer/alcohol.png'
 import VATPase from './img/answer/VATPase.png'
 import SAM from './img/answer/SAM.png'
 import ammonia from './img/answer/ammonia.png'
@@ -1702,13 +1708,96 @@ export const useQuestionList = () => {
           detailInfo: '11/01',
           questionImg: [],
           questionSentence:
-            'V-ATPのサブユニットを欠損させたマウスは発生初期(E5.5など)で胚性致死に至る。どういった過程でこのようになるのか、説明せよ',
+            'V-ATPのサブユニットを欠損させたマウスは発生初期(E5.5など)で胚性致死に至る。どういった原因でこのようになるのか、説明せよ',
           answerImg: [],
           answer:
             '胚の大きさは野生型に比べてやや小さいが、3つの構成成分への分化は正常に誘導されている。ただし変異型はそれぞれがクラスターのような分布をしており、正常な局在がみられない。',
           commentary:
             '→胚の極性を維持するためにV-ATPaseが必要であると考えられる。',
         },
+        {
+          detailInfo: '10/31「個人差の生化学」',
+          questionImg: [],
+          questionSentence: 'SNPとは何か、多型とは何か、説明せよ。',
+          answerImg: [SNP],
+          answer:
+            'SNPはSingle Nucleotide Polymorphism の略で、DNAの塩基配列における1個の塩基が他の塩基に置き換わっているものを指す。1塩基多型。また、集団においてその変異型が1%以上の頻度で出現している時、その塩基配列の違いを多型とよぶ。※1%未満である場合は変異や稀なバリエーションと呼ぶ。',
+          commentary: '',
+        },
+        {
+          detailInfo: '10/31「個人差の生化学」',
+          questionImg: [],
+          questionSentence:
+            '日本人の4割以上が酒に弱い遺伝子型である。この遺伝子型はどういったものか、アルコールの代謝と関連付けて説明せよ。',
+          answerImg: [alcohol],
+          answer:
+            '摂取したアルコールは胃から2割、小腸から8割吸収され、その大部分は肝臓で無毒化される。このとき肝臓でアセトアルデヒド→酢酸の反応を触媒する酵素がALDHであり、日本人の4割以上はこの酵素ALDH2が弱いあるいは活性が無い変異を持っている。酢酸への分解が進まないと、二日酔い・頭痛・動悸・発がん性も疑われている有毒物質アセトアルデヒドが蓄積してしまう。',
+          commentary:
+            'ドイツ・イスラエル・エジプト・ケニア・スウェーデン・フィンランドなどではALDH2遺伝子が弱い変異は存在しない。',
+        },
+        {
+          detailInfo: '10/31「個人差の生化学」',
+          questionImg: [],
+          questionSentence:
+            '従来のキャピラリー電気泳動方式（TaqMan法など）と比べてNGS（次世代シーケンサー）が遺伝子多型の解析に優れている点を挙げよ。',
+          answerImg: [taqman, sequencing],
+          answer:
+            'キャピラリー電気泳動ではスタッター・プルアップなど特有のエラーが起こりやすく、混合試料（特に19対1など少量の混合）との区別が難しいが、NGSは精度が高く、混合試料の解析に有利である。　また、TaqMan法では一度に判別できるSNPの数に限界がある？がNGSでは遺伝子全てを解析し無数のSNPの組み合わせをアレルとして読み取ることができる。　さらにNGSではリード数カウントにより塩基多型の頻度を定量的に判断することもできる。',
+          commentary:
+            'TaqMan法とは蛍光色素をプローブに付加した試薬（高額らしい）を使ってPCRを行い、PCR中にプライマーより先にDNA配列に結合した場合にのみ蛍光色素が活性化され発色する。発色強度はPCR20回目以上になると検出できるほどの大きさになる。それ以前のSNP検出方法としては、実習でも用いたPCR-RFLP法（制限酵素で切れるかどうかで判断）、Allele-specificPCR法（変異に対応するプライマーを準備してそれぞれPCR→電気泳動で増幅されたか調べる方法）などが挙げられる。高価という点を除けば、現状NGSがほとんどの場合で最適。',
+        },
+        {
+          detailInfo: '10/31「個人差の生化学」',
+          questionImg: [],
+          questionSentence:
+            '震災などのDNA鑑定では、まず出てきた骨が人かどうかを判別することになる。骨の形状以外で、動物種の特定を行うために何を調べるか。',
+          answerImg: [mtDNA],
+          answer:
+            'mtDNA(ミトコンドリアDNA)を調べることで動物種の特定を行うことができる。mtDNAは完全に母系遺伝であるため、母系のすべての祖先と原則的には同じ配列となる。人類はアフリカの1種類の共通女系祖先からmtDNAを受け継いでいるため、その殆どの配列が共通している（突然変異による枝分かれは存在している）。',
+          commentary:
+            '畑内遺跡で出土した人骨と、発掘した研究員のmtDNAは数か所の配列しか違わなかったといわれている。結局震災では解析データの共有に問題があり民間ではDNA鑑定による身元確認は一度も行われなかった。',
+        },
+
+        {
+          detailInfo: '10/17「HIV/AIDSの分子生物学」',
+          questionImg: [],
+          questionSentence: 'HIV/AIDSの感染経路・感染症状について、説明せよ。',
+          answerImg: [HIV],
+          answer:
+            'HIV:human immunodeficiency virus（ヒト免疫不全ウイルス）は、血液・体液を介してCD4/ヘルパーT細胞に感染し、逆転写した二本鎖DNAを宿主の染色体に組み込む。これを転写・翻訳・細胞膜へ輸送することでウイルスが増殖し、体内のCD4細胞が次々と感染していく。このようにして血中CD4細胞が低下すると免疫力が落ちてAIDSを発症することとなる。感染からAIDS期に至るまで数年程度かかるため、気付かず感染を広げてしまう。',
+          commentary:
+            '人類の死因の約二割が感染症で、途上国ではAIDSが死因一位である。先進国で適切な治療を行えば、AIDSで死に至ることは少なくなっている。HIVは非常に不活化されやすく、空気に触れると数分で感染力を失うが、体液中では安定して存在でき、胎盤・産道・母乳を介して垂直感染する可能性がある。',
+        },
+        {
+          detailInfo: '10/17「HIV/AIDSの分子生物学」',
+          questionImg: [],
+          questionSentence:
+            'HIVは効果的なワクチン開発が難しいとされる。その理由を説明せよ。',
+          answerImg: [HIV],
+          answer:
+            'HIVの逆転写酵素は正確性が低く（10⁵回程度に1回）、患者個人の中でも様々なバリエーションを持っているため。',
+          commentary:
+            'ワクチンが効きにくいインフルエンザのバリエーションと、個人が持つHIVバリエーションが同じくらいの規模であるといわれている。同様の理由で薬剤耐性ウイルスの出現を防ぐため、一般的に多剤併用療法で治療が行われる。',
+        },
+        {
+          detailInfo: '10/17「HIV/AIDSの分子生物学」',
+          questionImg: [],
+          questionSentence:
+            '既知の薬剤療法ではAIDSの発症を遅らせることはできても完治は望めない。一方で世界にはHIVを完治した症例が数件存在する。HIVを完治する治療法について、またその原理について説明せよ。',
+          answerImg: [],
+          answer:
+            '米国人ティモシー・レイ・ブラウンは1995年にHIV感染が発覚した後、2007年には急性骨髄性白血病と診断された。HIV感染と白血病の両方を治療するために、ベルリンの病院でHIV耐性を持つドナーからの骨髄幹細胞移植を受けた結果、世界で初めてHIV感染を克服することに成功した。同じく骨髄移植によって2例目の完治が、2019年に報告されている。',
+          commentary:
+            'HIV耐性（CCR5-Δ32）骨髄移植はリスクが高く、一般的には使われていない。ゲノム編集技術によってHIV耐性を獲得し治療できないか、研究が続けられている。',
+        },
+        // {
+        //   detailInfo: '9/27「遺伝子操作技術の変遷」など',
+        //   questionImg: [],
+        //   questionSentence: '',
+        //   answerImg: [],
+        //   answer: '',
+        //   commentary: '',
+        // },
         // {
         //   detailInfo: '',
         //   questionImg: [],
