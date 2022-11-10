@@ -1666,7 +1666,7 @@ export const useQuestionList = () => {
         {
           detailInfo: '4',
           questionSentence: '正常時の血糖値、NEAFはいくつか',
-          choices: [],
+          questionImg: [],
           answerImg: [beforeDiet],
           answer: '血糖値：70〜109mg/dL、NEFA：0.14〜0.85mEq/L',
           commentary: '血糖値は4.5~5mMとも表現される。',
