@@ -1,6 +1,12 @@
 import { useState } from 'react'
 
 // import q1 from './img/question/220613-1.JPG'
+import restrictionEnzyme from './img/answer/restrictionEnzyme.png'
+import microRNA from './img/answer/microRNA.png'
+import kidneyTissue from './img/answer/kidneyTissue.jpg'
+import genomeEditting from './img/answer/genomeEditting.webp'
+import geneTherapy from './img/answer/geneTherapy.png'
+import geneModifyVector from './img/answer/geneModifyVector.png'
 import taqman from './img/answer/taqman.png'
 import SNP from './img/answer/SNP.png'
 import sequencing from './img/answer/sequencing.png'
@@ -1651,6 +1657,32 @@ export const useQuestionList = () => {
           commentary:
             'タンパク質ではSDSで負電荷を付加して電気泳動を行った→イムノブロット/SDS-PAGE',
         },
+        {
+          detailInfo: 'レポート3日目',
+          questionImg: [],
+          questionSentence:
+            'PCR産物を制限酵素で切断し電気泳動した結果、写真でバンドが三本(約500bp/約400bp/約100bp)確認された。DNAがX型であれば制限酵素で切断され、R型であれば切断されない。このときの遺伝子型について、説明せよ。',
+          answerImg: [restrictionEnzyme],
+          answer: 'RX型',
+          commentary:
+            'A班（前半）の実習では、同時に撮影した12人全員で約500bpのバンドが確認されたが、うち2人は制限酵素で十分に切れていないXX型だった。このときのXX型とXR型では3本のバンドの濃さが少し違っていて、基質の濃度で反応速度が違う...など色々書いた。制限酵素と基質（DNA溶液）が十分に混ざってなかった可能性が一番高いらしい。',
+        },
+        // {
+        //   detailInfo: '',
+        //   questionImg: [],
+        //   questionSentence: '',
+        //   answerImg: [],
+        //   answer: '',
+        //   commentary: '',
+        // },
+        // {
+        //   detailInfo: '',
+        //   questionImg: [],
+        //   questionSentence: '',
+        //   answerImg: [],
+        //   answer: '',
+        //   commentary: '',
+        // },
         // {
         //   detailInfo: '',
         //   questionImg: [],
@@ -1790,8 +1822,80 @@ export const useQuestionList = () => {
           commentary:
             'HIV耐性（CCR5-Δ32）骨髄移植はリスクが高く、一般的には使われていない。ゲノム編集技術によってHIV耐性を獲得し治療できないか、研究が続けられている。',
         },
+        {
+          detailInfo: '9/27「遺伝子操作技術の変遷」など',
+          questionImg: [],
+          questionSentence: 'miRNAやsiRNAについて、説明せよ。',
+          answerImg: [microRNA],
+          answer:
+            'miRNA/microRNAとsiRNA/small interfering RNAはともにゲノム上にコードされ、多段階的な生成過程を経て最終的に20~25塩基長となる微小なノンコーディング（タンパク質へ翻訳されない）RNA。siRNAは配列に完全相補的に結合するRNA(ウイルスのRNAやmRNA)を分解することでウイルスの働きを抑制したりmRNAのタンパク質への翻訳を強力に阻害する。一方miRNAはRNAに部分相補的に一致するmRNAのタンパク質への翻訳を物理的に阻害することで、さまざまな遺伝子発現を抑制する。',
+          commentary:
+            '1990年色素発現遺伝子を強調すると逆に色素を発現しなくなる現象から発見。本来の役割はRNAウイルスからの防御だと考えられている。ヒトのゲノムには約2000種類のmiRNAがコードされており、その約半数の遺伝子がmiRNAによる発現調節を受けている。',
+        },
+        {
+          detailInfo: '9/27「遺伝子操作技術の変遷」など',
+          questionImg: [],
+          questionSentence: 'ゲノム編集の方法について説明せよ。',
+          answerImg: [genomeEditting],
+          answer:
+            'ゲノム編集には第1世代ZFN、第2世代TALEN、第3世代CRISPR-Cas9の3種類に大別される酵素が使用される。最初に開発された人工エンドヌクレアーゼはZFN(Zinc Finger Nuclease)で、特定の3塩基のDNAを認識し結合するが、隣同士のzinc fingerが干渉するなど様々な問題があった。結合した後はFok1という海藻由来の制限酵素で切断する。第2世代ではZinc fingerの代わりに特定の1塩基ごとに認識することができるTALENが使用され、より扱いやすくなった。CRISPR-Cas9システムは大腸菌の免疫機構（外来生物のゲノム断片を取り込み、二回目以降素早く対応するためのRNA配列をCas9が取り込み対応する配列の遺伝子を切断する機構）をベースに開発された手法で、部位選択の自由度・ヌクレアーゼの構築・ターゲッティング効率・多重化などほとんどの項目で最も優れるが、オフターゲット（誤ってよく似た配列を切断してしまう現象）に関しては他より劣っている。',
+          commentary:
+            '野生型Cas9は対象の二本鎖DNAの両側を切断してしまうが、ニッカーゼというCas9変異型は片側のみ切れ目(nick)を入れるため、より複雑な処理を行うことができるようになった。この技術は哺乳類ゲノムの編集を容易にし、遺伝子治療の可能性を切り開いた。',
+        },
+        {
+          detailInfo: '9/27「遺伝子操作技術の変遷」など',
+          questionImg: [],
+          questionSentence:
+            '遺伝子治療におけるex vivo法とin vivo法について、説明せよ。',
+          answerImg: [geneTherapy],
+          answer:
+            'ex vivo法ではT細胞や造血幹細胞を患者から採取し、体外で遺伝子導入を行って、遺伝子導入細胞を組織に戻す手法が取られる。一方でin vivo法では遺伝子導入するためのウイルスベクターやプラスミドなどを直接患者に投与し遺伝子改変を狙う。',
+          commentary:
+            '既知の治療法より効果があり、副作用より効果が明確だと証明されている治療法については遺伝子治療が認められている。血友病・デシェンヌ型筋ジストロフィー・脊髄性筋委縮症(SMA)など。',
+        },
+        {
+          detailInfo: '9/27「遺伝子操作技術の変遷」など',
+          questionImg: [],
+          questionSentence: '遺伝子導入を行うベクターについて、説明せよ。',
+          answerImg: [geneModifyVector],
+          answer:
+            '遺伝子導入ベクターにはアデノ随伴ウイルス・アデノウイルス・レンチウイルス・レトロウイルスが主に用いられる。それぞれ長所と短所があり、例えばレトロウイルスは核膜孔を通過できないので非分裂細胞へ導入できないし、アデノ随伴ウイルスは長期発現が可能であるが発現させる遺伝子の長さに制限があり、特徴・目的によってそれぞれ選択することになる。',
+          commentary:
+            '日本ではレトロウイルス・アデノウイルスによる遺伝子治療が多く行われている。その他、DNAワクチン（プラスミドDNA）による遺伝子治療が一時期注目されたが、最近は活発でない。',
+        },
+        {
+          detailInfo: '9/27「遺伝子操作技術の変遷」など',
+          questionImg: [],
+          questionSentence: 'カルタヘナ法について、説明せよ。',
+          answerImg: [],
+          answer:
+            '遺伝子組み換え生物などが生物の多様性への悪影響を及ぼすことを防ぐための、国際的な罰則付きの取り決め。第一種使用では、遺伝子組み換え生物などの環境放出（一般流通）をともない、予定している使用について生物多様性に影響が生じないかどうかについて審査を受ける必要がある。第二種使用では、遺伝子組み換え生物などを環境への放出が起こらないよう物理的に封じ込める空間「拡散防止措置」で使用することを指し、主に実験室などでの利用が該当する。遺伝子組み換え大腸菌などは必ず滅菌など不活化処置を行ってから廃棄しなければならない。',
+          commentary:
+            'アメリカはカルタヘナ法を批准していないため、輸入する場合は要注意。遺伝子治療は第一種使用に該当する。',
+        },
+        {
+          detailInfo: '9/20「実験動物を利用した難治性疾患の新規治療法の開発」',
+          questionImg: [],
+          questionSentence:
+            '肝臓は再生能力が高い臓器であるが、肝硬変が進行すると再生しにくい状態となってしまう。これはなぜか。またこれを改善するVA核酸製剤について説明せよ。',
+          answerImg: [kidneyTissue],
+          answer:
+            '肝硬変では肝星細胞の小胞体で過剰なコラーゲン合成が行われ蓄積されることで線維化が起こり、再生されにくい状態となる。肝星細胞のコラーゲン分泌にはHSP47というヒートショックタンパク質がトリガーとなっており、また肝星細胞はビタミンAを貯蔵することから、HSP47を欠損させビタミンAを付与したVA核酸製剤を開発した。これは特異的に肝星細胞に届き、肝臓の線維化を解消させる。',
+          commentary: '',
+        },
+        {
+          detailInfo: '9/20「実験動物を利用した難治性疾患の新規治療法の開発」',
+          questionImg: [],
+          questionSentence:
+            '組織の線維化に関わっているタンパク質HSP47が、膵癌の増殖に寄与しているとはどういうことか、説明せよ。',
+          answerImg: [kidneyTissue],
+          answer:
+            '原発性膵癌ではまず線維化により増殖・腫瘍形成の維持を行ってから転移能の増強が行われる。線維化に関わるHSP47はがん遺伝子にも発現していて、これを抑制することで膵癌組織の線維化や癌細胞の増殖が抑制された。また、癌細胞は線維化により抗がん剤抵抗性を得ていたことから、抗がん剤とHSP47を抑制する核酸製剤を組み合わせて投与すると生存率・がん細胞減少率が飛躍的に向上した。',
+          commentary:
+            'その他HSP47はアクチン・ミオシンを働かせて転移能を増強していたり、小胞体ストレスシグナルを活性化させて癌の腫瘍形成に寄与していたりしたらしく、この核酸製剤は膵癌だけでなく転移能の高い乳がんにも効果があることが判明したとのこと。',
+        },
         // {
-        //   detailInfo: '9/27「遺伝子操作技術の変遷」など',
+        //   detailInfo: '9/20「実験動物を利用した難治性疾患の新規治療法の開発」',
         //   questionImg: [],
         //   questionSentence: '',
         //   answerImg: [],
@@ -1799,7 +1903,15 @@ export const useQuestionList = () => {
         //   commentary: '',
         // },
         // {
-        //   detailInfo: '',
+        //   detailInfo: '9/20「実験動物を利用した難治性疾患の新規治療法の開発」',
+        //   questionImg: [],
+        //   questionSentence: '',
+        //   answerImg: [],
+        //   answer: '',
+        //   commentary: '',
+        // },
+        // {
+        //   detailInfo: '9/20「実験動物を利用した難治性疾患の新規治療法の開発」',
         //   questionImg: [],
         //   questionSentence: '',
         //   answerImg: [],
