@@ -1,6 +1,13 @@
 import { useState } from 'react'
 
 // import q1 from './img/question/220613-1.JPG'
+import diabetesMellitus from './img/answer/diabetesMellitus.png'
+import NEFA from './img/answer/NEFA.png'
+import chyloMicron from './img/answer/chyloMicron.png'
+import chromatography from './img/answer/chromatography.png'
+import cholesterol from './img/answer/cholesterol.png'
+import beforeDiet from './img/answer/beforeDiet.png'
+import afterDiet from './img/answer/afterDiet.png'
 import restrictionEnzyme from './img/answer/restrictionEnzyme.png'
 import microRNA from './img/answer/microRNA.png'
 import kidneyTissue from './img/answer/kidneyTissue.jpg'
@@ -1623,6 +1630,118 @@ export const useQuestionList = () => {
       ],
     },
     {
+      groupTag: '実習-脂質',
+      groupContents: [
+        {
+          detailInfo: '1',
+          questionImg: [],
+          questionSentence: 'NEFAは何の略？',
+          choices: [],
+          answerImg: [NEFA],
+          answer: 'non-esterified fatty acid',
+          commentary: '遊離脂肪酸',
+        },
+        {
+          detailInfo: '2',
+          questionImg: [],
+          questionSentence: '食後の血中NEFAと血糖値の挙動',
+          choices: [],
+          answerImg: [afterDiet],
+          answer:
+            'NEFA：急減し、徐々に回復する。血糖値：上昇し、徐々に低下する。',
+          commentary:
+            '摂食でグルカゴンの分泌が止まり、TGの分解が停滞するため、血中のNEFAは急減する。数時間経つと、グルカゴン分泌が再開し、血中NEFAが再び合成される。食事で血中のグルコースが増加し、インスリンの働きでグリコーゲンへと変化するため徐々に減少する。',
+        },
+        {
+          detailInfo: '3',
+          questionImg: [],
+          questionSentence: '食後NEFAが下がったのはなぜか。',
+          choices: [],
+          answerImg: [chyloMicron],
+          answer:
+            '空腹時、脂肪組織のホルモン感受性リパーゼによって貯蔵TGAが分解され、遊離脂肪酸NEFAやグリセロールの形で血中に放出される。食事後のインスリン分泌により遊離脂肪酸の放出は止まり、血中の遊離脂肪酸は速やかに取り込まれるため、血中の遊離脂肪酸濃度は低下する。一方で摂食時に小腸から吸収された脂質は小腸でTGAの形でキロミクロンを形成し血中に放出され、脂肪組織付近の毛細血管壁のリポタンパク質リパーゼで最終的に脂肪酸とグリセロールに分解され、脂肪酸は脂肪組織へそのまま吸収される。このため血中TGA濃度は上昇する（脂質は消化に時間がかかるため遅れて上昇する）が、食事によって血中遊離脂肪酸濃度が上昇することはない。',
+          commentary:
+            'キロミクロンは小腸から、VLDLは肝臓から血中へ放出されるリポタンパク質で、いずれもTAGを豊富に含んでいるが、脂肪組織に取り込まれる直前の毛細血管壁までTAGの形で血中を流れているため、遊離脂肪酸濃度の上昇には寄与しない。',
+        },
+        {
+          detailInfo: '4',
+          questionSentence: '正常時の血糖値、NEAFはいくつか',
+          choices: [],
+          answerImg: [beforeDiet],
+          answer: '血糖値：70〜109mg/dL、NEFA：0.14〜0.85mEq/L',
+          commentary: '血糖値は4.5~5mMとも表現される。',
+        },
+        {
+          detailInfo: '5',
+          questionImg: [],
+          questionSentence: '糖尿病患者の血糖値はどう変化するか',
+          choices: [],
+          answerImg: [diabetesMellitus],
+          answer:
+            '食事で血糖値が上昇すると、正常ではインスリンが分泌され、血中へのグルコース放出が抑制されたり脂肪組織・筋肉・肝臓などへグルコースが取り込まれたりすることで血糖値が速やかに正常範囲に戻るが、糖尿病では絶対的あるいは相対的なインスリン分泌不足により血糖値が下がりきらず、高止まりしてしまう。',
+          commentary:
+            'Ⅰ型（若年性）糖尿病はインスリン分泌に異常があり、Ⅱ型糖尿病はインスリン分泌の相対的不足＆血糖値の高止まり。Ⅱ型ではインスリンが全く分泌されていないわけではないため、糖尿病性ケトアシドーシスにまで至ることは少ない。糖尿病予備軍の状態では高血糖になりがちだが、インスリンは大量に分泌されている。',
+        },
+        {
+          detailInfo: '6',
+          questionImg: [],
+          questionSentence: '薄層クロマトグラフィーで脂質を分ける原理',
+          choices: [],
+          answerImg: [chromatography],
+          answer:
+            '非極性（脂溶性）の強い脂質ほど疎水性の展開溶媒に溶けて移動する原理。実習ではTGAやコレステロールエステルなどが大きく移動した',
+          commentary:
+            'コレステロールと脂肪酸/TGAを区別するため、実習ではこの後ステロール発色剤（濃硫酸と酢酸の1:1混合液）をスプレーし加熱した。コレステロールとコレステロールエステルが発色する→Liebermann-Burchard 反応',
+        },
+        {
+          detailInfo: '7',
+          questionImg: [],
+          questionSentence: 'コレステロールの役割',
+          choices: [],
+          answerImg: [cholesterol],
+          answer: 'ステロイドホルモン、細胞膜の脂質ラフトの構成',
+          commentary: '',
+        },
+      ],
+    },
+    // {
+    //   groupTag: '実習-組替えDNA',
+    //   groupContents: [
+    //     {
+    //       detailInfo: '1',
+    //       questionImg: [],
+    //       questionSentence:
+    //         '実習で使用したプレートで大腸菌が生育するために必要な遺伝子はなにか。',
+    //       choices: [],
+    //       answerImg: [],
+    //       answer: 'AmpR遺伝子（β-ラクタマーゼをコード）',
+    //       commentary:
+    //         'プレート上のアンピリンが、通常では大腸菌を死滅させるが、AmpR遺伝子を持つ場合、β-ラクタマーゼを合成でき、アンピリンを分解できる。',
+    //     },
+    //     {
+    //       detailInfo: '2',
+    //       questionImg: [],
+    //       questionSentence: '色の異なる大腸菌が生育した理由は？',
+    //       choices: [],
+    //       answerImg: [],
+    //       answer:
+    //         '今回の実習ではβ-Galのαフラグメントを欠落させた大腸菌に、lacZ-α遺伝子を組み込んでβガラクトシターゼ活性を補完した。これはX-Galの分解を可能にし、インドール化合物を寒天上に不溶性色素として沈着させる。ここで、プラスミド内のLacZ-α遺伝子内にラットのAST遺伝子を挿入すると、lacZ-αによるβガラクトシターゼが不完全となり、X-Galの分解ができず、寒天上でインドール化合物の沈着が起こらない。',
+    //       commentary: '',
+    //     },
+    // {
+    //   detailInfo: '3',
+    //   questionImg: [],
+    //   questionSentence: 'IPTGが寒天プレートに含まれている理由は何か。',
+    //   choices: [],
+    //   answerImg: [],
+    //   answer:
+    //     'IPTGはlacZ-α遺伝子のリプレッサー活性の抑制を解除することでβガラクトシターゼの転写を亢進する。',
+    //   commentary: '',
+    // },
+    //   ],
+    // },
+
+    {
       groupTag: '実習-SNP',
       groupContents: [
         {
@@ -1665,7 +1784,7 @@ export const useQuestionList = () => {
           answerImg: [restrictionEnzyme],
           answer: 'RX型',
           commentary:
-            'A班（前半）の実習では、同時に撮影した12人全員で約500bpのバンドが確認されたが、うち2人は制限酵素で十分に切れていないXX型だった。このときのXX型とXR型では3本のバンドの濃さが少し違っていて、基質の濃度で反応速度が違う...など色々書いた。制限酵素と基質（DNA溶液）が十分に混ざってなかった可能性が一番高いらしい。',
+            'A班（前半）の実習では、同時に撮影した12人全員で約500bpのバンドが確認されたが、うち2人は制限酵素で十分に切れていないXX型だった。このときのXX型とXR型では3本のバンドの濃さが少し違っていて、基質の濃度で反応速度が違う...など色々書いた。制限酵素と基質（DNA溶液）が十分に混ざってなかった可能性が一番高いらしい。一番分子量の小さいバンドが薄かった理由は、短いDNAはGelRedの色素が入り込みにくいため',
         },
         // {
         //   detailInfo: '',
