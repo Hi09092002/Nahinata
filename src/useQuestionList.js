@@ -1,6 +1,11 @@
 import { useState } from 'react'
 
 // import q1 from './img/question/220613-1.JPG'
+import plate96well from './img/answer/plate96well.png'
+import cubetAbsorbance from './img/answer/cubetAbsorbance.png'
+import blankGraph from './img/answer/blankGraph.png'
+import baseAbsorbance from './img/answer/baseAbsorbance.png'
+
 import diabetesMellitus from './img/answer/diabetesMellitus.png'
 import NEFA from './img/answer/NEFA.png'
 import chyloMicron from './img/answer/chyloMicron.png'
@@ -1290,6 +1295,81 @@ export const useQuestionList = () => {
           commentary:
             '(1)生物多様性への悪影響を防止が必須。(2)はネットニュースでも見てください。(3)は自由に。',
         },
+      ],
+    },
+    {
+      groupTag: '実習-基本実習',
+      groupContents: [
+        {
+          detailInfo: '',
+          questionImg: [],
+          questionSentence:
+            'キュベットで吸光度を測定する時と比べて、96穴プレートで吸光度測定を行う際には入れる試料の液量を厳密に調節する必要がある。この理由を説明せよ。',
+          answerImg: [cubetAbsorbance, plate96well],
+          answer:
+            'キュベットの吸光度測定では、光を横から当てて吸光度を測定するため一定の光路長(1cm)が取れていたが、96穴プレートでは、光を上から当てて吸光度を測定するため光路長が入れた溶液の高さに依存してしまうから。',
+          commentary:
+            '吸光度A = εCL ε:分子吸光係数（物質に固有な定数） C:溶液の濃度(mol/L)　L:光路長(cm)',
+        },
+        {
+          detailInfo: '',
+          questionImg: [],
+          questionSentence:
+            '実習1で、ATP溶液の濃度を吸光度から測定した。このとき、259nmにおける吸光度からATP水溶液の濃度を決定したが、この259nmの入射光は主にATPのどの部位に吸収されるか。DNAやRNAも同程度の260nmの光を主に吸収することを参考に、説明せよ。',
+          answerImg: [baseAbsorbance],
+          answer: '塩基に吸収される。',
+          commentary:
+            '塩基を含むATP、DNA、RNAは全て同じ260nm付近に吸光度のピークを持つ。厳密には塩基の種類によって微妙に吸収する光の波長が異なっているため、この差を利用して塩基配列の決定を行う手法もある。',
+        },
+        {
+          detailInfo: '',
+          questionImg: [],
+          questionSentence:
+            '実習1で、ATP溶液の濃度を吸光度から測定した。このとき、石英製のキュベットを用いるのはなぜか？',
+          answerImg: [cubetAbsorbance],
+          answer:
+            'プラスチック製のキュベットは可視領域の光は吸収しない（→人間の目には透明に見える）が、紫外領域の光は吸収してしまうため。',
+          commentary:
+            '話によるとプラスチック製のキュベットは紫外領域(~約350nm)の光をほぼ全て吸収してしまうらしい。可視領域(約350nm~)の光に対する吸光度測定にはプラスチック製のキュベットを使うことができる。',
+        },
+        {
+          detailInfo: '',
+          questionImg: [],
+          questionSentence:
+            '実習2では、Bradford法によりタンパク質と色素を結合させてから道濃度のタンパク質溶液中に含まれるタンパク質の濃度を決定した。実習1のATP溶液ではこのような操作を行わなかったが、なぜこのような操作が必要なのか？',
+          answerImg: [],
+          answer:
+            'タンパク質は種類によって吸収する光の波長帯がバラバラであるから。',
+          commentary:
+            '塩基が一定の波長の光を吸収するので、ATpやDNAやRNAに対しての吸光度測定に色素を使う必要が無かったが、タンパク質ではそのような性質はないので、色素による染色(Bradford法)が必要となる。この色素はタンパク質と結合することにより595nmの波長の光を吸収するようになるので、この領域の光について吸光度測定することで、タンパク質の濃度を測定することができる。',
+        },
+        {
+          detailInfo: '',
+          questionImg: [blankGraph],
+          questionSentence:
+            '実習2では、Bradford法によりタンパク質と色素を結合させてから道濃度のタンパク質溶液中に含まれるタンパク質の濃度を決定した。グラフ作成の際に測定した吸光度から水だけの時の吸光度（Blank）を引いてグラフを作成したが、なぜこのような操作を行ったのか、説明せよ。',
+          answerImg: [],
+          answer:
+            '溶液以外（主に水とキュベット）の吸光度を結果から取り除く必要があるから。',
+          commentary:
+            '溶液は溶質 + 水 + キュベット、Blankはこのうちの溶質以外部分の吸光度を測定している。',
+        },
+        // {
+        //   detailInfo: '',
+        //   questionImg: [],
+        //   questionSentence: '',
+        //   answerImg: [],
+        //   answer: '',
+        //   commentary: '',
+        // },
+        // {
+        //   detailInfo: '',
+        //   questionImg: [],
+        //   questionSentence: '',
+        //   answerImg: [],
+        //   answer: '',
+        //   commentary: '',
+        // },
       ],
     },
     {
