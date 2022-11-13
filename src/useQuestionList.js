@@ -1,6 +1,7 @@
 import { useState } from 'react'
 
 // import q1 from './img/question/220613-1.JPG'
+import chromatographyResult from './img/answer/chromatographyResult.jpg'
 import plate96well from './img/answer/plate96well.png'
 import cubetAbsorbance from './img/answer/cubetAbsorbance.png'
 import blankGraph from './img/answer/blankGraph.png'
@@ -1719,7 +1720,8 @@ export const useQuestionList = () => {
           choices: [],
           answerImg: [NEFA],
           answer: 'non-esterified fatty acid',
-          commentary: '遊離脂肪酸',
+          commentary:
+            '遊離脂肪酸。脂肪酸はグリセロールとエステル結合することでトリアシルグリセロールとなる（→TAGは中性脂肪と呼ばれる）。遊離脂肪酸はエステル化していないのでNEFA。今回の実習では、R-COOHの部分が反応して生成した色素で吸光度測定を行っていたため、TGAは遊離脂肪酸濃度に含まれない。',
         },
         {
           detailInfo: '2',
@@ -1745,11 +1747,11 @@ export const useQuestionList = () => {
         },
         {
           detailInfo: '4',
-          questionSentence: '正常時の血糖値、NEAFはいくつか',
+          questionSentence: '正常時の血糖値、NEFAはいくつか',
           questionImg: [],
           answerImg: [beforeDiet],
           answer: '血糖値：70〜109mg/dL、NEFA：0.14〜0.85mEq/L',
-          commentary: '血糖値は4.5~5mMとも表現される。',
+          commentary: '血糖値は4.5~5.5mMとも表現される。',
         },
         {
           detailInfo: '5',
@@ -1767,7 +1769,7 @@ export const useQuestionList = () => {
           questionImg: [],
           questionSentence: '薄層クロマトグラフィーで脂質を分ける原理',
           choices: [],
-          answerImg: [chromatography],
+          answerImg: [chromatography, chromatographyResult],
           answer:
             '非極性（脂溶性）の強い脂質ほど疎水性の展開溶媒に溶けて移動する原理。実習ではTGAやコレステロールエステルなどが大きく移動した',
           commentary:
@@ -1782,7 +1784,7 @@ export const useQuestionList = () => {
           answer:
             'ステロイドホルモン、（ビタミンD合成）、細胞膜の脂質ラフトの構成、胆汁',
           commentary:
-            'コレステロールはエネルギー源としては利用されない。貯蔵は肝臓で行われ、VLDL→LDL中のコレステロールエステルの形で組織（副腎・精巣・卵巣・）に供給され、組織の余分なコレステロールはHDLで回収される。胆汁や胆汁酸/胆汁酸塩にもコレステロールが関与している。余剰コレステロールが血中で徐々に酸化され、それを取り込んだ（マクロファージ→）泡沫細胞が血管内皮などに蓄積することで動脈硬化の原因となる。このとき、LDLが多いほど/HDLが少ないほど動脈硬化のリスクが高いといわれている。',
+            'コレステロールはエネルギー源としては利用されない。貯蔵は肝臓で行われ、VLDL→LDL中のコレステロールエステルの形で組織（副腎・精巣・卵巣・）に供給され、組織の余分なコレステロールはHDLで回収される。胆汁や胆汁酸/胆汁酸塩生成にもコレステロールが関与している（コレステロールの割合が高すぎると胆石の原因となる）。余剰コレステロールが血中で徐々に酸化され、それを取り込んだ（マクロファージ→）泡沫細胞が血管内皮などに蓄積することでアテローム性動脈硬化の原因となる。このとき、LDLが多いほど/HDLが少ないほど動脈硬化のリスクが高いといわれている。',
         },
       ],
     },
@@ -1868,30 +1870,59 @@ export const useQuestionList = () => {
           commentary:
             'A班（前半）の実習では、同時に撮影した12人全員で約500bpのバンドが確認されたが、うち2人は制限酵素で十分に切れていないXX型だった。このときのXX型とXR型では3本のバンドの濃さが少し違っていて、基質の濃度で反応速度が違う...など色々書いた。制限酵素と基質（DNA溶液）が十分に混ざってなかった可能性が一番高いらしい。一番分子量の小さいバンドが薄かった理由は、短いDNAはGelRedの色素が入り込みにくいため',
         },
-        // {
-        //   detailInfo: '',
-        //   questionImg: [],
-        //   questionSentence: '',
-        //   answerImg: [],
-        //   answer: '',
-        //   commentary: '',
-        // },
-        // {
-        //   detailInfo: '',
-        //   questionImg: [],
-        //   questionSentence: '',
-        //   answerImg: [],
-        //   answer: '',
-        //   commentary: '',
-        // },
-        // {
-        //   detailInfo: '',
-        //   questionImg: [],
-        //   questionSentence: '',
-        //   answerImg: [],
-        //   answer: '',
-        //   commentary: '',
-        // },
+        {
+          detailInfo: '',
+          questionImg: [],
+          questionSentence:
+            '実習1日目。採取した試料（チューブに入った綿棒）を56℃でコロナ不活化を行った後、400μLのdH₂Oを加えた。何の目的で蒸留水(dH₂O)を加えたのか。',
+          answerImg: [],
+          answer:
+            '浸透圧を変え、細胞を破裂させて細胞膜や核膜などに穴を開けるため。',
+          commentary: 'DNAを露出させたい',
+        },
+        {
+          detailInfo: '',
+          questionImg: [],
+          questionSentence:
+            '実習1日目。20μLのProteinaseKを加え、さらに400μLのBuffer ALを加えた。このBuffer ALは揺らすと泡が立つような液体であった。これは何の成分によるためか。また、この操作の目的は？',
+          answerImg: [],
+          answer:
+            'このBufferには界面活性剤が含まれており、細胞膜や核膜を破壊するために加えられた。',
+          commentary:
+            '一つ前の操作で蒸留水を加える操作・この後のエタノールを加える操作と合わせて、核膜に収納されているDNAを外に露出させて、抽出しやすくする。ProteinaseKは至適温度が56度であるため、この段階では無関係。',
+        },
+        {
+          detailInfo: '',
+          questionImg: [],
+          questionSentence:
+            '実習2日目。アガロースゲル電気泳動を行った。ゲルにはGelRedというDNA染色液が含まれている。これによってDNAを可視化する仕組みを説明せよ。また、Loading bufferの青色色素との違いは何か。',
+          answerImg: [],
+          answer:
+            'GelRedはDNAの2重らせん構造に入り込み、紫外線照射を受けることで蛍光する。一方でLoading Bufferの色素（グリセロール？）はDNAとは関係なく電気泳動されていくため、DNAの分布を見ることはできない。',
+          commentary:
+            '今回の写真は紫外線照射下で撮影した。Loading Bufferの色素は分子量としては非常に小さなものであるため、電気泳動を行う時間の目安として使える。',
+        },
+        {
+          detailInfo: '',
+          questionImg: [],
+          questionSentence:
+            '今回の実習(制限酵素で切れるかどうか)以外の方法で一塩基多型を調べる方法について、述べよ。',
+          answerImg: [taqman],
+          answer:
+            'シークエンスによって塩基配列を特定する方法、対応する配列のプローブに蛍光色素をつけた試薬と一緒にPCRを行って可視化する方法(Taqman法)など',
+          commentary:
+            '今回のACTN3遺伝子の多型では終止コドンに変わっているため、生成されるアミノ酸の長さでも区別できるかもしれない。詳細は特別講義「個人差の生化学」にて。',
+        },
+        {
+          detailInfo: '',
+          questionImg: [],
+          questionSentence: 'SNPの検査は医療分野でどのように応用されているか。',
+          answerImg: [],
+          answer:
+            '薬剤代謝の程度を調べることができる。SNPを調べることで薬剤の投与量などの調節を行うことができる。',
+          commentary:
+            '例えばアルコールの代謝速度など。日本人の4割はアセトアルデヒド分解酵素を欠損しており酒に弱い。',
+        },
         // {
         //   detailInfo: '',
         //   questionImg: [],

@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/anywhere-Insulin19220111/static/css/main.2255ca1a.css",
-    "main.js": "/anywhere-Insulin19220111/static/js/main.2a2768e8.js",
+    "main.js": "/anywhere-Insulin19220111/static/js/main.c677564c.js",
     "static/media/biochemistry2018_4_2.png": "/anywhere-Insulin19220111/static/media/biochemistry2018_4_2.3f1b252e9120e9aacb9f.png",
     "static/media/biochemistry2018_5.png": "/anywhere-Insulin19220111/static/media/biochemistry2018_5.3b24e87a75aaae5d167a.png",
     "static/media/biochemistry_2020_2_1.jpg": "/anywhere-Insulin19220111/static/media/biochemistry_2020_2_1.c1cb639c9d72cfd03c8a.jpg",
@@ -92,6 +92,7 @@
     "static/media/cytoplasmAcetylCoA.png": "/anywhere-Insulin19220111/static/media/cytoplasmAcetylCoA.9e9e6da451046867ea4e.png",
     "static/media/glucokinase.png": "/anywhere-Insulin19220111/static/media/glucokinase.60f2d3977cebe574d3bf.png",
     "static/media/promotor.png": "/anywhere-Insulin19220111/static/media/promotor.6d7ead58b6ea938d9697.png",
+    "static/media/chromatographyResult.jpg": "/anywhere-Insulin19220111/static/media/chromatographyResult.06f543c648439c5a5ca1.jpg",
     "static/media/standardFreeEnergy.png": "/anywhere-Insulin19220111/static/media/standardFreeEnergy.1e8ce857349856a67de7.png",
     "static/media/geneTherapy.png": "/anywhere-Insulin19220111/static/media/geneTherapy.3048212b379084df5505.png",
     "static/media/SAM.png": "/anywhere-Insulin19220111/static/media/SAM.1d2ecb289ef946590e74.png",
@@ -130,10 +131,10 @@
     "static/media/genomeEditting.webp": "/anywhere-Insulin19220111/static/media/genomeEditting.4736f6f652bc43628d37.webp",
     "index.html": "/anywhere-Insulin19220111/index.html",
     "main.2255ca1a.css.map": "/anywhere-Insulin19220111/static/css/main.2255ca1a.css.map",
-    "main.2a2768e8.js.map": "/anywhere-Insulin19220111/static/js/main.2a2768e8.js.map"
+    "main.c677564c.js.map": "/anywhere-Insulin19220111/static/js/main.c677564c.js.map"
   },
   "entrypoints": [
     "static/css/main.2255ca1a.css",
-    "static/js/main.2a2768e8.js"
+    "static/js/main.c677564c.js"
   ]
 }
