@@ -775,7 +775,8 @@ export const useTechnicalTerm = () => {
     },
     {
       term: ['S-アデノシルメチオニン', 'SAM'],
-      explanation: 'DNAのメチル化と関係があり、メチル基をDNAなどに供与する。',
+      explanation:
+        'L-メチオニンとATPから合成され、メチル基をDNAに転移させるDNAメチル化などを行う。メチル基転移後は葉酸とビタミンB12由来の補酵素で再びL-メチオニンに再生される（メチオニン不足時）か、システインに変換される。',
     },
     {
       term: ['ジオキシゲナーゼ', 'dioxygenase'],
