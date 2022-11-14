@@ -1,12 +1,13 @@
 import { useState } from 'react'
 
 // import q1 from './img/question/220613-1.JPG'
+import NSAIDs from './img/answer/NSAIDs.jpg'
+import lipidMediator from './img/answer/lipidMediator.jpg'
 import chromatographyResult from './img/answer/chromatographyResult.jpg'
 import plate96well from './img/answer/plate96well.png'
 import cubetAbsorbance from './img/answer/cubetAbsorbance.png'
 import blankGraph from './img/answer/blankGraph.png'
 import baseAbsorbance from './img/answer/baseAbsorbance.png'
-
 import diabetesMellitus from './img/answer/diabetesMellitus.png'
 import NEFA from './img/answer/NEFA.png'
 import chyloMicron from './img/answer/chyloMicron.png'
@@ -1940,7 +1941,50 @@ export const useQuestionList = () => {
       groupTag: '特別講義特集',
       groupContents: [
         {
-          detailInfo: '11/01',
+          detailInfo: '11/14「脂質メディエーターの生化学」',
+          questionImg: [],
+          questionSentence: '脂質メディエーターとは何か。',
+          answerImg: [lipidMediator],
+          answer:
+            '脂質メディエーターとは、（局所で）細胞間情報伝達などの生理活性をもつ脂質の総称である。',
+          commentary:
+            'プロスタグランジン(PG)、ロイコトリエン(LT)、血小板活性化因子(PAF)、内因性カンナビノイド、リゾホスファチジン酸、スフィンゴシン1-リン酸などを指す。脂肪酸（アラキドン酸）由来のものが多く、リン脂質由来、コレステロール由来のものも脂質メディエーターに分類される。',
+        },
+        {
+          detailInfo: '11/14「脂質メディエーターの生化学」',
+          questionImg: [],
+          questionSentence:
+            'NSAIDs(Non-Steroidal-Anti-Inflammatory Drugs :非ステロイド性抗炎症薬)の役割を説明せよ。',
+          answerImg: [NSAIDs],
+          answer:
+            'シクロオキシゲナーゼCOXの活性を抑制することで、脂質メディエーター（エイコサノイド）の発熱・痛覚過敏症状などを緩和することができる。',
+          commentary:
+            '厳密にはCOXは2種類のアイソザイムが存在している。ほとんどの細胞で常に発現しているCOX1を阻害してしまうと胃腸障害などの副作用が生じる。COX2はマクロファージ・線維芽細胞・骨芽細胞などに発現していて炎症時に問題となる。',
+        },
+        {
+          detailInfo: '11/14「脂質メディエーターの生化学」',
+          questionImg: [],
+          questionSentence:
+            '脂質メディエーターの1つ、エンドカンナビノイドについて説明せよ。',
+          answerImg: [],
+          answer:
+            'エンドカンナビノイドは内因性マリファナ様物質ともよばれ、マリファナ（大麻）に含まれるカンナビノイドに類似する物質が生体内で作られている。脂質メディエーターとして、中枢神経系のシナプスの逆行性伝達物質として作用し、シナプス後部から産生・放出されてシナプス前部に受容体を持ち、シナプス前部からの神経伝達物質の放出を抑制すると考えられている。記憶・認知・鎮痛・食欲調節・吐き気抑制・緑内障などに作用をもつ。',
+          commentary:
+            '日本では医療大麻は一切認められていない。海外では末期AIDS患者や末期がん患者に投与される。',
+        },
+        {
+          detailInfo: '11/14「脂質メディエーターの生化学」',
+          questionImg: [],
+          questionSentence:
+            '脂質メディエーターを同定する上で必要な要素はなにか。',
+          answerImg: [],
+          answer:
+            '物質としての存在、産生/放出機構・代謝仮定・不活性過程などの特定',
+          commentary:
+            '脂質メディエーターは中間代謝物であることも多く、神経伝達物質などと似通った部分も多いため、しっかりと特定しないと脂質メディエーターとして認められない。',
+        },
+        {
+          detailInfo: '11/01「疾患発症に関わる酸性オルガネラの高次機能」',
           questionImg: [],
           questionSentence: 'V-ATPaseとは何か、どういった細胞にみられるか',
           answerImg: [VATPase],
@@ -1950,7 +1994,7 @@ export const useQuestionList = () => {
             'ミトコンドリア膜のATPシンターゼ（酸化的リン酸化）の逆の反応を行う酵素で、ATPシンターゼと似た構造をしている。別名、液胞型ATP分解酵素。V-ATPaseの最初の活性を発見したのは大隅教授らしい。',
         },
         {
-          detailInfo: '11/01',
+          detailInfo: '11/01「疾患発症に関わる酸性オルガネラの高次機能」',
           questionImg: [],
           questionSentence:
             'オルガネラとは何か。また、酸性オルガネラとは何か。',
@@ -1961,7 +2005,7 @@ export const useQuestionList = () => {
             '細胞にはゴルジ体・小胞体・ミトコンドリアなど様々な細胞小器官（オルガネラ）が含まれる。例えばリソソームは、含んでいる分解酵素を活性化するために細胞内を酸性(pH 5.0付近)に維持しなければならない。このように内部の酸性環境を形成・維持するために、V-ATPaseは活動する。',
         },
         {
-          detailInfo: '11/01',
+          detailInfo: '11/01「疾患発症に関わる酸性オルガネラの高次機能」',
           questionImg: [],
           questionSentence:
             'V-ATPaseのサブユニットに変異があると、骨形成が一方的に進む大理石病や、遠位尿細管のアシドーシス、感音性の難聴、がん細胞が転移しやすくなったりする。これらがどういった過程で生じるのか、説明せよ。',
@@ -1972,7 +2016,7 @@ export const useQuestionList = () => {
             'その他糖鎖付加にも関与していて、皮膚が異常に弛緩する常染色体劣性遺伝病（エーラース・ダンロス症候群？）を引き起こす変異もある。',
         },
         {
-          detailInfo: '11/01',
+          detailInfo: '11/01「疾患発症に関わる酸性オルガネラの高次機能」',
           questionImg: [],
           questionSentence:
             'V-ATPのサブユニットを欠損させたマウスは発生初期(E5.5など)で胚性致死に至る。どういった原因でこのようになるのか、説明せよ',

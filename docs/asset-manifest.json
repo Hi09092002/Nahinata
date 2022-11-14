@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/anywhere-Insulin19220111/static/css/main.2255ca1a.css",
-    "main.js": "/anywhere-Insulin19220111/static/js/main.f0e541b0.js",
+    "main.js": "/anywhere-Insulin19220111/static/js/main.c3b67455.js",
     "static/media/biochemistry2018_4_2.png": "/anywhere-Insulin19220111/static/media/biochemistry2018_4_2.3f1b252e9120e9aacb9f.png",
     "static/media/biochemistry2018_5.png": "/anywhere-Insulin19220111/static/media/biochemistry2018_5.3b24e87a75aaae5d167a.png",
     "static/media/biochemistry_2020_2_1.jpg": "/anywhere-Insulin19220111/static/media/biochemistry_2020_2_1.c1cb639c9d72cfd03c8a.jpg",
@@ -98,6 +98,7 @@
     "static/media/SAM.png": "/anywhere-Insulin19220111/static/media/SAM.1d2ecb289ef946590e74.png",
     "static/media/lacZ.png": "/anywhere-Insulin19220111/static/media/lacZ.5eb4c9bc4ad34a72e9e0.png",
     "static/media/SDSMicelle.png": "/anywhere-Insulin19220111/static/media/SDSMicelle.87ddc783caecf4c4fc71.png",
+    "static/media/NSAIDs.jpg": "/anywhere-Insulin19220111/static/media/NSAIDs.ef4a16a56f1b964d6830.jpg",
     "static/media/alcohol.png": "/anywhere-Insulin19220111/static/media/alcohol.7af1bf321161895c6695.png",
     "static/media/synthesizeCatecholamine.png": "/anywhere-Insulin19220111/static/media/synthesizeCatecholamine.3dfa41b552934320dc8b.png",
     "static/media/introducedAST1.png": "/anywhere-Insulin19220111/static/media/introducedAST1.0e56a92e49ff6336f798.png",
@@ -109,6 +110,7 @@
     "static/media/microRNA.png": "/anywhere-Insulin19220111/static/media/microRNA.ffabc59a12357290de3e.png",
     "static/media/sequencing.png": "/anywhere-Insulin19220111/static/media/sequencing.30fe41c182a8f3f5530c.png",
     "static/media/taqman.png": "/anywhere-Insulin19220111/static/media/taqman.631dbd6c7748aa5b55c1.png",
+    "static/media/lipidMediator.jpg": "/anywhere-Insulin19220111/static/media/lipidMediator.dd0e4af2861b194b7774.jpg",
     "static/media/snRNA.png": "/anywhere-Insulin19220111/static/media/snRNA.0aaf3a3de002ed907e62.png",
     "static/media/insulinGene.png": "/anywhere-Insulin19220111/static/media/insulinGene.93a67f3c17c320295867.png",
     "static/media/electrophoresisDNA.png": "/anywhere-Insulin19220111/static/media/electrophoresisDNA.0cfb8e2b846547f5a672.png",
@@ -131,10 +133,10 @@
     "static/media/genomeEditting.webp": "/anywhere-Insulin19220111/static/media/genomeEditting.4736f6f652bc43628d37.webp",
     "index.html": "/anywhere-Insulin19220111/index.html",
     "main.2255ca1a.css.map": "/anywhere-Insulin19220111/static/css/main.2255ca1a.css.map",
-    "main.f0e541b0.js.map": "/anywhere-Insulin19220111/static/js/main.f0e541b0.js.map"
+    "main.c3b67455.js.map": "/anywhere-Insulin19220111/static/js/main.c3b67455.js.map"
   },
   "entrypoints": [
     "static/css/main.2255ca1a.css",
-    "static/js/main.f0e541b0.js"
+    "static/js/main.c3b67455.js"
   ]
 }
