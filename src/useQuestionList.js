@@ -1,6 +1,10 @@
 import { useState } from 'react'
 
 // import q1 from './img/question/220613-1.JPG'
+import F1toF5 from './img/answer/F1toF5.png'
+import enzymeReport1 from './img/answer/enzymeReport1.png'
+import colloid from './img/answer/colloid.png'
+import BMTD from './img/answer/BMTD.png'
 import EnzymeActivity from './img/answer/EnzymeActivity.jpg'
 import NSAIDs from './img/answer/NSAIDs.jpg'
 import lipidMediator from './img/answer/lipidMediator.jpg'
@@ -1600,8 +1604,9 @@ export const useQuestionList = () => {
           choices: [],
           answerImg: [],
           answer:
-            '「アスパラギン酸＋αケトグルタル酸→オキサロ酢酸＋グルタミン酸」の反応を促進',
-          commentary: 'アミノ基転移反応',
+            '「アスパラギン酸＋αケトグルタル酸←→オキサロ酢酸＋グルタミン酸」の反応の触媒',
+          commentary:
+            'アミノ基転移反応なので、ピリドキサールリン酸（ビタミンB₆由来）を補酵素として用いている。',
         },
         {
           detailInfo: '2',
@@ -1609,8 +1614,9 @@ export const useQuestionList = () => {
           questionSentence: 'ASTはどこから精製した？',
           choices: [],
           answerImg: [],
-          answer: 'ラットの肝臓細胞質',
-          commentary: 'ミトコンドリア内のASTは細胞分画で除去した',
+          answer: 'ラットの肝臓細胞質（ホモジェネレート）',
+          commentary:
+            'ミトコンドリア内のASTは細胞分画で除去した（ミトコンドリア内のASTはリンゴ酸-アスパラギン酸シャトルに関与している→NAD⁺/NADHの輸送のため）',
         },
         {
           detailInfo: '3',
@@ -1619,7 +1625,8 @@ export const useQuestionList = () => {
           choices: [],
           answerImg: [],
           answer: 'ASTの補酵素',
-          commentary: '',
+          commentary:
+            'ビタミンB₆由来で、アミノ基転移に関与する補酵素。基本的にアミノ酸の代謝に関与している。',
         },
         {
           detailInfo: '4',
@@ -1628,7 +1635,8 @@ export const useQuestionList = () => {
           choices: [],
           answerImg: [],
           answer: '酵素の働きを補助する有機化合物',
-          commentary: '',
+          commentary:
+            'Feイオンなどは補因子には含まれるが、有機物ではないので補酵素には含まれない。',
         },
         {
           detailInfo: '5',
@@ -1637,8 +1645,9 @@ export const useQuestionList = () => {
           choices: [],
           answerImg: [],
           answer:
-            'AST はαケトグルタル酸に結合することで耐熱性を獲得するのでこの耐熱性の差を利用して分画するため',
-          commentary: '',
+            'ASTは基質に結合することで（酵素基質複合体になることで）高熱下でも変性しにくくなるため、この差を利用して分画するため',
+          commentary:
+            '熱変性したタンパク質は沈殿しやすく、遠心分離で除外された。酵素基質複合体は酵素部分も基質部分もコンホメーションが変化している。',
         },
         {
           detailInfo: '6',
@@ -1648,17 +1657,18 @@ export const useQuestionList = () => {
           answerImg: [],
           answer:
             'サンプル内の微細化合物を除去し、混入物濃度を許容範囲内まで低下させるため',
-          commentary: '',
+          commentary:
+            '除去したい物質のなかには直前の塩析で用いた硫安も含まれる。',
         },
         {
           detailInfo: '7',
           questionImg: [],
           questionSentence: '硫安塩析法の原理は？',
           choices: [],
-          answerImg: [],
+          answerImg: [colloid],
           answer:
             '水和していたタンパク質から水分子が硫安に取られ、タンパク質が互いに疎水性相互作用で結集し沈殿する',
-          commentary: '',
+          commentary: '凝析と塩析の違い。',
         },
         {
           detailInfo: '8',
@@ -1667,8 +1677,9 @@ export const useQuestionList = () => {
           choices: [],
           answerImg: [],
           answer:
-            'CBB G-250 がタンパク質と結合することで最大吸収波長が変化することを利用してその吸光度からタンパク質を定量する(←OAAの検出方法)',
-          commentary: '',
+            'CBB G-250 がタンパク質と結合することで最大吸収波長が変化することを利用してその吸光度からタンパク質を定量する',
+          commentary:
+            '基本実習と同様の手法。ASTだけではなくすべてのタンパク質が結合し、濃度に応じて吸光する。',
         },
         {
           detailInfo: '9',
@@ -1683,11 +1694,13 @@ export const useQuestionList = () => {
         {
           detailInfo: '10',
           questionImg: [],
-          questionSentence: 'TAC(trichloroacetic acid)を加えた理由は？',
+          questionSentence:
+            '実験2日目、ASTの酵素活性について調べた。TCA(trichloroacetic acid)を加えた理由は？',
           choices: [],
-          answerImg: [],
+          answerImg: [BMTD],
           answer: 'オキサロ酢酸(OAA)とBMTDの反応を止めるため',
-          commentary: '',
+          commentary:
+            'タンパク質とBMTDの反応を止めることで、存在するタンパク質にBMTDが過剰に反応して色素が生成されるのを防いでいる。',
         },
         {
           detailInfo: '11',
@@ -1697,72 +1710,81 @@ export const useQuestionList = () => {
           answerImg: [],
           answer:
             '細胞分画の分離を行うため緩衝液や生理的食塩液を用いて生体組織を擦り潰し、得られた懸濁液',
-          commentary: '',
+          commentary:
+            '中にはRNAseもリソソーム（内の拡散分解酵素）も含まれている→Proteinase Kによる処理が必要',
         },
         {
           detailInfo: '12',
-          questionImg: [],
+          questionImg: [enzymeReport1],
           questionSentence: '精製度とは？',
           choices: [],
           answerImg: [],
           answer: '混合物から特定の物質をどの程度抽出できたかの割合',
-          commentary: '',
+          commentary:
+            'F1（粗酵素液）の比活性を1として、精製処理によってどのくらい濃いAST溶液を作製できたかを表す数値。ASTの精製を行う上で重要なことは、ASTがどれだけ大量に精製できたかだけではなく、AST以外のタンパク質をどれだけ除去できたかも重要で、これを比活性（タンパク質全量に占めるASTの割合）として計算している。精製度は比活性の、F1に対する割合。例えば精製度が10であればF1（そのまま）に比べて10倍ASTを濃く抽出できたことになる。',
         },
         {
           detailInfo: '13',
-          questionImg: [],
+          questionImg: [enzymeReport1],
           questionSentence: '全活性とは？',
           choices: [],
           answerImg: [],
-          answer: 'ある酵素活性に対してその酵素全量の活性',
-          commentary: '',
+          answer:
+            'ある酵素活性に対してその酵素全量の活性 (1unit = 1minあたりの生成OAA量[μmol])',
+          commentary:
+            'その試料全体からどのくらいのOAA(オキサロ酢酸)が1分あたりに生成されたか。実際は10分間の反応の平均値から計算しており、十分な基質を加えているため反応の初速度を求めたといえる。全活性は試料に含まれるAST量そのものではないが、生成OAA量の初速度[unit]はAST量に依存しているため、試料に含まれるAST量が多いほど全活性は大きくなる。',
         },
         {
           detailInfo: '14',
-          questionImg: [],
+          questionImg: [enzymeReport1],
           questionSentence: '回収率とは？',
           choices: [],
           answerImg: [],
           answer: '反応前後で目的とする物質がどれだけ回収されたかの割合',
-          commentary: '',
+          commentary:
+            'F1（粗酵素液）の全活性を100%として、精製後の試料のどこにどれだけの割合のASTが含まれているかを示す。実験手技によって誤差は出るが、理論的にはF2~F4で100%を超えることは無く、かつF3~F5の回収率の合計はF2の回収率と等しくなる。（F2はF1の一部：沈殿を破棄しているが、F3以降の精製過程で破棄した部分は存在しないため）',
         },
         {
           detailInfo: '15',
-          questionImg: [],
+          questionImg: [enzymeReport1],
           questionSentence: '比活性とは？',
           choices: [],
           answerImg: [],
           answer: '一定量のタンパク質に対して働く酵素量',
-          commentary: '単位：unit／mg、比活性＝全活性／全タンパク質量',
+          commentary:
+            '単位：unit／mg、比活性＝全活性／全タンパク質量。試料に含まれているタンパク質に対してのASTの割合のようなもの。厳密にはunitは生成OAA量の初速度であってASTの量そのものを示しているわけではないが、生成OAA量の初速度[unit]はAST量に依存しているため、試料に含まれているタンパク質に対してASTの割合が大きいほど比活性は大きくなる。全活性は試料中ASTの絶対量にしたがって大きくなるのに対して、比活性は試料中のタンパク質に対するAST量の割合にしたがって大きくなるという点で違う尺度の数値。',
         },
         {
           detailInfo: '16',
           questionImg: [],
           questionSentence: '対照の吸光度を引く理由は？',
           choices: [],
-          answerImg: [],
+          answerImg: [blankGraph],
           answer: 'タンパク質以外の吸光要因を除くため',
-          commentary: '',
+          commentary: '具体的には水・キュベットなど。基本実習も参考に',
         },
         {
           detailInfo: '17',
           questionImg: [],
-          questionSentence: 'SV プロットから分かることは？',
+          questionSentence:
+            '実習3日目、AST精製後のF4画分（酵素液）とα-ケトグルタル酸・ピリドキサールリン酸などを用いて反応速度を調べた。得られた結果S（α-ケトグルタル酸濃度）とV（オキサロ酢酸/OAA濃度）からS-V プロットを作製した。ここから分かることは？',
           choices: [],
           answerImg: [],
           answer:
             '基質濃度が高ければ反応速度は早くなるが、次第に反応速度は頭打ちになる。',
-          commentary: '',
+          commentary:
+            '反応が進むにつれて基質濃度が下がるだけでなく、反応が逆方向にも進むため。ASTは反応を両方向に触媒する。',
         },
         {
           detailInfo: '18',
           questionImg: [],
-          questionSentence: 'Km、Vmaxとは？',
+          questionSentence: 'Km、Vmaxとは何か？',
           choices: [],
           answerImg: [],
           answer:
             'Vmax：最大反応速度、Km：Vmaxの半分の反応速度を与える基質濃度',
-          commentary: 'Kmが小さいほど酵素と基質の親和性が高い',
+          commentary:
+            'Kmが小さいほど酵素と基質の親和性が高い。KmはVmaxの半分のVが得られるような基質の濃度を示していて、このようなKmの値が大きい→1/2Vmaxの反応速度を得るために必要な基質が大きい→基質に対する酵素の親和性が低い',
         },
         {
           detailInfo: '19',
@@ -1772,7 +1794,7 @@ export const useQuestionList = () => {
           choices: [],
           answerImg: [EnzymeActivity],
           answer:
-            'Km値とは最大反応速度Vmaxの半分の値をとる時の基質濃度に等しく、基質との親和性を表す。Km値は大きくなる。また、Vmax値は、基質酵素複合体の濃度[ES]に依存するため、十分量の基質が存在する場合、競合阻害薬によって[ES]は変化しないから、Vmaxは不変。',
+            'Km値とは最大反応速度Vmaxの半分の値をとる時の基質濃度に等しく、基質との親和性を表す。競合阻害によって酵素は基質と出会いにくくなりKm値は大きくなる。また、Vmax値は、基質酵素複合体の濃度[ES]に依存するため、十分量の基質が存在する場合、競合阻害薬によって[ES]は変化しないから（無限に濃い濃度の基質存在下では競合阻害剤の存在を無視できるから）、Vmaxは不変。',
           commentary:
             'V-[S]グラフでイメージすると良い。漸近線が変わらず、長期的に見れば同じこと。',
         },
@@ -1782,10 +1804,11 @@ export const useQuestionList = () => {
           questionSentence:
             '各上清(F1〜F5)はどのような条件か。また、理論上最もAST の比活性が高くなるのはどれか。',
           choices: [],
-          answerImg: [],
+          answerImg: [F1toF5],
           answer:
-            'F1：粗酵素液、F2：熱処理上清、F3：0〜0.5 飽和硫安画分、F4（比活性最大）：0.5〜0.75 飽和硫安画分、F5：0.75 飽和硫安画分',
-          commentary: '',
+            'F1：粗酵素液、F2：熱処理上清、F3：0〜0.5 飽和硫安画分、F4（比活性最大）：0.5〜0.75 飽和硫安画分、F5：0.75~ 飽和硫安画分',
+          commentary:
+            'この実習の目的はASTの精製なので、F4が精製後ということになる。',
         },
         {
           detailInfo: '21',
@@ -1795,7 +1818,8 @@ export const useQuestionList = () => {
           answerImg: [],
           answer:
             '肝臓などの臓器に何らかの障害があると、血液中にASTが漏れ出るので血中ASTを測定することで障害程度を知ることができる',
-          commentary: '',
+          commentary:
+            '酵素実習ではASTの酵素活性を用いてASTの存在・精製度を間接的に測定したが、イムノブロット実習では塩基配列から（大腸菌が）生成したタンパク質の分子量からASTの存在を確認することになる。',
         },
       ],
     },

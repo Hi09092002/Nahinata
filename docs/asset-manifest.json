@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/anywhere-Insulin19220111/static/css/main.2255ca1a.css",
-    "main.js": "/anywhere-Insulin19220111/static/js/main.61e3c6b3.js",
+    "main.js": "/anywhere-Insulin19220111/static/js/main.01ba92f7.js",
     "static/media/biochemistry2018_4_2.png": "/anywhere-Insulin19220111/static/media/biochemistry2018_4_2.3f1b252e9120e9aacb9f.png",
     "static/media/biochemistry2018_5.png": "/anywhere-Insulin19220111/static/media/biochemistry2018_5.3b24e87a75aaae5d167a.png",
     "static/media/biochemistry_2020_2_1.jpg": "/anywhere-Insulin19220111/static/media/biochemistry_2020_2_1.c1cb639c9d72cfd03c8a.jpg",
@@ -101,10 +101,12 @@
     "static/media/NSAIDs.jpg": "/anywhere-Insulin19220111/static/media/NSAIDs.ef4a16a56f1b964d6830.jpg",
     "static/media/alcohol.png": "/anywhere-Insulin19220111/static/media/alcohol.7af1bf321161895c6695.png",
     "static/media/synthesizeCatecholamine.png": "/anywhere-Insulin19220111/static/media/synthesizeCatecholamine.3dfa41b552934320dc8b.png",
+    "static/media/BMTD.png": "/anywhere-Insulin19220111/static/media/BMTD.5c485e81e6df51dacdfd.png",
     "static/media/EnzymeActivity.jpg": "/anywhere-Insulin19220111/static/media/EnzymeActivity.36c5c2359dcdfb522ace.jpg",
     "static/media/introducedAST1.png": "/anywhere-Insulin19220111/static/media/introducedAST1.0e56a92e49ff6336f798.png",
     "static/media/geneDuplication.png": "/anywhere-Insulin19220111/static/media/geneDuplication.d1bfa66ca56ea08f8eec.png",
     "static/media/biochemistry2019_6_ans.jpg": "/anywhere-Insulin19220111/static/media/biochemistry2019_6_ans.76e1362e075fbb773b0f.jpg",
+    "static/media/F1toF5.png": "/anywhere-Insulin19220111/static/media/F1toF5.12a4b38788b5ea835982.png",
     "static/media/SFEquestion2.png": "/anywhere-Insulin19220111/static/media/SFEquestion2.1e87df09568647741dbf.png",
     "static/media/tRNA.png": "/anywhere-Insulin19220111/static/media/tRNA.6909fa01835d3ee126ec.png",
     "static/media/Xgal.png": "/anywhere-Insulin19220111/static/media/Xgal.f78cdadc989e01c7d825.png",
@@ -121,6 +123,7 @@
     "static/media/oligoDTprimer.png": "/anywhere-Insulin19220111/static/media/oligoDTprimer.5b2f08e0608a3f8fa853.png",
     "static/media/corePromoter.png": "/anywhere-Insulin19220111/static/media/corePromoter.85bf0e792ed0075ed41a.png",
     "static/media/mtDNA.jpeg": "/anywhere-Insulin19220111/static/media/mtDNA.f2e210abce5f4087f8a9.jpeg",
+    "static/media/enzymeReport1.png": "/anywhere-Insulin19220111/static/media/enzymeReport1.6b8a8894452903034466.png",
     "static/media/DNArepair.png": "/anywhere-Insulin19220111/static/media/DNArepair.3e2109f73414a235e460.png",
     "static/media/biochemistry2020_3_answer.jpg": "/anywhere-Insulin19220111/static/media/biochemistry2020_3_answer.dbc231832f8e91848e61.jpg",
     "static/media/SNP.png": "/anywhere-Insulin19220111/static/media/SNP.601d456dee2b59712515.png",
@@ -128,16 +131,17 @@
     "static/media/donorAcceptorSite.png": "/anywhere-Insulin19220111/static/media/donorAcceptorSite.86226a711345e2de834e.png",
     "static/media/baseAbsorbance.png": "/anywhere-Insulin19220111/static/media/baseAbsorbance.5080fc9f6cb006aa9c18.png",
     "static/media/biochemistry2020_3_question.jpg": "/anywhere-Insulin19220111/static/media/biochemistry2020_3_question.22c9684c1e37da7d2415.jpg",
+    "static/media/colloid.png": "/anywhere-Insulin19220111/static/media/colloid.70d2d1b4f86631661f84.png",
     "static/media/blankGraph.png": "/anywhere-Insulin19220111/static/media/blankGraph.86b0d872993015c1eb70.png",
     "static/media/plate96well.png": "/anywhere-Insulin19220111/static/media/plate96well.e7a105a3fb65e9c5e050.png",
     "static/media/chromatography.png": "/anywhere-Insulin19220111/static/media/chromatography.d930f1846f63475b703d.png",
     "static/media/genomeEditting.webp": "/anywhere-Insulin19220111/static/media/genomeEditting.4736f6f652bc43628d37.webp",
     "index.html": "/anywhere-Insulin19220111/index.html",
     "main.2255ca1a.css.map": "/anywhere-Insulin19220111/static/css/main.2255ca1a.css.map",
-    "main.61e3c6b3.js.map": "/anywhere-Insulin19220111/static/js/main.61e3c6b3.js.map"
+    "main.01ba92f7.js.map": "/anywhere-Insulin19220111/static/js/main.01ba92f7.js.map"
   },
   "entrypoints": [
     "static/css/main.2255ca1a.css",
-    "static/js/main.61e3c6b3.js"
+    "static/js/main.01ba92f7.js"
   ]
 }
