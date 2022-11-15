@@ -1652,7 +1652,8 @@ export const useQuestionList = () => {
         {
           detailInfo: '6',
           questionImg: [],
-          questionSentence: '透析した理由は？',
+          questionSentence:
+            'F1~F5を作製した後、全ての試料に対して透析を行った。透析した理由は？',
           choices: [],
           answerImg: [],
           answer:
