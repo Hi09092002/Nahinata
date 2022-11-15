@@ -1,6 +1,7 @@
 import { useState } from 'react'
 
 // import q1 from './img/question/220613-1.JPG'
+import EnzymeActivity from './img/answer/EnzymeActivity.jpg'
 import NSAIDs from './img/answer/NSAIDs.jpg'
 import lipidMediator from './img/answer/lipidMediator.jpg'
 import chromatographyResult from './img/answer/chromatographyResult.jpg'
@@ -1587,6 +1588,215 @@ export const useQuestionList = () => {
         //   answer: '',
         //   commentary: '',
         // },
+      ],
+    },
+    {
+      groupTag: '実習-酵素',
+      groupContents: [
+        {
+          detailInfo: '1',
+          questionImg: [],
+          questionSentence: 'ASTの働きは？',
+          choices: [],
+          answerImg: [],
+          answer:
+            '「アスパラギン酸＋αケトグルタル酸→オキサロ酢酸＋グルタミン酸」の反応を促進',
+          commentary: 'アミノ基転移反応',
+        },
+        {
+          detailInfo: '2',
+          questionImg: [],
+          questionSentence: 'ASTはどこから精製した？',
+          choices: [],
+          answerImg: [],
+          answer: 'ラットの肝臓細胞質',
+          commentary: 'ミトコンドリア内のASTは細胞分画で除去した',
+        },
+        {
+          detailInfo: '3',
+          questionImg: [],
+          questionSentence: 'ピリドキサールリン酸は何のために加えたか？',
+          choices: [],
+          answerImg: [],
+          answer: 'ASTの補酵素',
+          commentary: '',
+        },
+        {
+          detailInfo: '4',
+          questionImg: [],
+          questionSentence: '補酵素とは何？',
+          choices: [],
+          answerImg: [],
+          answer: '酵素の働きを補助する有機化合物',
+          commentary: '',
+        },
+        {
+          detailInfo: '5',
+          questionImg: [],
+          questionSentence: '熱処理した理由は？',
+          choices: [],
+          answerImg: [],
+          answer:
+            'AST はαケトグルタル酸に結合することで耐熱性を獲得するのでこの耐熱性の差を利用して分画するため',
+          commentary: '',
+        },
+        {
+          detailInfo: '6',
+          questionImg: [],
+          questionSentence: '透析した理由は？',
+          choices: [],
+          answerImg: [],
+          answer:
+            'サンプル内の微細化合物を除去し、混入物濃度を許容範囲内まで低下させるため',
+          commentary: '',
+        },
+        {
+          detailInfo: '7',
+          questionImg: [],
+          questionSentence: '硫安塩析法の原理は？',
+          choices: [],
+          answerImg: [],
+          answer:
+            '水和していたタンパク質から水分子が硫安に取られ、タンパク質が互いに疎水性相互作用で結集し沈殿する',
+          commentary: '',
+        },
+        {
+          detailInfo: '8',
+          questionImg: [],
+          questionSentence: 'Bradford法とは？',
+          choices: [],
+          answerImg: [],
+          answer:
+            'CBB G-250 がタンパク質と結合することで最大吸収波長が変化することを利用してその吸光度からタンパク質を定量する(←OAAの検出方法)',
+          commentary: '',
+        },
+        {
+          detailInfo: '9',
+          questionImg: [],
+          questionSentence: 'Lowry 法とは？',
+          choices: [],
+          answerImg: [],
+          answer:
+            'ビウレット反応とアミノ酸側鎖の酸化反応を組み合わせたもの。定量感度はBradford法の約三分の一。',
+          commentary: '',
+        },
+        {
+          detailInfo: '10',
+          questionImg: [],
+          questionSentence: 'TAC(trichloroacetic acid)を加えた理由は？',
+          choices: [],
+          answerImg: [],
+          answer: 'オキサロ酢酸(OAA)とBMTDの反応を止めるため',
+          commentary: '',
+        },
+        {
+          detailInfo: '11',
+          questionImg: [],
+          questionSentence: 'ホモジェネートとは？',
+          choices: [],
+          answerImg: [],
+          answer:
+            '細胞分画の分離を行うため緩衝液や生理的食塩液を用いて生体組織を擦り潰し、得られた懸濁液',
+          commentary: '',
+        },
+        {
+          detailInfo: '12',
+          questionImg: [],
+          questionSentence: '精製度とは？',
+          choices: [],
+          answerImg: [],
+          answer: '混合物から特定の物質をどの程度抽出できたかの割合',
+          commentary: '',
+        },
+        {
+          detailInfo: '13',
+          questionImg: [],
+          questionSentence: '全活性とは？',
+          choices: [],
+          answerImg: [],
+          answer: 'ある酵素活性に対してその酵素全量の活性',
+          commentary: '',
+        },
+        {
+          detailInfo: '14',
+          questionImg: [],
+          questionSentence: '回収率とは？',
+          choices: [],
+          answerImg: [],
+          answer: '反応前後で目的とする物質がどれだけ回収されたかの割合',
+          commentary: '',
+        },
+        {
+          detailInfo: '15',
+          questionImg: [],
+          questionSentence: '比活性とは？',
+          choices: [],
+          answerImg: [],
+          answer: '一定量のタンパク質に対して働く酵素量',
+          commentary: '単位：unit／mg、比活性＝全活性／全タンパク質量',
+        },
+        {
+          detailInfo: '16',
+          questionImg: [],
+          questionSentence: '対照の吸光度を引く理由は？',
+          choices: [],
+          answerImg: [],
+          answer: 'タンパク質以外の吸光要因を除くため',
+          commentary: '',
+        },
+        {
+          detailInfo: '17',
+          questionImg: [],
+          questionSentence: 'SV プロットから分かることは？',
+          choices: [],
+          answerImg: [],
+          answer:
+            '基質濃度が高ければ反応速度は早くなるが、次第に反応速度は頭打ちになる。',
+          commentary: '',
+        },
+        {
+          detailInfo: '18',
+          questionImg: [],
+          questionSentence: 'Km、Vmaxとは？',
+          choices: [],
+          answerImg: [],
+          answer:
+            'Vmax：最大反応速度、Km：Vmaxの半分の反応速度を与える基質濃度',
+          commentary: 'Kmが小さいほど酵素と基質の親和性が高い',
+        },
+        {
+          detailInfo: '19',
+          questionImg: [],
+          questionSentence:
+            '競合阻害によってKmとVmaxの値はどのように変化するか？',
+          choices: [],
+          answerImg: [EnzymeActivity],
+          answer:
+            'Km値とは最大反応速度Vmaxの半分の値をとる時の基質濃度に等しく、基質との親和性を表す。Km値は大きくなる。また、Vmax値は、基質酵素複合体の濃度[ES]に依存するため、十分量の基質が存在する場合、競合阻害薬によって[ES]は変化しないから、Vmaxは不変。',
+          commentary:
+            'V-[S]グラフでイメージすると良い。漸近線が変わらず、長期的に見れば同じこと。',
+        },
+        {
+          detailInfo: '20',
+          questionImg: [],
+          questionSentence:
+            '各上清(F1〜F5)はどのような条件か。また、理論上最もAST の比活性が高くなるのはどれか。',
+          choices: [],
+          answerImg: [],
+          answer:
+            'F1：粗酵素液、F2：熱処理上清、F3：0〜0.5 飽和硫安画分、F4（比活性最大）：0.5〜0.75 飽和硫安画分、F5：0.75 飽和硫安画分',
+          commentary: '',
+        },
+        {
+          detailInfo: '21',
+          questionImg: [],
+          questionSentence: 'この実験(AST 測定)の臨床的意義は？',
+          choices: [],
+          answerImg: [],
+          answer:
+            '肝臓などの臓器に何らかの障害があると、血液中にASTが漏れ出るので血中ASTを測定することで障害程度を知ることができる',
+          commentary: '',
+        },
       ],
     },
     {
