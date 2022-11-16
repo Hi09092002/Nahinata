@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/anywhere-Insulin19220111/static/css/main.2255ca1a.css",
-    "main.js": "/anywhere-Insulin19220111/static/js/main.fba3d4c6.js",
+    "main.js": "/anywhere-Insulin19220111/static/js/main.51e17e02.js",
     "static/media/biochemistry2018_4_2.png": "/anywhere-Insulin19220111/static/media/biochemistry2018_4_2.3f1b252e9120e9aacb9f.png",
     "static/media/biochemistry2018_5.png": "/anywhere-Insulin19220111/static/media/biochemistry2018_5.3b24e87a75aaae5d167a.png",
     "static/media/biochemistry_2020_2_1.jpg": "/anywhere-Insulin19220111/static/media/biochemistry_2020_2_1.c1cb639c9d72cfd03c8a.jpg",
@@ -138,10 +138,10 @@
     "static/media/genomeEditting.webp": "/anywhere-Insulin19220111/static/media/genomeEditting.4736f6f652bc43628d37.webp",
     "index.html": "/anywhere-Insulin19220111/index.html",
     "main.2255ca1a.css.map": "/anywhere-Insulin19220111/static/css/main.2255ca1a.css.map",
-    "main.fba3d4c6.js.map": "/anywhere-Insulin19220111/static/js/main.fba3d4c6.js.map"
+    "main.51e17e02.js.map": "/anywhere-Insulin19220111/static/js/main.51e17e02.js.map"
   },
   "entrypoints": [
     "static/css/main.2255ca1a.css",
-    "static/js/main.fba3d4c6.js"
+    "static/js/main.51e17e02.js"
   ]
 }
