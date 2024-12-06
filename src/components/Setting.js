@@ -37,7 +37,7 @@ import '../App.css'
 import { SearchWord } from './SearchWord'
 import { useState } from 'react'
 // import jsCookie from 'js-cookie'
-import titleImg from '../img/titleImg.JPG'
+import titleImg from '../img/titleImg (2).png'
 export const Setting = ({
   toast,
   questionList,
@@ -263,6 +263,7 @@ export const Setting = ({
             </List>
             <Divider orientation="horizontal" mt={3} mb="1" />
             <Text>アップデート履歴</Text>
+            <Text fontSize={'sm'}>2024-12-7_Ver2.0-問題を追加、実習問題を削除</Text>
             <Text fontSize={'sm'}>10-03_Ver1.5-頻出キーワード確認を追加</Text>
             <Text fontSize={'sm'}>10-02_Ver1.4-キーワード検索を便利に</Text>
             <Text fontSize={'sm'}>09-16_Ver1.3-ボタンを透明に</Text>
@@ -376,7 +377,7 @@ export const Setting = ({
       />
       <Divider orientation="horizontal" maxW={'lg'} />
       <Text fontSize="xs" textColor={'blackAlpha.500'} ml="4">
-        Supported by Y.Kobayashi
+        Developed by Y.Kobayashi ＆ currently supported by H.Inoue
       </Text>
       <Text fontSize="xs" textColor={'blackAlpha.500'} ml="4">
         ©2022- IgaTatApps
